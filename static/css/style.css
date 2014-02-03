@@ -83,7 +83,7 @@ a{
   background-image: url("/static/back2.jpg");
   background-position: 0px 0px;
   background-repeat: repeat-x;
-  animation: animatedBackground 80s linear infinite;
+  animation: animatedBackground 30s linear infinite;
 }
 
           .nav-menu{
