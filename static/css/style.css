@@ -3,10 +3,15 @@
 
 @font-face {
 font-family:"FF Tisa";
-src: url("/static/FFTisa/TisaPro-Ita.otf") /* EOT file for IE */
+src: url("/static/FFTisa/TisaPro-Regular.otf") /* EOT file for IE */
 }
 
-.h1{
+@font-face {
+font-family:"FF Tisa boldslant";
+src: url("/static/FFTisa/TisaPro-BoldIta.otf") /* EOT file for IE */
+}
+
+h1{
   font-family: 'FF Tisa boldslant', 'San', serif;
 }
 body {
@@ -80,7 +85,7 @@ a{
   left:0px;
   width:300px;
   opacity:0.8;
-  background-image: url("/static/back2.jpg");
+  background-image: url("/static/back3.jpg");
   background-position: 0px 0px;
   background-repeat: repeat-x;
   animation: animatedBackground 30s linear infinite;
