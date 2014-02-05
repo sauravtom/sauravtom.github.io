@@ -1,5 +1,6 @@
-
-/* Layout */
+/**************
+   Top Lvl Css           
+****************/
 
 @font-face {
 font-family:"FF Tisa";
@@ -11,9 +12,6 @@ font-family:"FF Tisa boldslant";
 src: url("/static/FFTisa/TisaPro-BoldIta.otf") /* EOT file for IE */
 }
 
-h1{
-  font-family: 'FF Tisa boldslant', 'San', serif;
-}
 body {
   font-family: 'FF Tisa', 'San', serif;
   width:100%;
@@ -21,11 +19,36 @@ body {
   margin-bottom: 30px;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 900px;
+  margin: 40px auto;
+}
+
+/**************
+    Globals           
+****************/
 a{
   text-decoration: none;
   border-bottom: 1px dashed #999;
 }
 
+h1{
+  font-family: 'FF Tisa boldslant', 'San', serif;
+}
+
+/**************
+    Content           
+****************/
+
+.content{
+  margin-left: 200px;
+}
 .content>.page-list{
   list-style-type: none;
 }
@@ -44,34 +67,23 @@ a{
   padding:30px;
   margin: 10px;
   width:100%;
-  //border: 1px dashed #999;
 }
 
+/**************
+    topbar           
+****************/
+.topbar{
+  position:absolute;
+  top:0px;
+  right:0px;
+  left:0px;
+  height:10px;
+  background-color: rgba(36, 197, 211, 0.51);
+}
 
-          * {
-              -webkit-box-sizing: border-box;
-              -moz-box-sizing: border-box;
-              box-sizing: border-box;
-          }
-
-          .box {
-              width: 900px;
-              margin: 40px auto;
-          }
-
-          .topbar{
-            position:absolute;
-            top:0px;
-            right:0px;
-            left:0px;
-            height:10px;
-            background-color: rgba(36, 197, 211, 0.51);
-          }
-          .content{
-            //background: blue;
-            margin-left: 200px;
-          }
-
+/**************
+    Sidebar           
+****************/
 @keyframes animatedBackground {
   from { background-position: 0 0; }
   to { background-position: 100% 0; }
@@ -85,24 +97,24 @@ a{
   left:0px;
   width:300px;
   opacity:0.8;
-  background-image: url("/static/back3.jpg");
+  background-image: url("/static/b4.jpg");
   background-position: 0px 0px;
   background-repeat: repeat-x;
   animation: animatedBackground 30s linear infinite;
 }
 
-          .nav-menu{
-            position: fixed;
-            left:35px;
-            top:30%;
-            //margin-left: 200px;
-          }
-          .nav-menu>a{
-            padding: 10px;
-            margin: 10px;
-            background: ghostwhite;
-            display: list-item;
-            list-style-type: none;
-            border:1px dashed;
-            opacity: 0.5;
-          }
+.nav-menu{
+  position: fixed;
+  left:35px;
+  top:30%;
+  //margin-left: 200px;
+}
+.nav-menu>a{
+  padding: 10px;
+  margin: 10px;
+  background: ghostwhite;
+  display: list-item;
+  list-style-type: none;
+  border:1px dashed;
+  opacity: 0.5;
+}
