@@ -1,0 +1,56 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>Saurav Tomar </title>
+  
+  <link type="text/css" rel="stylesheet" href="/static/css/style.css" />
+  <link type="text/css" rel="stylesheet" href="/static/css/prettify.css" />
+
+</head>
+<body class="box">
+  <div class='topbar'></div>
+  <div class='sidebar'></div>
+
+  <nav class="nav-menu">
+      <a href="/">Home</a>
+      <a href="/projects">Projects</a>
+      <a href="/about">About</a>
+      <a href="https://github.com/sauravtom">Github</a>
+  </nav>
+
+  <div class="content" role="main">
+    
+<h1 class='title'>Making a Facebook Bot in python</h1>
+<p class='date'>Published on 09 AM Sunday 23 February 2014 </p>
+<p class='tag'>code</p>
+
+<p>The confession pages trend is really picking up in colleges, and DTU is not different. But I noticed something strange with the confession pages. What really used to be hapenning was that a neckbeard made a facebook confession page and would make a google form and ask users to post their confessions on that google form, he then would open up google drive every once in a while and start posting the submissions himself.</p>
+<p>That is barbarian, I thought that there must be a better way to do this, and there indeed was.</p>
+<p><a href="http://instaconfession.appspot.com">instaconfession.appspot.com</a>
+So I made a facebook page and the accompanying bot to do the same. You can find the source code on github here.
+<a href="http://github.com/sauravtom/instaconfess">github.com/sauravtom/instaconfess</a></p>
+<p>This is actually the source code for the whole instaconfess website, which includes a form , a captcha and the ofcourse the autoposter.</p>
+<p>Writing the code wasn't the big deal, what was big deal though was configuring the access_token bullshit of facebook pages.</p>
+<p>The trick here is to, first make your page and everything as usual, and then going to the <a href="https://developers.facebook.com/tools/explorer/">Graph explorer tool</a> and generating the access_toke, this token however is only valid for 2 hours.</p>
+<p>To extend the access_token to 60 days you need to follow these instructions, </p>
+<blockquote>
+<p><code>
+   https://graph.facebook.com/oauth/access_token?<br />
+        grant_type=fb_exchange_token&amp;         <br />
+        client_id=APP_ID&amp;
+        client_secret=APP_SECRET&amp;
+        fb_exchange_token=SHORT_LIVED_ACCESS_TOKEN
+</code></p>
+</blockquote>
+<p>Add the values in the fields accordingly, and then you will get a response output of your access_token extended to 60 days.</p>
+<p>There is a way you can extend this access token even beyond 60 days, I haven't been able to do so yet.</p>
+
+  </div>
+
+</div><!-- end container -->
+<script src="/static/js/script.js"></script>
+<script src="/static/js/prettify.js"></script>
+<script src="/static/js/prefixfree.min.js"></script>
+
+</body>
+</html>
