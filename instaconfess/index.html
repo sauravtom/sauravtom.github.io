@@ -24,13 +24,22 @@
 <p class='date'>Published on 09 AM Sunday 23 February 2014 </p>
 <p class='tag'>code</p>
 
-<p>The confession pages trend is really picking up in colleges, and DTU is not different. But I noticed something strange with the confession pages. What really used to be hapenning was that a neckbeard made a facebook confession page and would make a google form and ask users to post their confessions on that google form, he then would open up google drive every once in a while and start posting the submissions himself.</p>
+<p>Its a bueatiful day and my weekend hack project is finally done, and it took far less time to completion than anticipated, a evening full of laziness and parallell skype talking and ofcourse reddit. (I need to mend my ways).</p>
+<p>No project was ever complete without a boring introduction, so here goes.</p>
+<p>The confession pages trend is really picking up in colleges, and DTU,my college is no different.One of the confession pages got 3k likes within few months, and the amount of user engagement is just marvellous.I won't be surprised if it got anything near 50k monthly views. But I noticed something strange with the confession pages.Behind almost all of these pages what really used to be hapenning was that a neckbeard would made a facebook confession page and would make a google form and ask users to post their confessions on that google form, he then would open up google drive every once in a while and start posting the submissions himself.</p>
+<blockquote>
+<p>"All your confessions are belong to us" ~Big Brother</p>
+</blockquote>
 <p>That is barbarian, I thought that there must be a better way to do this, and there indeed was.</p>
 <p><a href="http://instaconfession.appspot.com">instaconfession.appspot.com</a>
 So I made a facebook page and the accompanying bot to do the same. You can find the source code on github here.
 <a href="http://github.com/sauravtom/instaconfess">github.com/sauravtom/instaconfess</a></p>
-<p>This is actually the source code for the whole instaconfess website, which includes a form , a captcha and the ofcourse the autoposter.</p>
+<p>This is actually the source code for the whole instaconfess website, which includes a form, a captcha and the ofcourse the autoposter.</p>
 <p>Writing the code wasn't the big deal, what was big deal though was configuring the access_token bullshit of facebook pages.</p>
+<p>Seems like facebook really doesn't want programmers to interact with their API if ther are using python.</p>
+<p>No official python facebook SDK, seriously facebook ?
+You can do better.</p>
+<p>And that is only the tip of the ideberg, configuring the access_tokes and redirect_uri is a developer nightmare. As always StackOverflow came to the rescue.</p>
 <p>The trick here is to, first make your page and everything as usual, and then going to the <a href="https://developers.facebook.com/tools/explorer/">Graph explorer tool</a> and generating the access_toke, this token however is only valid for 2 hours.</p>
 <p>To extend the access_token to 60 days you need to follow these instructions, </p>
 <blockquote>
