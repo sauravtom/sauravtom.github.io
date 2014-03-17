@@ -11,7 +11,9 @@ src: url("/static/FFTisa/TisaPro-Regular.otf") /* EOT file for IE */
 font-family:"FF Tisa boldslant";
 src: url("/static/FFTisa/TisaPro-BoldIta.otf") /* EOT file for IE */
 }
-
+.center{
+  text-align: center;
+}
 body {
   font-family: 'FF Tisa', 'San', serif;
   width:100%;
@@ -79,6 +81,7 @@ h1{
   left:0px;
   height:10px;
   background-color: rgba(36, 197, 211, 0.51);
+  background-color: orange;
 }
 
 /**************
