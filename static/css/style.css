@@ -12,10 +12,12 @@ font-family:"FF Tisa boldslant";
 src: url("/static/FFTisa/TisaPro-BoldIta.otf") /* EOT file for IE */
 }
 
+html, body {
+    max-width: 100%;
+}
+
 body {
   font-family: 'FF Tisa', 'San', serif !important;
-  width:100%;
-  height:100%;
   letter-spacing: 0.0605em;
   font-weight: normal;
   line-height: 1.5;
@@ -47,16 +49,16 @@ h1{
   text-decoration: none;
   border-bottom: 1px dashed #999;
 }
+
 .content>.page-list{
   list-style-type: none;
 }
+
 .page-list{
   width:100%
   background:blue;
 }
-.title:first-letter{
-  font-size:140%;
-}
+
 .page-list>.title>.date{
   float: right;
 }
