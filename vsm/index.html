@@ -5,24 +5,54 @@
   
   <link type="text/css" rel="stylesheet" href="/static/css/style.css" />
   <link type="text/css" rel="stylesheet" href="/static/css/prettify.css" />
+  <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.css" />
 
 </head>
-<body class="box">
-  <div class='topbar'></div>
-  <div class='sidebar'></div>
 
-  <nav class="nav-menu">
-      <a href="/">Home</a>
-      <a href="/projects">Projects</a>
-      <a href="/about">About</a>
-      <a href="https://github.com/sauravtom">Github</a>
-  </nav>
+<body>
 
-  <div class="content" role="main">
-    
+<nav class="navbar navbar-default visible-xs visible-sm" role="navigation">
+   <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" 
+         data-target="#example-navbar-collapse">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">SauravTom.com</a>
+   </div>
+   <div class="collapse navbar-collapse" id="example-navbar-collapse">
+      <ul class="nav navbar-nav">
+         <li class='center bold'><a href="/">Home</a></li>
+         <li class='center bold'><a href="/projects">Projects</a></li>
+         <li class='center bold'><a href="/about">About</a></li>
+         <li class='center bold'><a href="https://github.com/sauravtom">Github</a></li>
+      </ul>
+   </div>
+</nav>
+
+<div class="container">
+    <div class='topbar'></div>
+
+    <div class="row">
+      <div class="col-md-3 visible-md visible-lg">
+        <div class='sidebar slide'></div>
+        <nav class="nav-menu slide visible-md visible-lg">
+            <a href="/">Home</a>
+            <a href="/projects">Projects</a>
+            <a href="/about">About</a>
+            <a href="https://github.com/sauravtom">Github</a>
+        </nav>
+      </div>
+      <div class="col-md-8">
+        <div class="content" role="main">
+          
 <h1 class='title'>Virtual Stock Exchange</h1>
+<br>
 <p class='date'>Published on 04 AM Saturday 01 March 2014 </p>
 <p class='tag'>general</p>
+<br><br><br>
 
 <p>I woke up today and the first thing I saw was this image.</p>
 <p><img src="/static/img/vsm_1.png" max-width="100%"></p>
@@ -73,12 +103,18 @@ With this and some meny saved up in the last couple of months, I finally will be
     
 
 
-  </div>
+        </div>
+      </div>
+    </div>
 
 </div><!-- end container -->
+
+
+<script src="/static/js/jquery.min.js"></script>
 <script src="/static/js/script.js"></script>
 <script src="/static/js/prettify.js"></script>
 <script src="/static/js/prefixfree.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

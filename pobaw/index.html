@@ -5,24 +5,54 @@
   
   <link type="text/css" rel="stylesheet" href="/static/css/style.css" />
   <link type="text/css" rel="stylesheet" href="/static/css/prettify.css" />
+  <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.css" />
 
 </head>
-<body class="box">
-  <div class='topbar'></div>
-  <div class='sidebar'></div>
 
-  <nav class="nav-menu">
-      <a href="/">Home</a>
-      <a href="/projects">Projects</a>
-      <a href="/about">About</a>
-      <a href="https://github.com/sauravtom">Github</a>
-  </nav>
+<body>
 
-  <div class="content" role="main">
-    
+<nav class="navbar navbar-default visible-xs visible-sm" role="navigation">
+   <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" 
+         data-target="#example-navbar-collapse">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">SauravTom.com</a>
+   </div>
+   <div class="collapse navbar-collapse" id="example-navbar-collapse">
+      <ul class="nav navbar-nav">
+         <li class='center bold'><a href="/">Home</a></li>
+         <li class='center bold'><a href="/projects">Projects</a></li>
+         <li class='center bold'><a href="/about">About</a></li>
+         <li class='center bold'><a href="https://github.com/sauravtom">Github</a></li>
+      </ul>
+   </div>
+</nav>
+
+<div class="container">
+    <div class='topbar'></div>
+
+    <div class="row">
+      <div class="col-md-3 visible-md visible-lg">
+        <div class='sidebar slide'></div>
+        <nav class="nav-menu slide visible-md visible-lg">
+            <a href="/">Home</a>
+            <a href="/projects">Projects</a>
+            <a href="/about">About</a>
+            <a href="https://github.com/sauravtom">Github</a>
+        </nav>
+      </div>
+      <div class="col-md-8">
+        <div class="content" role="main">
+          
 <h1 class='title'>Book Review- The Perks of being a wallflower by Stephen Chbosky</h1>
+<br>
 <p class='date'>Published on 12 PM Monday 14 October 2013 </p>
 <p class='tag'>book-review</p>
+<br><br><br>
 
 <p>I start reading it yesterday afternoon starting 2:32 and finished it today at 11:30 something.
 I had read a lot of great things about the book on <a href="www.reddit.com/r/books">/r/books</a>, but frankly I was disappointed after reading the book.
@@ -61,12 +91,18 @@ Or maybe I should watch <a href="http://www.imdb.com/title/tt1659337/">the movie
     
 
 
-  </div>
+        </div>
+      </div>
+    </div>
 
 </div><!-- end container -->
+
+
+<script src="/static/js/jquery.min.js"></script>
 <script src="/static/js/script.js"></script>
 <script src="/static/js/prettify.js"></script>
 <script src="/static/js/prefixfree.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
