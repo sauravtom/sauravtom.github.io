@@ -1,0 +1,137 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>Saurav Tomar </title>
+  
+  <link type="text/css" rel="stylesheet" href="/static/css/style.css" />
+  <link type="text/css" rel="stylesheet" href="/static/css/prettify.css" />
+  <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.css" />
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default visible-xs visible-sm" role="navigation">
+   <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" 
+         data-target="#example-navbar-collapse">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">SauravTom.com</a>
+   </div>
+   <div class="collapse navbar-collapse" id="example-navbar-collapse">
+      <ul class="nav navbar-nav">
+         <li class='center bold'><a href="/">Home</a></li>
+         <li class='center bold'><a href="/projects">Projects</a></li>
+         <li class='center bold'><a href="/about">About</a></li>
+         <li class='center bold'><a href="https://github.com/sauravtom">Github</a></li>
+      </ul>
+   </div>
+</nav>
+
+<div class="container">
+    <div class='topbar'></div>
+
+    <div class="row">
+      <div class="col-md-3 visible-md visible-lg">
+        <div class='sidebar slide'></div>
+        <nav class="nav-menu slide visible-md visible-lg">
+            <a href="/">Home</a>
+            <a href="/projects">Projects</a>
+            <a href="/about">About</a>
+            <a href="https://github.com/sauravtom">Github</a>
+        </nav>
+      </div>
+      <div class="col-md-8">
+        <div class="content" role="main">
+          
+<h1 class='title'>Generating Prime Numbers</h1>
+<br>
+<p class='date'>Published on 01 AM Friday 04 October 2013 </p>
+<p class='tag'>code</p>
+<br><br><br>
+
+<p>Prime generator noob version
+<code class="prettyprint"></p>
+<pre><code>int prime(int a){
+    int i=0;
+    for(i=2;i&lt;a;i++){
+        if (a%i == 0){
+            return 0;
+        }
+    }
+    if(a == 1 || a == 0) { return 0; }
+    if(a == 2 || a == 3){ return 1; }
+    return 1;
+}
+</code></pre>
+<p></code></p>
+<p>Prime generator advanced noob version
+Only iterate over odd numbers
+Only iterate till rootN</p>
+<pre><code>#include&lt;math.h&gt;
+
+int prime(int a){
+    int i=0;
+    int roota = math.pow(0.5,a);
+    if(a == 1 || a == 0 ) { return 0; }
+    if(a == 2 || a == 3){ return 1; }
+
+    for(i=2;i&lt;=roota;i+=2){
+        if (a%i == 0){
+            return 0;
+        }
+    }
+
+    return 1;
+}
+</code></pre>
+<p>Prime generator semi pro</p>
+<br><br><br>
+<hr>
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'sauravtomblog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+
+        </div>
+      </div>
+    </div>
+
+</div><!-- end container -->
+
+
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/script.js"></script>
+<script src="/static/js/prettify.js"></script>
+<script src="/static/js/prefixfree.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-31832426-3', 'sauravtom.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

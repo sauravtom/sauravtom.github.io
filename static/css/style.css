@@ -120,8 +120,9 @@ h1{
   background: ghostwhite;
   display: list-item;
   list-style-type: none;
-  border:1px dashed;
-  opacity: 0.5;
+  border:1px solid;
+  opacity: 0.8;
+  color: orange;
 }
 
 /******************
