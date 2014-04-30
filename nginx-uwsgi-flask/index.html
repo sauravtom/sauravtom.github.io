@@ -100,7 +100,52 @@ server {
 <pre><code>sudo service nginx restart
 </code></pre>
 <p>and then go to your server ip on your webbrowser and you will find that it starts routing requests.For testing purposes I would recommend you websites like google.com, quora.com instead of backend servers.</p>
-<p>...continued</p>
+<hr>
+
+<p>Now that we have setup to nginx load balancer we need to host our flask app at the backend servers we specified in the last step.</p>
+<p>After all is done this is what the whole architecture will look like.</p>
+<p><img src="/static/img/nginx-uwsgi-flask_1.png" ></p>
+<p>A : nginx load balancer webserver</p>
+<p>B : Data Banks, Static file hosting web servers</p>
+<p>C : Client App</p>
+<ol>
+<li>
+<p>Client makes a request to the central server (A) , the server then does load balancing, and finds the address of the least used Data Bank.(to be returned to client in next step)</p>
+</li>
+<li>
+<p>The Central Redirection Server, then returns the address in previous step to the client.</p>
+</li>
+<li>
+<p>The client then eiter makes a second request to the Data Bank server it has been assigned, and retrieves the data specified by the user or the url it first made request to redirects it to one of the backend servers, just like we are about to do.</p>
+</li>
+</ol>
+<hr>
+
+<p>If you are going to be using flask for production then it is strongly recommended that you use a webserver like gunicorn, uWSGI instead to flask's built in web server.</p>
+<p>In this tutorial we will be using <a href="http://uwsgi-docs.readthedocs.org/en/latest/FAQ.html">uWSGI</a></p>
+<p>First install uWSGI</p>
+<pre><code>sudo apt-get install uWSGI
+</code></pre>
+<p>Next setup a basic app with uWSGI and see if everything is working fine or not, </p>
+<pre><code>uwsgi --http :8000 --wsgi-file test.py
+</code></pre>
+<p>Where test.py is your flask app.After running th above command you should be seeing your app server at localhost:8000.</p>
+<p>You can make config files for uWSGI if your parameters are too many like this I made.</p>
+<pre><code>[uwsgi]
+uid = www-data
+gid = www-data
+master = true
+socket    = :5000 
+#plugin    = python
+wsgi-file = /path/to/your/python/flask/app.py
+module = name_of_your_file
+callable = app
+daemonize = /var/log/uwsgi.log
+pidfile = /var/run/uwsgi.pid
+process   = 4
+</code></pre>
+<p>Remember, we are doing this is one of the backend servers, this IS NOT the central server.</p>
+<p>Continued ...</p>
 <br><br><br>
 <hr>
 <div id="disqus_thread"></div>
