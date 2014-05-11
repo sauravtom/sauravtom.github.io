@@ -19,10 +19,10 @@ html, body {
 }
 
 body {
-  font-family: 'FF Tisa', 'San', serif !important;
-  letter-spacing: 0.0605em;
-  font-weight: normal;
-  line-height: 1.5;
+  #font-family: 'FF Tisa', 'San', serif !important;
+  #letter-spacing: 0.0605em;
+  #font-weight: normal;
+  #line-height: 1.5;
 }
 
 /**************
