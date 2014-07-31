@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <link rel="author" href="https://plus.google.com/+SauravTomar1729/posts"/>
   
-  <title>Saurav Tomar Mapping multiple domains on the same IP on different ports</title>
+  <title>Saurav Tomar : Mapping multiple domains on the same IP on different ports</title>
   
   <link type="text/css" rel="stylesheet" href="/static/css/style.css" />
   <link type="text/css" rel="stylesheet" href="/static/css/prettify.css" />
@@ -58,7 +58,7 @@
 <br><br><br>
 
 <p>We can setup different domains on the same server on different ports, using apache2 and <a href="http://projects.unbit.it/uwsgi/wiki">uWSGI</a>.
-uWSGI is a deployment option on servers like nginx, lighttpd, apache2 to serve your flask app.</p>
+uWSGI is a deployment option on servers like nginx, lighttpd, apache2 to serve your app (flask,django,hell even php).</p>
 <p>For a primer about dealing with multiple domains on your VPS, give <a href="http://blog.championswimmer.in/2014/hosting-multiple-domains-on-your-vps/">this verbose blog post</a> a read, written by my hacker friend <a href="http://championswimmer.in">championswimmer</a>.</p>
 <p>So here goes my little how to.</p>
 <p>First make a socket connection using uWSGI</p>
@@ -77,7 +77,7 @@ process   = 4
 <pre><code>/etc/apache2/sites-available/&lt;your-domain&gt;
 </code></pre>
 <p>which is the cofiguration file for your website. Again check out championswimmer's blogpost, if you need more clarity.</p>
-<p>We need to basically add a location block in that file, as shown below.</p>
+<p>We need to basically add a location block in that file, as shown below.So that uWSGI and Apache2 can communicate with one another.</p>
 <pre><code>&lt;VirtualHost *:80&gt;
 
     ...
