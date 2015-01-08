@@ -86,40 +86,48 @@
 + Fault tolerance and heightened stability.</p>
 <p>So lets setup a basic Load Balancer on nginx,we will be setting up a Round Robin Load Balancer.The Round Robin algorithm for load balancing sends visitors to one of a set of IPs. At its most basic level Round Robin, which is fairly easy to implement, distributes server load without implementing considering more nuanced factors like server response time and the visitors’ geographic region.</p>
 <p>First install nginx</p>
-<pre><code>sudo apt-get install nginx
-</code></pre>
+<div class="codehilite"><pre><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">nginx</span>
+</pre></div>
+
+
 <p>Next, we need to setup the Upstream module in nginx default site configuration for our loadbalancer.</p>
-<pre><code>vim /etc/nginx/sites-available/default
-</code></pre>
+<div class="codehilite"><pre><span class="n">vim</span> <span class="sr">/etc/</span><span class="n">nginx</span><span class="sr">/sites-available/</span><span class="n">default</span>
+</pre></div>
+
+
 <p>Its gonna look something like this after you edit it,</p>
-<pre><code>upstream backend  {
-  server 173.255.XXX.XXX:5000;
-  server 198.58.XXX.XXX:8000;
-  server 198.58.XXX.XXX:8000;
-}
+<div class="codehilite"><pre><span class="n">upstream</span> <span class="n">backend</span>  <span class="p">{</span>
+  <span class="n">server</span> <span class="mf">173.255</span><span class="o">.</span><span class="n">XXX</span><span class="o">.</span><span class="n">XXX:5000</span><span class="p">;</span>
+  <span class="n">server</span> <span class="mf">198.58</span><span class="o">.</span><span class="n">XXX</span><span class="o">.</span><span class="n">XXX:8000</span><span class="p">;</span>
+  <span class="n">server</span> <span class="mf">198.58</span><span class="o">.</span><span class="n">XXX</span><span class="o">.</span><span class="n">XXX:8000</span><span class="p">;</span>
+<span class="p">}</span>
 
-server {
-    #listen   80; ## listen for ipv4; this line is default and implied
-    #listen   [::]:80 default ipv6only=on; ## listen for ipv6
+<span class="n">server</span> <span class="p">{</span>
+    <span class="c1">#listen   80; ## listen for ipv4; this line is default and implied</span>
+    <span class="c1">#listen   [::]:80 default ipv6only=on; ## listen for ipv6</span>
 
-    root /usr/share/nginx/www;
-    index index.html index.htm;
+    <span class="n">root</span> <span class="sr">/usr/s</span><span class="n">hare</span><span class="sr">/nginx/</span><span class="n">www</span><span class="p">;</span>
+    <span class="nb">index</span> <span class="nb">index</span><span class="o">.</span><span class="n">html</span> <span class="nb">index</span><span class="o">.</span><span class="n">htm</span><span class="p">;</span>
 
-    server_name &lt;your-server-ip&gt;;
+    <span class="n">server_name</span> <span class="sr">&lt;your-server-ip&gt;</span><span class="p">;</span>
 
-    location / {
-        proxy_pass  http://backend;
-        # First attempt to serve request as file, then
-        # as directory, then fall back to index.html
-        try_files $uri $uri/ /index.html;
-        # Uncomment to enable naxsi on this location
-        # include /etc/nginx/naxsi.rules
-    }
-}
-</code></pre>
+    <span class="n">location</span> <span class="o">/</span> <span class="p">{</span>
+        <span class="n">proxy_pass</span>  <span class="n">http:</span><span class="sr">//</span><span class="n">backend</span><span class="p">;</span>
+        <span class="c1"># First attempt to serve request as file, then</span>
+        <span class="c1"># as directory, then fall back to index.html</span>
+        <span class="n">try_files</span> <span class="nv">$uri</span> <span class="nv">$uri</span><span class="sr">/ /i</span><span class="n">ndex</span><span class="o">.</span><span class="n">html</span><span class="p">;</span>
+        <span class="c1"># Uncomment to enable naxsi on this location</span>
+        <span class="c1"># include /etc/nginx/naxsi.rules</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
 <p>So as you can see, we have specified the 3 backend server we want to balance to load to in the upstream stanza.After entering your server ip in the server_name line, you just do</p>
-<pre><code>sudo service nginx restart
-</code></pre>
+<div class="codehilite"><pre><span class="n">sudo</span> <span class="n">service</span> <span class="n">nginx</span> <span class="n">restart</span>
+</pre></div>
+
+
 <p>and then go to your server ip on your webbrowser and you will find that it starts routing requests.For testing purposes I would recommend you websites like google.com, quora.com instead of backend servers.</p>
 <hr>
 
@@ -145,26 +153,32 @@ server {
 <p>If you are going to be using flask for production then it is strongly recommended that you use a webserver like gunicorn, uWSGI instead to flask's built in web server.</p>
 <p>In this tutorial we will be using <a href="http://uwsgi-docs.readthedocs.org/en/latest/FAQ.html">uWSGI</a></p>
 <p>First install uWSGI</p>
-<pre><code>sudo apt-get install uWSGI
-</code></pre>
+<div class="codehilite"><pre><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">uWSGI</span>
+</pre></div>
+
+
 <p>Next setup a basic app with uWSGI and see if everything is working fine or not, </p>
-<pre><code>uwsgi --http :8000 --wsgi-file test.py
-</code></pre>
+<div class="codehilite"><pre><span class="n">uwsgi</span> <span class="o">--</span><span class="n">http</span> <span class="p">:</span><span class="mi">8000</span> <span class="o">--</span><span class="n">wsgi</span><span class="o">-</span><span class="n">file</span> <span class="n">test</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+
+
 <p>Where test.py is your flask app.After running th above command you should be seeing your app server at localhost:8000.</p>
 <p>You can make config files for uWSGI if your parameters are too many like this I made.</p>
-<pre><code>[uwsgi]
-uid = www-data
-gid = www-data
-master = true
-socket    = :5000 
-#plugin    = python
-wsgi-file = /path/to/your/python/flask/app.py
-module = name_of_your_file
-callable = app
-daemonize = /var/log/uwsgi.log
-pidfile = /var/run/uwsgi.pid
-process   = 4
-</code></pre>
+<div class="codehilite"><pre><span class="k">[uwsgi]</span>
+<span class="na">uid</span> <span class="o">=</span> <span class="s">www-data</span>
+<span class="na">gid</span> <span class="o">=</span> <span class="s">www-data</span>
+<span class="na">master</span> <span class="o">=</span> <span class="s">true</span>
+<span class="na">socket</span>    <span class="o">=</span> <span class="s">:5000 </span>
+<span class="c">#plugin    = python</span>
+<span class="na">wsgi-file</span> <span class="o">=</span> <span class="s">/path/to/your/python/flask/app.py</span>
+<span class="na">module</span> <span class="o">=</span> <span class="s">name_of_your_file</span>
+<span class="na">callable</span> <span class="o">=</span> <span class="s">app</span>
+<span class="na">daemonize</span> <span class="o">=</span> <span class="s">/var/log/uwsgi.log</span>
+<span class="na">pidfile</span> <span class="o">=</span> <span class="s">/var/run/uwsgi.pid</span>
+<span class="na">process</span>   <span class="o">=</span> <span class="s">4</span>
+</pre></div>
+
+
 <p>Remember, we are doing this is one of the backend servers, this IS NOT the central server.</p>
 <p>Continued ...</p>
 <br><br><br>

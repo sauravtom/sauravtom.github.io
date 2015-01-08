@@ -80,46 +80,58 @@ uWSGI is a deployment option on servers like nginx, lighttpd, apache2 to serve y
 <p>For a primer about dealing with multiple domains on your VPS, give <a href="http://blog.championswimmer.in/2014/hosting-multiple-domains-on-your-vps/">this verbose blog post</a> a read, written by my hacker friend <a href="http://championswimmer.in">championswimmer</a>.</p>
 <p>So here goes my little how to.</p>
 <p>First make a socket connection using uWSGI</p>
-<pre><code>[uwsgi]
-master = true
-socket = :3031
-wsgi-file = /path/to/flask/file.py
-module = file_name
-callable = app
-daemonize = /var/log/uwsgi.log
-pidfile = /var/run/uwsgi.pid
-process   = 4
-</code></pre>
+<div class="codehilite"><pre><span class="k">[uwsgi]</span>
+<span class="na">master</span> <span class="o">=</span> <span class="s">true</span>
+<span class="na">socket</span> <span class="o">=</span> <span class="s">:3031</span>
+<span class="na">wsgi-file</span> <span class="o">=</span> <span class="s">/path/to/flask/file.py</span>
+<span class="na">module</span> <span class="o">=</span> <span class="s">file_name</span>
+<span class="na">callable</span> <span class="o">=</span> <span class="s">app</span>
+<span class="na">daemonize</span> <span class="o">=</span> <span class="s">/var/log/uwsgi.log</span>
+<span class="na">pidfile</span> <span class="o">=</span> <span class="s">/var/run/uwsgi.pid</span>
+<span class="na">process</span>   <span class="o">=</span> <span class="s">4</span>
+</pre></div>
+
+
 <p>In my case I am using port 3031, to find out which ports you can use, see this <a href="http://superuser.com/a/538600/318308">answer</a>.</p>
 <p>Now lets configure apache2, for that we need to edit the file</p>
-<pre><code>/etc/apache2/sites-available/&lt;your-domain&gt;
-</code></pre>
+<div class="codehilite"><pre><span class="sr">/etc/</span><span class="n">apache2</span><span class="sr">/sites-available/&lt;your-domain&gt;</span>
+</pre></div>
+
+
 <p>which is the cofiguration file for your website. Again check out championswimmer's blogpost, if you need more clarity.</p>
 <p>We need to basically add a location block in that file, as shown below.So that uWSGI and Apache2 can communicate with one another.</p>
-<pre><code>&lt;VirtualHost *:80&gt;
+<div class="codehilite"><pre><span class="nt">&lt;VirtualHost</span> <span class="err">*:80</span><span class="nt">&gt;</span>
 
     ...
 
-    &lt;Location /&gt;
+    <span class="nt">&lt;Location</span> <span class="nt">/&gt;</span>
         Options FollowSymLinks Indexes
         SetHandler uwsgi-handler
         uWSGISocket 127.0.0.1:3031
-    &lt;/Location&gt;
+    <span class="nt">&lt;/Location&gt;</span>
 
     ...
 
-&lt;/VirtualHost&gt;
-</code></pre>
+<span class="nt">&lt;/VirtualHost&gt;</span>
+</pre></div>
+
+
 <p>After that is done, we need to install some modules required by apache2 to connect to uWSGI</p>
-<pre><code>sudo apt-get install apache2 libapache2-mod-uwsgi
-sudo apt-get install uwsgi uwsgi-plugin-python uwsgi-plugin-cgi
-</code></pre>
+<div class="codehilite"><pre><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">apache2</span> <span class="n">libapache2</span><span class="o">-</span><span class="n">mod</span><span class="o">-</span><span class="n">uwsgi</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">uwsgi</span> <span class="n">uwsgi</span><span class="o">-</span><span class="n">plugin</span><span class="o">-</span><span class="n">python</span> <span class="n">uwsgi</span><span class="o">-</span><span class="n">plugin</span><span class="o">-</span><span class="n">cgi</span>
+</pre></div>
+
+
 <p>After, that just restart spache2 server</p>
-<pre><code>sudo service apache2 restart
-</code></pre>
+<div class="codehilite"><pre><span class="n">sudo</span> <span class="n">service</span> <span class="n">apache2</span> <span class="n">restart</span>
+</pre></div>
+
+
 <p>and run your uWSGI config file</p>
-<pre><code>uwsgi --ini /path/to/config/file.ini
-</code></pre>
+<div class="codehilite"><pre><span class="n">uwsgi</span> <span class="o">--</span><span class="n">ini</span> <span class="sr">/path/</span><span class="n">to</span><span class="sr">/config/</span><span class="n">file</span><span class="o">.</span><span class="n">ini</span>
+</pre></div>
+
+
 <p>And thats all you need to do.</p>
 <p>If you still are having any doubts leave comments below.</p>
 <p>In the next post I will discuss how to manage different uWSGI instances using uWSGI Emperor.</p>
