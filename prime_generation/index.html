@@ -77,39 +77,43 @@
 
 <p>Prime generator noob version
 <code class="prettyprint"></p>
-<pre><code>int prime(int a){
-    int i=0;
-    for(i=2;i&lt;a;i++){
-        if (a%i == 0){
-            return 0;
-        }
-    }
-    if(a == 1 || a == 0) { return 0; }
-    if(a == 2 || a == 3){ return 1; }
-    return 1;
-}
-</code></pre>
+<div class="codehilite"><pre><span class="nb">int</span> <span class="n">prime</span><span class="p">(</span><span class="nb">int</span> <span class="n">a</span><span class="p">){</span>
+    <span class="nb">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">a</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="nv">%i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">||</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">3</span><span class="p">){</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
 <p></code></p>
 <p>Prime generator advanced noob version
 Only iterate over odd numbers
 Only iterate till rootN</p>
-<pre><code>#include&lt;math.h&gt;
+<div class="codehilite"><pre><span class="c1">#include&lt;math.h&gt;</span>
 
-int prime(int a){
-    int i=0;
-    int roota = math.pow(0.5,a);
-    if(a == 1 || a == 0 ) { return 0; }
-    if(a == 2 || a == 3){ return 1; }
+<span class="nb">int</span> <span class="n">prime</span><span class="p">(</span><span class="nb">int</span> <span class="n">a</span><span class="p">){</span>
+    <span class="nb">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="nb">int</span> <span class="n">roota</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="n">a</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">||</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">3</span><span class="p">){</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
 
-    for(i=2;i&lt;=roota;i+=2){
-        if (a%i == 0){
-            return 0;
-        }
-    }
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">roota</span><span class="p">;</span><span class="n">i</span><span class="o">+=</span><span class="mi">2</span><span class="p">){</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="nv">%i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
-    return 1;
-}
-</code></pre>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
 <p>Prime generator semi pro</p>
 <br><br><br>
 <hr>
