@@ -2,6 +2,7 @@ var w=window.innerWidth;
 var h=window.innerHeight;
 var o=74;
 if(w>500){w=500;}
+console.log("Drag and learn Game Demo.The game consists of a word and 4 picture options, the user has to drag the image corresponding to the word into the translucent circle. VIew Source here https://github.com/sauravtom/sauravtom.github.io/tree/master/dragnlearn");
 var game = new Phaser.Game(w,h, Phaser.AUTO, 'gameDiv');
 
 var data_string ="\
@@ -26,7 +27,7 @@ var mainState = {
         }
 
         random_item = data_arr[Math.floor(Math.random()*data_arr.length)];
-        console.log(random_item);
+        //console.log(random_item);
         game.load.image('option1', 'assets/img/'+random_item[2]);
         game.load.image('option2', 'assets/img/'+random_item[3]);
         game.load.image('option3', 'assets/img/'+random_item[4]);
@@ -45,10 +46,10 @@ var mainState = {
 
         function itemDragStop(item) {
               var temp = item.name.split(';');
-              console.log(temp);
+              //console.log(temp);
               if(item.y<180){
                 if(random_item[1] == temp[0]){
-                    console.log("correct");
+                    //console.log("correct");
                     item.x=w/2;
                     item.y=70;
                     item.scale.x=2.5;
@@ -75,7 +76,7 @@ var mainState = {
               item.scale.x=1.5;
               item.scale.y=1.5;
               item.name=i++ + ";"+item.x+";"+item.y;
-              console.log(item.x,item.y);
+              //console.log(item.x,item.y);
             });
 
         this.score = 0;

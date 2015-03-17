@@ -15,12 +15,13 @@
       overflow-x:hidden;
       overflow-y: hidden; 
     }
+    #right{
+      z-index: +1000;
+      float:right;
+    }
     </style>
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-
-    <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
@@ -30,7 +31,7 @@
   <body ng-app="starter">
     <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Drag and Learn Game Demo</h1>
+        <h1 class="title">Drag and Learn Game Demo (view console for more info)</h1>
       </ion-header-bar>
       <ion-content scroll="false">
         <div id="gameDiv"> </div>
