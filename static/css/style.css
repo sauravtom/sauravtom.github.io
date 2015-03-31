@@ -24,7 +24,13 @@ body {
   #font-weight: normal;
   #line-height: 1.5;
 }
-
+.highlight{
+  font-weight: bolder;
+  font-size: 90%;
+  background: yellow;
+  width:500px;
+  margin:40px;
+}
 /**************
     Globals           
 ****************/
