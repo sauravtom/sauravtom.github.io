@@ -56,6 +56,8 @@ p {
 /* Links */
 a {
     color: #1abc9c;
+    color: #FF0000;
+    color: blue;
     word-wrap: break-word;
 
     -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -68,6 +70,7 @@ a {
 a:hover,
 a:focus {
     color: #7b7b7b;
+    color: purple;
     text-decoration: none;
     outline: 0;
 }
@@ -175,6 +178,7 @@ grey {
 
 .glam {
   background: -webkit-linear-gradient(#B0171F, #FF0000);
+  background: -webkit-linear-gradient(top, red 0%, orange 40%, red 60%, yellow 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
