@@ -16,7 +16,7 @@ timezone: India/Kolkata
 
 title: Saurav Kumar # the main title
 
-tagline: AI Consultant # it will display as the subtitle
+tagline: Applied AI Consultant # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Artificial Intelligence and machine learning consultant. Blog, Github, Machine Learning, Python
@@ -38,11 +38,11 @@ social:
   email: sauravalgs@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
+    - https://www.linkedin.com/in/sauraav007
     - https://twitter.com/aimlbigdata # change to your Twitter homepage
     - https://github.com/sauravtom # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    - https://www.linkedin.com/in/sauraav007
 
 # Site Verification Settings
 webmaster_verifications:
