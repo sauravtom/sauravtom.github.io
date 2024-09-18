@@ -1,6 +1,6 @@
 ---
-title: How to Ensure Your Blog Outlives You - A Practical Perspective
-date: 2024-09-18 23:30 +0530
+title: How to Ensure Your Blog Outlives You
+date: 2024-09-18 +0530
 categories: [Blogging, Longevity, GitHub Pages]
 tags: [blogging, longevity, GitHub Pages, Microsoft]
 author: sauravtom
