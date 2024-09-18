@@ -9,7 +9,7 @@ theme: jekyll-theme-chirpy
 lang: en
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
-timezone:
+timezone: India/Kolkata
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
@@ -19,7 +19,7 @@ title: Saurav Kumar # the main title
 tagline: AI Consultant # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Artificial Intelligence and machine learning consultant.
+  Artificial Intelligence and machine learning consultant. Blog, Github, Machine Learning, Python
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -42,7 +42,7 @@ social:
     - https://github.com/sauravtom # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/sauraav007
 
 # Site Verification Settings
 webmaster_verifications:
@@ -98,21 +98,21 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK7-GWRf4z46CrzTubYTvsFzLk1Ym2-lX7DA&s"
+avatar: /assets/img/personal/sauravtom.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: # string, local or CORS resources
+social_preview_image: /assets/img/personal/sauravtom.png # string, local or CORS resources
 
 # boolean type, the global switch for TOC in posts.
 toc: true
 
 comments:
   # Global switch for the post-comment system. Keeping it empty means disabled.
-  provider: discus # [disqus | utterances | giscus]
+  provider: #[discus] # [disqus | utterances | giscus]
   # The provider options are as follows:
   disqus:
-    shortname: sauravtomblog # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+    shortname: #sauravtomblog # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
     repo: # <gh-username>/<repo>
