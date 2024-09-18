@@ -15,4 +15,4 @@ I can help with:
   
 - **AI-Business Synergy**: Need to scale your AI systems to align with your business objectives? I can help bridge that gap.
 
-Feel free to connect with me via email or [LinkedIn](https://www.linkedin.com/in/sauraav007/). I look forward to helping you harness the power of AI and machine learning.
+Feel free to connect with me via [email](javascript:location.href = 'mailto:' + ['sauravalgs','gmail.com'].join('@')) or [LinkedIn](https://www.linkedin.com/in/sauraav007/). I look forward to helping you harness the power of AI and machine learning.
