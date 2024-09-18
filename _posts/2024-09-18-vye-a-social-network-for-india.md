@@ -1,5 +1,5 @@
 ---
-title: Vye The Local Social Media Revolution Begins
+title: Vye The Desi Social Media Revolution Begins
 date: 2024-09-18 21:30 +0530
 categories: [Vye, Social Media, Localization]
 tags: [vye, social media, localization, Bangalore]
@@ -12,7 +12,7 @@ Ever feel like you're drowning in a sea of irrelevant content on social media? I
 
 ## The Birth of Vye
 
-Enter Vye, the brainchild of my frustration with global social media platforms. Vye is a social media platform with a twist - it's local first. The name itself is a play on the inequality "x < y", where x is the global and y is the local. The focus is on the local, the familiar, the here and now.
+Enter Vye, the brainchild of my frustration with global social media platforms. Vye is a social media platform with a twist - it's desi first. The name itself is a play on the inequality "x < y", where x is the global and y is the local. The focus is on the local, the familiar, the here and now.
 
 ## Why Bangalore?
 
@@ -25,3 +25,6 @@ Vye is not just another social media platform. It's a community space. It's a vi
 ## Looking Ahead
 
 While Vye is still in its infancy, the vision is clear. We're starting with Bangalore, but we won't stop there. The goal is to bring the Vye experience to cities across India and eventually, the world. Stay tuned for more updates on Vye, the social media platform that puts the local before the global.
+
+vye.lol Coming soon ...
+
