@@ -16,6 +16,5 @@ When I'm not knee-deep in tech, I relish exploring Bangalore's rich cultural mos
 
 If your interests align with AI, machine learning, or tech at large, I'd be thrilled to connect. Don't hesitate to touch base with me on [LinkedIn](https://www.linkedin.com/in/sauraav007/) for stimulating discussions, potential collaborations, or simply to exchange greetings.
 
-Thank you for dropping by. I'm excited to embark on this journey with you.
-
+Thank you for dropping by. 
 
