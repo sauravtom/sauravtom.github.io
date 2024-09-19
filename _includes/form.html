@@ -9,3 +9,38 @@
         <input type="hidden" name="redirectTo" value="https://example.com/contact/success">
         <input type="submit" value="Submit" />
     </form>
+
+<hr>
+
+<div class="container">
+  <div class="columns">
+    <div class="column is-half">
+      <form action="https://api.staticforms.xyz/submit" method="post" id="staticform">
+        <!-- Replace with your StaticForms accessKey -->
+        <input type="hidden" name="accessKey" value="5c78a93d-5d86-41c6-ac8b-eebf8f773ca9">
+        <input type="hidden" name="subject" value="Test from jsfiddle">
+        <!-- Replace with the url you want to redirect to -->
+        <input type="hidden" name="redirectTo" value="https://sauravtom.github.io">
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <input class="input" type="text" name="name" placeholder="Enter Your Name" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control">
+            <input class="input" type="email" name="email" placeholder="Enter Your Email" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Message</label>
+          <div class="control">
+            <textarea class="textarea" name="message" placeholder="Enter Your Message" required></textarea>
+          </div>
+        </div>
+        <button class="button is-primary" type="Submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
