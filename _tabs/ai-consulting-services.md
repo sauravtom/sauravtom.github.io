@@ -1,6 +1,6 @@
 ---
 # the default layout is 'page'
-icon: fas fa-info-circle
+icon: fas fa-check
 order: 6
 ---
 
@@ -9,10 +9,10 @@ I have been building search and recommendation systems for the past 3 years. I h
 
 I can help with:
 
-- **Data Scraping**: Need large volumes of data to train your bespoke AI model? I can construct data pipelines to scrape the necessary information. Fear not the wrath of web scrapers – if you can capture it in a screenshot, I can scrape it.
+- **Data Scraping**: Building data pipelines to scrape large amount of data to train your custom AI model.
   
 - **Performance Fine-Tuning**: If your AI model's performance needs a boost for a specific use case, I can step in to optimise it.
   
 - **AI-Business Synergy**: Need to scale your AI systems to align with your business objectives? I can help bridge that gap.
 
-Feel free to connect with me via email or [LinkedIn](https://www.linkedin.com/in/sauraav007/). I look forward to helping you harness the power of AI and machine learning.
+Feel free to connect with me via email or [LinkedIn](https://www.linkedin.com/in/sauraav007/). 
