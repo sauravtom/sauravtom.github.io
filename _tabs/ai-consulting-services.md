@@ -15,6 +15,6 @@ I can help with:
   
 - **AI-Business Synergy**: Need to scale your AI systems to align with your business objectives? I can help bridge that gap.
 
-Feel free to connect with me via email or [LinkedIn](https://www.linkedin.com/in/sauraav007/). 
+Feel free to connect with me via email, [LinkedIn](https://www.linkedin.com/in/sauraav007/) or through the form below.
 
 {% include form.html %}
