@@ -2,6 +2,8 @@
 
 - type: linkedin
   icon: "fab fa-linkedin"
+  url: 'https://www.linkedin.com/in/sauraav007/'
+  noblank: true # open link in current tab
 
 - type: email
   icon: "fas fa-envelope"
