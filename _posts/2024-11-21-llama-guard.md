@@ -3,7 +3,7 @@ title: llama guard
 date: 2024-11-21 21:30 +0530
 categories: [Large Language Models, AI Safety, Llama Guard, Meta AI, Natural Language Processing]
 tags: [LLMs, AI Safety, Llama Guard, Meta, NLP,  Prompt Engineering, Content Moderation, Misinformation, Toxicity, Bias,  AI Ethics]
-author: sauravtom
+author: Saurav Kumar
 ---
 
 ## Safeguarding LLM Conversations Using Llama Guard: A Hands-On Look
