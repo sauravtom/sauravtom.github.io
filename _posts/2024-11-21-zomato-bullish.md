@@ -1,6 +1,6 @@
 ---
 title: Zomato - More that just food delivery
-date: 2024-11-21 21:30 +0530
+date: 2024-11-21 +0530
 categories: [zomato, food delivery, bullish, stock-market]
 tags: [zomato, food delivery, bullish, stock-market]
 author: Saurav Kumar
