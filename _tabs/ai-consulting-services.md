@@ -6,8 +6,6 @@ order: 1
 
 ## My (Probably Genius) Machine Learning and AI Consulting Services (Because Your Startup Clearly Needs Help)
 
-Let's be honest, your startup's AI strategy probably looks like a Dilbert comic strip.  Lots of pointy-haired managers making nonsensical pronouncements, engineers duct-taping together code they barely understand, and a general air of impending doom.  Luckily for you, I'm here to fix it.
-
 For the past three years, I've been building search and recommendation systems – the kind that actually work, not the kind that suggest cat videos when you're shopping for car insurance. And for the last year, I've been rescuing hapless startups from the swirling vortex of AI mediocrity.  Consider me your outsourced CTO, minus the stock options and crippling existential dread.
 
 **Beyond MVPs (Because Minimum Viable Product Often Means Maximum Viable Pain):**
