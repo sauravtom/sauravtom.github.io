@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
 icon: fas fa-code
-order: 6
+order: 1
 ---
 
 ## My (Probably Genius) Machine Learning and AI Consulting Services (Because Your Startup Clearly Needs Help)
