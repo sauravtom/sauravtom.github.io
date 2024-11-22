@@ -8,6 +8,8 @@ author: Saurav Kumar
 
 ## Why I'm Bullish on Zomato
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The bullish case for Zomato and why <a href="https://twitter.com/Deepi?ref_src=twsrc%5Etfw">@deepi</a> is a marketing genius <a href="https://t.co/0Dib1yXTcQ">https://t.co/0Dib1yXTcQ</a> <a href="https://t.co/JJGbLZSKJo">pic.twitter.com/JJGbLZSKJo</a></p>&mdash; Saurav (@aimlbigdata) <a href="https://twitter.com/aimlbigdata/status/1859835955357811011?ref_src=twsrc%5Etfw">November 22, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 Zomato is more than just a food delivery app; it's a portfolio of habit-forming luxury apps.  
 Think about it: getting hot food delivered to your doorstep in 30 minutes and groceries in 10 is an absolute luxury.  
 We've become accustomed to this level of convenience, and it's hard to imagine going back.  
@@ -23,7 +25,7 @@ People are annoyed, sure, but they're still hooked.  That's a powerful position 
 
 Moreover, Zomato's CEO, Deepinder Goyal, is a master of public relations. 
 He understands the power of narrative and keeps Zomato in the headlines for all the right reasons.  
-Post-IPO, he's consistently generated positive buzz, whether it's through initiatives like the all-vegetarian delivery fleet or the much-discussed 20 lakh rupee salary for the Chief of Staff role.  
+Post-IPO, he's consistently generated positive buzz, whether it's through initiatives like the all-vegetarian delivery fleet or the much-discussed 20 lakh rupee fee for the Chief of Staff role.  
 This kind of savvy media presence keeps Zomato top-of-mind and strengthens the brand's connection with consumers.  He's playing the long game, building a brand that resonates with a broad audience.
 
 This strategic use of media reminds me of another highly successful CEO, Anand Mahindra of the Mahindra Group.  
