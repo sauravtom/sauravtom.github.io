@@ -6,7 +6,7 @@ tags: [zomato, food delivery, bullish, stock-market]
 author: Saurav Kumar
 ---
 
-## Why I'm Bullish on Zomato: More Than Just Food Delivery
+## Why I'm Bullish on Zomato
 
 Zomato is more than just a food delivery app; it's a portfolio of habit-forming luxury apps.  
 Think about it: getting hot food delivered to your doorstep in 30 minutes and groceries in 10 is an absolute luxury.  
