@@ -18,6 +18,6 @@ Sure, I can build your MVP.  But that's just the appetizer.  My real expertise l
 
 * **AI-Business Synergy (aka Making Your AI Actually Useful):**  Your AI strategy shouldn’t be a random collection of buzzwords and PowerPoint slides.  It needs to align with your business objectives.  I'll bridge the gap between your tech team and your business goals, translating complex technical jargon into plain English that even your marketing department can understand.  I'll make sure your AI is actually contributing to your bottom line, not just burning through VC funding like a bonfire of silicon and wasted potential.
 
-So, if you’re ready to take your startup from zero to AI hero, connect with me via email or book a time on my calendar ([link here](https://cal.com/sauraav)).  But be warned: I'm not cheap.  Talent like this comes at a premium.  Think of it as an investment in your sanity.  And probably your company's future.
+So, if you’re ready to take your startup from zero to AI hero, connect with me via email or book a time on my calendar ([link here](https://cal.com/sauraav)).
 
 {% include form.html %}
