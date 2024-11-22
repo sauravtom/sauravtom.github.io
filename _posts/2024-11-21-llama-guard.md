@@ -1,12 +1,10 @@
 ---
-title: llama guard
+title: Safeguarding LLM Conversations Using Llama Guard: A Hands-On Look
 date: 2024-11-21 +0530
 categories: [Large Language Models, AI Safety, Llama Guard, Meta AI, Natural Language Processing]
 tags: [LLMs, AI Safety, Llama Guard, Meta, NLP,  Prompt Engineering, Content Moderation, Misinformation, Toxicity, Bias,  AI Ethics]
 author: Saurav Kumar
 ---
-
-## Safeguarding LLM Conversations Using Llama Guard: A Hands-On Look
 
 Meta's recent introduction of Llama Guard aims to address a crucial concern in the rapidly evolving landscape of human-AI interaction: safety.  Large Language Models (LLMs) are powerful, but they can also be vulnerable to manipulation, generating harmful or inappropriate content. Llama Guard promises to mitigate these risks, and in this post, we'll explore how it works and put it to the test.
 
