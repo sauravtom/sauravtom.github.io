@@ -6,7 +6,7 @@ order: 1
 
 ## My (Probably Genius) Machine Learning and AI Consulting Services (Because Your Startup Clearly Needs Help)
 
-For the past three years, I've been building search and recommendation systems – the kind that actually work, not the kind that suggest cat videos when you're shopping for car insurance. And for the last year, I've been rescuing hapless startups from the swirling vortex of AI mediocrity.  Consider me your outsourced CTO, minus the stock options and crippling existential dread.
+For the past three years, I've been building AI apps and search/recommendation systems – the kind that actually work, not the kind that suggest cat videos when you're shopping for car insurance. And for the last year, I've been rescuing hapless startups from the swirling vortex of AI mediocrity.  Consider me your outsourced CTO, minus the stock options and crippling existential dread.
 
 **Beyond MVPs (Because Minimum Viable Product Often Means Maximum Viable Pain):**
 
