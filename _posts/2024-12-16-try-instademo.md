@@ -1,8 +1,8 @@
 ---
-title: introducing instaDemo
+title: Introducing InstaDemo
 date: 2024-12-26 +0530
-categories: [SaaS, Sales Enablement, Marketing Automation, Customer Experience, Lead Generation, Artificial Intelligence, Software Development, Business Productivity]
-tags: [AI, Artificial Intelligence, Sales, Sales Automation, Demo Automation, Lead Qualification, Customer Onboarding, Customer Engagement, Conversational AI, Chatbots, Instant Demo, Product Demo, SaaS]
+categories: [SaaS, Sales Enablement, Marketing Automation, Customer Experience, Lead Generation]
+tags: [AI, Artificial Intelligence, Sales, Sales Automation, Demo Automation, Lead Qualification]
 author: sauravtom
 ---
 
