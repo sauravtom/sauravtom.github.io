@@ -1,5 +1,5 @@
 ---
-title: Vye - desi twitter clone
+title: Steal this idea | Vye - desi twitter clone
 date: 2024-09-18 21:30 +0530
 categories: [Vye, Social Media, Localization]
 tags: [vye, social media, localization, Bangalore]
