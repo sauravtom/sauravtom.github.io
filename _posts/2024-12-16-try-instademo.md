@@ -1,5 +1,5 @@
 ---
-title: Introducing InstaDemo
+title: Rethinking product demos | Steal this Idea
 date: 2024-12-26 +0530
 categories: [SaaS, Sales Enablement, Marketing Automation, Customer Experience, Lead Generation]
 tags: [AI, Artificial Intelligence, Sales, Sales Automation, Demo Automation, Lead Qualification]
@@ -25,10 +25,10 @@ But what’s stopping them? You guessed it. No demo. No one to hold their hand a
 
 This is insane! This is a fundamental flaw in the fabric of reality!
 
-**Introducing InstaDemo: The Demo Antidote**
-That's why we created InstaDemo.
+**The Demo Antidote**
+There might be a better way to run demos.
 
-Imagine a world where your website has a little widget. A magical portal. A… well, it’s a widget. This widget lets any visitor launch an instant demo with an AI agent. This isn't some chatbot spouting canned responses. This is an AI that knows your product. It runs the demo, answers questions, and even sends you a summary of the call via email and Slack. Because two notifications are better than one, right?
+Imagine a world where your website has a little widget. A magical portal. A… well, it’s a widget. This widget lets any visitor launch an instant demo with an AI agent. This isn't some chatbot spouting canned responses. This is an AI that knows your product. It runs the demo over a screenshare, answers questions, and even sends you a summary of the call via email and Slack. Because two notifications are better than one, right?
 
 Oh, and you get a Slack notification when a demo starts, so if you happen to be awake at 3 a.m. on Christmas Eve (because you're a workaholic like me), you can jump in. Or not. Because you'll get the summary anyway.
 
