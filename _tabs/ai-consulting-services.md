@@ -4,7 +4,8 @@ icon: fas fa-code
 order: 1
 ---
 
-## My (Probably Genius) Machine Learning and AI Consulting Services (Because Your Startup Clearly Needs Help)
+## About Me
+I am a applied AI research engineer focused on applying LLMs to domain-specific data. I run an AI product studio [xAGI labs](https://github.com/xAGI-labs/) where we work on applying LLMs to a variety of business usecases. Prior to that, I worked on video compression models at Amazon and founded a developer tools startup backed by YC and Accel.
 
 For the past three years, I've been building AI apps and search/recommendation systems – the kind that actually work, not the kind that suggest cat videos when you're shopping for car insurance. And for the last year, I've been rescuing hapless startups from the swirling vortex of AI mediocrity.  Consider me your outsourced CTO, minus the stock options and crippling existential dread.
 
