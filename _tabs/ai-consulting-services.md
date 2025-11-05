@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
 icon: fas fa-code
-order: 1
+order: 3
 ---
 
 ## About Me

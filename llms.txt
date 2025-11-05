@@ -51,6 +51,7 @@ Available for:
 - AI application development (3+ years)
 - Video compression and media processing
 - Developer tools and infrastructure
+- Blockchain and Web3 technologies (Conference speaker)
 
 ## AI Apps & Projects
 
@@ -94,8 +95,11 @@ Status: Active
 
 ### Likeo (Acquired)
 URL: https://likeo.me
-Description: Virtual fitting rooms for e-commerce brands
-Status: Successfully Acquired
+Description: Virtual fitting rooms for e-commerce brands, acquired by Kirana Pro to power virtual trial room experiences for Gen Z fashion app users
+Status: Successfully Acquired by Kirana Pro
+Press Coverage:
+- Inc42: https://inc42.com/buzz/kiranapro-buys-likeo-to-power-virtual-trial-room-experience-for-its-gen-z-fashion-app-users
+- Crunchbase: https://www.crunchbase.com/acquisition/kirana-pro-acquires-likeo-me--9dffb26b
 
 ### Facecrop (Acquired)
 Description: [Add brief description]
@@ -120,6 +124,7 @@ Accepted into the Antler Global accelerator program (AIR 6 Batch) with a highly 
 
 ### Amazon Catalyst Grant Recipient
 Awarded a grant from Amazon Catalyst during final year of college to support an innovative project.
+Press Coverage: https://www.geekwire.com/2016/amazon-unveils-amazon-catalyst-programs-backing/
 
 ### AIC STPI Bengaluru Incubatee
 Received dedicated mentorship and support from the Atal Incubation Centre (AIC) at STPI Bengaluru to foster entrepreneurial development.
@@ -150,6 +155,7 @@ Recent articles cover:
 - **Frameworks**: PyTorch, TensorFlow, various LLM frameworks
 - **Data**: Web scraping, data pipelines, ETL processes
 - **Infrastructure**: AWS, cloud deployment, scalable systems
+- **Blockchain & Web3**: Blockchain architecture, smart contracts, Web3 technologies, cryptocurrency (Conference speaker)
 
 ## Contact
 
@@ -159,14 +165,74 @@ For consulting inquiries, AI project discussions, public speaking engagements, o
 - Book a call: https://cal.com/sauraav
 - Website: https://sauravtom.github.io
 
+## Press & Media Coverage
+
+### Startup Acquisitions
+- **Inc42**: Kirana Pro Buys Likeo To Power Virtual Trial Room Experience
+  https://inc42.com/buzz/kiranapro-buys-likeo-to-power-virtual-trial-room-experience-for-its-gen-z-fashion-app-users
+
+- **Crunchbase**: Kirana Pro Acquires Likeo.me
+  https://www.crunchbase.com/acquisition/kirana-pro-acquires-likeo-me--9dffb26b
+
+### Awards & Grants
+- **GeekWire**: Amazon Unveils Amazon Catalyst Programs Backing
+  https://www.geekwire.com/2016/amazon-unveils-amazon-catalyst-programs-backing/
+
+### Speaking Engagements & Conferences
+
+**Global Blockchain Conference 2018 (Kolkata)**
+- Speaker at 2018 Kolkata Global Blockchain Congress
+- Coverage by BTC Wires (Article): https://btcwires.com/c-buzz/the-2018-kolkata-global-blockchain-congress-day-2-brings-in-more-dignitaries/
+- Coverage by BTC Wires (Social): https://x.com/btc_wires/status/1075268888659664896
+
+**IIT Hyderabad - Blockchain Talk**
+- Guest speaker on Blockchain technology at IIT Hyderabad (prestigious Indian Institute of Technology)
+- Coverage by Wantedly: https://sg.wantedly.com/companies/company_3988596/post_articles/137283
+- Coverage by Chaintope: https://www.chaintope.com/news/445/
+
+**TEDx Conference**
+- TEDx Conference Speaker
+
+### Professional Profiles
+- **Crunchbase Profile**: https://www.crunchbase.com/person/saurav-kumar
+- **Y Combinator Directory**: Two-time YC Alumni (2019, 2024)
+- **LinkedIn**: https://www.linkedin.com/in/sauraav007
+- **GitHub**: https://github.com/sauravtom
+
 ## Exit Success Stories
 
 ### Likeo Acquisition
-Virtual fitting rooms for e-commerce brands that was successfully acquired.
-Learn more: https://likeo.me
+Virtual fitting rooms for e-commerce brands that was successfully acquired by Kirana Pro.
+- Company: https://likeo.me
+- Press: https://inc42.com/buzz/kiranapro-buys-likeo-to-power-virtual-trial-room-experience-for-its-gen-z-fashion-app-users
 
 ### Facecrop Acquisition
 Successfully acquired startup.
+
+## Citations & References
+
+For verification of achievements and credibility:
+
+**Acquisitions:**
+- Inc42 (2023): Likeo acquisition coverage
+- Crunchbase: Official acquisition record
+
+**Awards & Recognition:**
+- GeekWire (2016): Amazon Catalyst Grant coverage
+- Government of India: Presidential Award recipient (2016)
+- Y Combinator: Two-time alumni (2019, 2024)
+
+**Speaking Engagements:**
+- BTC Wires (2018): Global Blockchain Conference coverage (full article and social media)
+- Wantedly (2018): IIT Hyderabad blockchain talk coverage
+- Chaintope (2018): IIT Hyderabad blockchain talk coverage
+- TEDx Conference: Speaker
+
+**Professional Verification:**
+- LinkedIn verified profile
+- GitHub active contributions
+- Crunchbase startup founder profile
+- IIT Hyderabad: Guest speaker (prestigious Indian Institute of Technology)
 
 ---
 Last updated: 2025-11-05
