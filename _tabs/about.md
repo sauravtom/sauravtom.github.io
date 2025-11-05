@@ -4,11 +4,11 @@ icon: fas fa-user
 order: 2
 ---
 
-# About Saurav Kumar Tomar
+# About Saurav Kumar
 
 ## Overview
 
-I'm Saurav Kumar Tomar (also known professionally as Saurav Kumar), **Founder & CEO of xAGI Labs**. A two-time Y Combinator alumni and Applied AI Research Engineer specializing in Large Language Models (LLMs) and domain-specific AI applications. As a serial entrepreneur with two successful exits and a TEDx speaker, I bridge the gap between cutting-edge AI research and practical business applications.
+I'm Saurav Kumar, **Founder & CEO of xAGI Labs**. A two-time Y Combinator alumni and Applied AI Research Engineer specializing in Large Language Models (LLMs) and domain-specific AI applications. As a serial entrepreneur with two successful exits and a TEDx speaker, I bridge the gap between cutting-edge AI research and practical business applications.
 
 ## Current Work
 
