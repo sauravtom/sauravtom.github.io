@@ -42,17 +42,21 @@ permalink: /drive/
   <canvas id="c"></canvas>
   <div class="info">
     <h1>🏎️ HUE JUMPER 🏎️</h1>
-    <p>Mouse = Steer | Click = Brake | Double Click = Jump</p>
+    <p>Arrow Keys = Steer | Down = Brake | Up/Space = Jump</p>
     <p>The road ends at 1000...</p>
+    <p style="font-size: 11px; margin-top: 15px;">
+      Inspired by <a href="https://news.ycombinator.com/item?id=22524287" target="_blank" style="color: #4af; text-decoration: none;">Hue Jumper by Frank Force</a>
+    </p>
   </div>
 
   <script>
 //  HUE JUMPER - By Frank Force
-//  A 3D racing game in 2 Kilobytes!
+//  Modified with keyboard controls
+//  Original: https://news.ycombinator.com/item?id=22524287
 //
-//  Mouse = Steer
-//  Click = Brake
-//  Double Click = Jump
+//  Arrow Keys = Steer
+//  Down Arrow = Brake
+//  Up Arrow/Space = Jump
 //
 //  The road ends at 1000...
 
@@ -97,17 +101,55 @@ const maxDifficultySegment = 9e3; // how far until max difficulty
 const roadEnd = 1e4;              // how far until end of road
 
 //////////////////////////////////////////////////////////////////
-// mouse input
+// keyboard input
 //////////////////////////////////////////////////////////////////
 
-mouseDown     =
-mousePressed  =
-mouseUpFrames =
-mouseX        = 0;
+let keys = {};
+let brakePressed = false;
+let jumpPressed = false;
+let gameStarted = false;
+let playerX = 0;
 
-onmouseup   =e=> mouseDown = 0;
-onmousedown =e=> mousePressed ? mouseDown = 1 : mousePressed = 1;
-onmousemove =e=> mouseX = e.x/window.innerWidth*2 - 1;
+// keyboard event handlers
+onkeydown = e => {
+  keys[e.key] = true;
+  if (!gameStarted) gameStarted = true;
+
+  // jump on up arrow or space
+  if (e.key === 'ArrowUp' || e.key === ' ') {
+    if (!jumpPressed) {
+      jumpPressed = true;
+      jumpUpFrames = 0;
+    }
+    e.preventDefault();
+  }
+
+  // brake on down arrow
+  if (e.key === 'ArrowDown') {
+    brakePressed = true;
+    e.preventDefault();
+  }
+};
+
+onkeyup = e => {
+  keys[e.key] = false;
+  if (e.key === 'ArrowUp' || e.key === ' ') {
+    jumpPressed = false;
+  }
+  if (e.key === 'ArrowDown') {
+    brakePressed = false;
+  }
+};
+
+// calculate steering based on arrow keys
+function getSteerInput() {
+  let steer = 0;
+  if (keys['ArrowLeft']) steer -= 1;
+  if (keys['ArrowRight']) steer += 1;
+  return steer;
+}
+
+let jumpUpFrames = 0;
 
 //////////////////////////////////////////////////////////////////
 // math and helper functions
@@ -265,8 +307,8 @@ if (position.y < roadY)
 
   // apply player brake and accel
   velocity.z +=
-    mouseDown? playerBrake :
-    Lerp(velocity.z/maxSpeed, mousePressed*playerAccel, 0);
+    brakePressed? playerBrake :
+    Lerp(velocity.z/maxSpeed, gameStarted*playerAccel, 0);
 
   // check if off road
   if (Math.abs(position.x) > road[s].w)
@@ -277,19 +319,19 @@ if (position.y < roadY)
 }
 
 // update player turning and apply centrifugal force
-turn = Lerp(velocity.z/maxSpeed, mouseX * turnControl, 0);
+let steerInput = getSteerInput();
+turn = Lerp(velocity.z/maxSpeed, steerInput * turnControl, 0);
 velocity.x +=
   velocity.z * turn -
   velocity.z ** 2 * centrifugal * roadX;
 
 // update jump
-if (airFrame++<6 && time
-  && mouseDown && mouseUpFrames && mouseUpFrames<9)
+if (jumpPressed && airFrame < 6 && time && jumpUpFrames < 9)
 {
   velocity.y += jumpAccel; // apply jump velocity
   airFrame = 9;            // prevent jumping again
 }
-mouseUpFrames = mouseDown? 0 : mouseUpFrames+1;
+jumpUpFrames = jumpPressed? jumpUpFrames+1 : 0;
 
 // pitch down with vertical velocity when in air
 airPercent = (position.y-roadY) / 99;
@@ -493,7 +535,7 @@ for( i = drawDistance; i--; )        // iterate in reverse
 // draw and update time
 //////////////////////////////////////////////////////////////////
 
-if (mousePressed)
+if (gameStarted)
 {
   time = Clamp(time - timeDelta, 0, maxTime); // update time
   DrawText(Math.ceil(time), 9);               // show time
