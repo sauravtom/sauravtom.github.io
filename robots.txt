@@ -1,0 +1,32 @@
+# robots.txt for sauravtom.github.io
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# AI/LLM specific crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Reference to llms.txt for LLM discoverability
+# See: https://llmstxt.org/
+Sitemap: https://sauravtom.github.io/sitemap.xml
+Allow: /llms.txt

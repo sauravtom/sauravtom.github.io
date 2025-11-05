@@ -42,6 +42,94 @@
       color: #23272f;
       letter-spacing: 0.01em;
     }
+    .description {
+      font-size: 0.95rem;
+      color: #6b7280;
+      line-height: 1.5;
+      padding: 8px 32px 12px 32px;
+      border-bottom: 1px solid #ececec;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      animation: fadeIn 0.2s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 28px;
+      border-radius: 12px;
+      max-width: 500px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      animation: slideIn 0.3s ease;
+    }
+    @keyframes slideIn {
+      from {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .modal-header {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #23272f;
+      margin-bottom: 16px;
+    }
+    .modal-link {
+      background: #f8fafc;
+      padding: 12px;
+      border-radius: 6px;
+      word-break: break-all;
+      font-family: 'Monaco', 'Courier New', monospace;
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-bottom: 16px;
+    }
+    .modal-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+    .modal-btn {
+      padding: 8px 20px;
+      border-radius: 7px;
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.18s;
+    }
+    .copy-btn {
+      background: #4f46e5;
+      color: #fff;
+    }
+    .copy-btn:hover {
+      background: #4338ca;
+    }
+    .copy-btn:active {
+      background: #3730a3;
+    }
+    .close-btn {
+      background: #e5e7eb;
+      color: #374151;
+    }
+    .close-btn:hover {
+      background: #d1d5db;
+    }
     .ql-toolbar.ql-snow {
       border: none;
       padding: 0;
@@ -110,6 +198,14 @@
         padding-left: 12px;
         padding-right: 12px;
       }
+      .description {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .modal-content {
+        margin: 30% auto;
+        max-width: 90%;
+      }
     }
   </style>
 </head>
@@ -119,6 +215,9 @@
       <span class="title">Notepad2000</span>
       <div id="quill-toolbar"></div>
     </div>
+    <div class="description">
+      A minimalist notepad that stores your notes in the URL. Write up to 2000 compressed characters and share your notes by simply sharing the link. No server, no database—everything is encoded in the URL hash.
+    </div>
     <div class="editor-area">
       <div id="editor"></div>
     </div>
@@ -126,6 +225,18 @@
       <span class="counter" id="counter">2000 characters remaining</span>
       <button class="share-btn" id="share-btn">Share</button>
       <span class="copied" id="copied-msg" style="display:none;">Copied!</span>
+    </div>
+  </div>
+
+  <!-- Share Modal -->
+  <div id="share-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">Share Your Note</div>
+      <div class="modal-link" id="share-link"></div>
+      <div class="modal-buttons">
+        <button class="modal-btn close-btn" id="close-modal">Close</button>
+        <button class="modal-btn copy-btn" id="copy-link">Copy Link</button>
+      </div>
     </div>
   </div>
 
@@ -210,12 +321,39 @@
     // Initial load
     loadFromHash();
 
-    // Share button
+    // Modal elements
+    const modal = document.getElementById('share-modal');
+    const shareLink = document.getElementById('share-link');
+    const closeModal = document.getElementById('close-modal');
+    const copyLinkBtn = document.getElementById('copy-link');
+
+    // Share button - show modal
     shareBtn.onclick = function() {
+      shareLink.textContent = window.location.href;
+      modal.style.display = 'block';
+    };
+
+    // Close modal
+    closeModal.onclick = function() {
+      modal.style.display = 'none';
+    };
+
+    // Copy link from modal
+    copyLinkBtn.onclick = function() {
       navigator.clipboard.writeText(window.location.href).then(function() {
-        copiedMsg.style.display = 'inline';
-        setTimeout(() => copiedMsg.style.display = 'none', 1200);
+        copyLinkBtn.textContent = 'Copied!';
+        setTimeout(() => {
+          copyLinkBtn.textContent = 'Copy Link';
+          modal.style.display = 'none';
+        }, 1000);
       });
+    };
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
     };
   </script>
 </body>

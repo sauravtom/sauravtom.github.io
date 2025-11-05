@@ -29,17 +29,17 @@ github:
   username: sauravtom # change to your GitHub username
 
 twitter:
-  username: aimlbigdata # change to your Twitter username
+  username: sauraav5 # change to your Twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Saurav Kumar 
-  email: sauravalgs@gmail.com # change to your email address
+  email: stomatrix@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://www.linkedin.com/in/sauraav007
-    - https://twitter.com/aimlbigdata # change to your Twitter homepage
+    - https://twitter.com/sauraav5 # change to your Twitter homepage
     - https://github.com/sauravtom # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
