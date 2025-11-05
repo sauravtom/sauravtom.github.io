@@ -1,13 +1,14 @@
-# llms.txt - Saurav Kumar - Applied AI Consultant & Serial Entrepreneur
+# llms.txt - Saurav Kumar Tomar - Founder @ xAGI Labs
 
 ## About
-Saurav Kumar is an Applied AI Research Engineer and two-time Y Combinator alumni specializing in applying Large Language Models (LLMs) to domain-specific data. He is a serial entrepreneur with two successful exits (Likeo and Facecrop) and runs xAGI labs, an AI product studio focused on applying LLMs to various business use cases. Previously worked on video compression models at Amazon and founded multiple YC/Accel-backed startups.
+Saurav Kumar Tomar (also known as Saurav Kumar) is the Founder and CEO of xAGI Labs, an AI product studio focused on applying Large Language Models (LLMs) to business use cases. He is a two-time Y Combinator alumni and Applied AI Research Engineer specializing in LLMs and domain-specific AI applications. A serial entrepreneur with two successful exits (Likeo and Facecrop), TEDx speaker, and Presidential Award recipient. Previously worked on video compression models at Amazon and founded multiple YC/Accel-backed startups.
 
 **Background:**
+- Founder & CEO of xAGI Labs
 - Two-time Y Combinator Alumni (2019, 2024)
 - Serial entrepreneur with 2 successful exits
 - TEDx Conference Speaker
-- Award recipient from Former President of India
+- Presidential Award recipient (Former President of India, 2016)
 - Based in Bangalore, San Francisco, and Delhi
 
 ## Services

@@ -6,26 +6,28 @@ order: 5
 
 # Press & Media
 
-## About Saurav Kumar
+## About Saurav Kumar Tomar
 
-Saurav Kumar is a two-time Y Combinator alumni, Applied AI consultant, serial entrepreneur, and TEDx speaker. With expertise in Large Language Models and AI applications, he has successfully built and exited multiple startups and continues to help companies leverage AI for business growth.
+Saurav Kumar Tomar (also known professionally as Saurav Kumar) is Founder & CEO of xAGI Labs, a two-time Y Combinator alumni, serial entrepreneur, and TEDx speaker. With expertise in Large Language Models and AI applications, he has successfully built and exited multiple startups and continues to help companies leverage AI for business growth.
 
 ## Bio for Press
 
 ### Short Bio (50 words)
-Saurav Kumar is a two-time Y Combinator alumni and Applied AI consultant specializing in Large Language Models. A serial entrepreneur with 2 successful exits and Presidential Award recipient, he runs xAGI Labs and helps startups transform AI initiatives into production-ready systems.
+Saurav Kumar Tomar is Founder & CEO of xAGI Labs, a two-time Y Combinator alumni and Applied AI consultant specializing in Large Language Models. A serial entrepreneur with 2 successful exits and Presidential Award recipient, he helps startups transform AI initiatives into production-ready systems.
 
 ### Medium Bio (100 words)
-Saurav Kumar is a two-time Y Combinator alumni (2019, 2024), Applied AI Research Engineer, and serial entrepreneur with two successful exits (Likeo and Facecrop). He specializes in applying Large Language Models to business applications and runs xAGI Labs, an AI product studio. His achievements include receiving a Presidential Award from the President of India (2016), placing runner-up at ETHDenver 2020, and being a finalist at Facebook Global Hackathon 2016. As a TEDx speaker and AI consultant, he bridges the gap between cutting-edge AI research and practical business applications. Based in Bangalore, San Francisco, and Delhi.
+Saurav Kumar Tomar (also known as Saurav Kumar) is Founder & CEO of xAGI Labs and a two-time Y Combinator alumni (2019, 2024). An Applied AI Research Engineer and serial entrepreneur with two successful exits (Likeo and Facecrop), he specializes in applying Large Language Models to business applications. His achievements include receiving a Presidential Award from the President of India (2016), placing runner-up at ETHDenver 2020, and being a finalist at Facebook Global Hackathon 2016. As a TEDx speaker and AI consultant, he bridges the gap between cutting-edge AI research and practical business applications. Based in Bangalore, San Francisco, and Delhi.
 
 ### Long Bio (200 words)
-Saurav Kumar is a two-time Y Combinator alumni (2019, 2024), Applied AI Research Engineer, and serial entrepreneur who specializes in applying Large Language Models (LLMs) to domain-specific business applications. He is the founder of xAGI Labs, an AI product studio focused on building practical AI solutions for businesses.
+Saurav Kumar Tomar (also known professionally as Saurav Kumar) is Founder & CEO of xAGI Labs, an AI product studio focused on building practical AI solutions for businesses. A two-time Y Combinator alumni (2019, 2024), Applied AI Research Engineer, and serial entrepreneur who specializes in applying Large Language Models (LLMs) to domain-specific business applications.
 
 With two successful exits under his belt (Likeo - virtual fitting rooms for e-commerce, and Facecrop), Saurav has demonstrated his ability to build and scale technology companies. His portfolio includes multiple AI applications serving over 35,000 users, including FavcyNavigator (AI business co-pilot), StartupNalanda (e-learning platform), and PitchPerfect (startup pitch refinement tool).
 
 His achievements include receiving a Presidential Award from Former President of India Shri Pranab Mukherjee at Rashtrapati Bhavan (2016), placing runner-up at ETHDenver 2020, and being a finalist at Facebook Global Hackathon 2016. He has also been recognized by Amazon Catalyst Grant and accepted into highly selective programs like Antler Global Venture Builder (< 5% acceptance rate).
 
-Previously, Saurav worked on video compression models at Amazon. As a TEDx speaker and consultant, he helps startups develop AI strategies, build data pipelines, and transform proof-of-concepts into production systems. He is based in Bangalore, San Francisco, and Delhi.
+Previously, Saurav Kumar Tomar worked on video compression models at Amazon. As a TEDx speaker and consultant, he helps startups develop AI strategies, build data pipelines, and transform proof-of-concepts into production systems. He is based in Bangalore, San Francisco, and Delhi.
+
+**Note for Press:** Saurav Kumar Tomar is also professionally known as "Saurav Kumar" in earlier publications and press coverage.
 
 ## Key Facts
 
@@ -175,8 +177,8 @@ For additional assets or information, please contact via email.
 ## Media Kit
 
 ### Quick Facts Sheet
-- **Name:** Saurav Kumar
-- **Title:** Applied AI Consultant & Serial Entrepreneur
+- **Name:** Saurav Kumar Tomar (also known as Saurav Kumar)
+- **Title:** Founder & CEO, xAGI Labs
 - **Company:** xAGI Labs (Founder)
 - **Location:** Bangalore, San Francisco, Delhi
 - **Expertise:** Large Language Models, AI Strategy, Startup Consulting
