@@ -1,7 +1,7 @@
 ---
 layout: page
-icon: fas fa-rocket
-order: 3
+title: Projects
+permalink: /projects/
 ---
 
 # Projects
