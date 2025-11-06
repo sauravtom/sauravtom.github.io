@@ -5,7 +5,7 @@ Saurav Kumar is the Founder and CEO of xAGI Labs, an AI product studio focused o
 
 **Background:**
 - Founder & CEO of xAGI Labs
-- Two-time Y Combinator Alumni (2019, 2024)
+- Two-time Y Combinator Alumni (2019, 2020)
 - Serial entrepreneur with 2 successful exits
 - TEDx Conference Speaker
 - Presidential Award recipient (Former President of India, 2016)
@@ -93,6 +93,7 @@ Status: Active
 URL: https://bugshoot.com
 Description: AI-powered PR review GitHub bot for automated code review
 Status: Active
+Featured: Stripe Developers YouTube Channel - https://www.youtube.com/watch?v=LEgYHyvGNlg
 
 ### Likeo (Acquired)
 URL: https://likeo.me
@@ -108,7 +109,7 @@ Status: Successfully Acquired
 
 ## Awards & Achievements
 
-### Y Combinator Alumnus (2019, 2024)
+### Y Combinator Alumnus (2019, 2020)
 Two-time acceptance into the highly competitive Y Combinator accelerator program, which has an acceptance rate of less than 1%.
 
 ### Presidential Award Recipient (2016)
@@ -179,6 +180,12 @@ For consulting inquiries, AI project discussions, public speaking engagements, o
 - **GeekWire**: Amazon Unveils Amazon Catalyst Programs Backing
   https://www.geekwire.com/2016/amazon-unveils-amazon-catalyst-programs-backing/
 
+### Product Features & Media
+
+**bugshoot - Stripe Developers YouTube Channel**
+- Featured on Stripe Developers official YouTube channel
+- Video: https://www.youtube.com/watch?v=LEgYHyvGNlg
+
 ### Speaking Engagements & Conferences
 
 **Global Blockchain Conference 2018 (Kolkata)**
@@ -196,7 +203,7 @@ For consulting inquiries, AI project discussions, public speaking engagements, o
 
 ### Professional Profiles
 - **Crunchbase Profile**: https://www.crunchbase.com/person/saurav-kumar
-- **Y Combinator Directory**: Two-time YC Alumni (2019, 2024)
+- **Y Combinator Directory**: Two-time YC Alumni (2019, 2020)
 - **LinkedIn**: https://www.linkedin.com/in/sauraav007
 - **GitHub**: https://github.com/sauravtom
 
@@ -221,7 +228,10 @@ For verification of achievements and credibility:
 **Awards & Recognition:**
 - GeekWire (2016): Amazon Catalyst Grant coverage
 - Government of India: Presidential Award recipient (2016)
-- Y Combinator: Two-time alumni (2019, 2024)
+- Y Combinator: Two-time alumni (2019, 2020)
+
+**Product Features:**
+- Stripe Developers (YouTube): bugshoot featured on official Stripe Developers channel
 
 **Speaking Engagements:**
 - BTC Wires (2018): Global Blockchain Conference coverage (full article and social media)

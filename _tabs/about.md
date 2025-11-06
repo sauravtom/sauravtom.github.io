@@ -8,7 +8,7 @@ order: 2
 
 ## Overview
 
-I'm Saurav Kumar, **Founder & CEO of xAGI Labs**. A two-time Y Combinator alumni and Applied AI Research Engineer specializing in Large Language Models (LLMs) and domain-specific AI applications. As a serial entrepreneur with two successful exits and a TEDx speaker, I bridge the gap between cutting-edge AI research and practical business applications.
+I'm Saurav Kumar, **Founder & CEO of xAGI Labs**. A two-time Y Combinator alumni (2019, 2020) and Applied AI Research Engineer specializing in Large Language Models (LLMs) and domain-specific AI applications. As a serial entrepreneur with two successful exits and a TEDx speaker, I bridge the gap between cutting-edge AI research and practical business applications.
 
 ## Current Work
 
@@ -33,12 +33,12 @@ For the past three years, I've been building AI applications and search/recommen
 - **[StartupNalanda](https://startupnalanda.com)** - E-learning platform, create courses from prompts (5,000+ courses created)
 - **[PitchPerfect](https://pitch.favcynavigator.com)** - AI tool for refining startup pitches (10,000+ pitches analyzed)
 - **[Gamenzo](https://gamenzo.xyz)** - Create games from voice commands
-- **[bugshoot](https://bugshoot.com)** - PR review GitHub bot for automated code reviews
+- **[bugshoot](https://bugshoot.com)** - PR review GitHub bot for automated code reviews (Featured on [Stripe Developers YouTube](https://www.youtube.com/watch?v=LEgYHyvGNlg))
 - **[Notepad2000](https://sauravtom.github.io/notepad2000/)** - Minimalist notepad with URL-based storage
 
 ## Awards & Recognition
 
-### Y Combinator Alumnus (2019, 2024)
+### Y Combinator Alumnus (2019, 2020)
 Two-time acceptance into the highly competitive Y Combinator accelerator program, which has an acceptance rate of less than 1%.
 
 ### Presidential Award Recipient (2016)

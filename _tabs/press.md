@@ -13,13 +13,13 @@ Saurav Kumar is Founder & CEO of xAGI Labs, a two-time Y Combinator alumni, seri
 ## Bio for Press
 
 ### Short Bio (50 words)
-Saurav Kumar is Founder & CEO of xAGI Labs, a two-time Y Combinator alumni and Applied AI consultant specializing in Large Language Models. A serial entrepreneur with 2 successful exits and Presidential Award recipient, he helps startups transform AI initiatives into production-ready systems.
+Saurav Kumar is Founder & CEO of xAGI Labs, a two-time Y Combinator alumni (2019, 2020) and Applied AI consultant specializing in Large Language Models. A serial entrepreneur with 2 successful exits and Presidential Award recipient, he helps startups transform AI initiatives into production-ready systems.
 
 ### Medium Bio (100 words)
-Saurav Kumar is Founder & CEO of xAGI Labs and a two-time Y Combinator alumni (2019, 2024). An Applied AI Research Engineer and serial entrepreneur with two successful exits (Likeo and Facecrop), he specializes in applying Large Language Models to business applications. His achievements include receiving a Presidential Award from the President of India (2016), placing runner-up at ETHDenver 2020, and being a finalist at Facebook Global Hackathon 2016. As a TEDx speaker and AI consultant, he bridges the gap between cutting-edge AI research and practical business applications. Based in Bangalore, San Francisco, and Delhi.
+Saurav Kumar is Founder & CEO of xAGI Labs and a two-time Y Combinator alumni (2019, 2020). An Applied AI Research Engineer and serial entrepreneur with two successful exits (Likeo and Facecrop), he specializes in applying Large Language Models to business applications. His achievements include receiving a Presidential Award from the President of India (2016), placing runner-up at ETHDenver 2020, and being a finalist at Facebook Global Hackathon 2016. As a TEDx speaker and AI consultant, he bridges the gap between cutting-edge AI research and practical business applications. Based in Bangalore, San Francisco, and Delhi.
 
 ### Long Bio (200 words)
-Saurav Kumar is Founder & CEO of xAGI Labs, an AI product studio focused on building practical AI solutions for businesses. A two-time Y Combinator alumni (2019, 2024), Applied AI Research Engineer, and serial entrepreneur who specializes in applying Large Language Models (LLMs) to domain-specific business applications.
+Saurav Kumar is Founder & CEO of xAGI Labs, an AI product studio focused on building practical AI solutions for businesses. A two-time Y Combinator alumni (2019, 2020), Applied AI Research Engineer, and serial entrepreneur who specializes in applying Large Language Models (LLMs) to domain-specific business applications.
 
 With two successful exits under his belt (Likeo - virtual fitting rooms for e-commerce, and Facecrop), Saurav has demonstrated his ability to build and scale technology companies. His portfolio includes multiple AI applications serving over 35,000 users, including FavcyNavigator (AI business co-pilot), StartupNalanda (e-learning platform), and PitchPerfect (startup pitch refinement tool).
 
@@ -29,7 +29,7 @@ Previously, Saurav Kumar worked on video compression models at Amazon. As a TEDx
 
 ## Key Facts
 
-- **Two-time Y Combinator Alumni** (2019, 2024) - < 1% acceptance rate
+- **Two-time Y Combinator Alumni** (2019, 2020) - < 1% acceptance rate
 - **Serial Entrepreneur** - 2 successful exits (Likeo, Facecrop)
 - **Presidential Award Recipient** (2016) - Honored by President of India
 - **TEDx Conference Speaker**
@@ -45,7 +45,7 @@ Previously, Saurav Kumar worked on video compression models at Amazon. As a TEDx
 - **AIC STPI Bengaluru Incubatee** - Atal Incubation Centre
 
 ### Accelerators & Programs
-- **Y Combinator (2019, 2024)** - Two-time acceptance (< 1% acceptance rate)
+- **Y Combinator (2019, 2020)** - Two-time acceptance (< 1% acceptance rate)
 - **Antler Global Venture Builder (Bengaluru)** - AIR 6 Batch (< 5% acceptance rate)
 
 ### Hackathons & Competitions
@@ -82,7 +82,7 @@ AI product studio focused on applying LLMs to business use cases. Building pract
 - **StartupNalanda** - E-learning platform (5,000+ courses)
 - **PitchPerfect** - Startup pitch refinement (10,000+ pitches)
 - **Gamenzo** - Create games from voice
-- **bugshoot** - GitHub PR review bot
+- **bugshoot** - GitHub PR review bot (Featured on Stripe Developers YouTube)
 
 ## Speaking & Events
 
@@ -110,6 +110,12 @@ AI product studio focused on applying LLMs to business use cases. Building pract
 - Coverage: [Wantedly](https://sg.wantedly.com/companies/company_3988596/post_articles/137283) | [Chaintope](https://www.chaintope.com/news/445/)
 
 ## In The News
+
+### Product Features & Media
+
+**bugshoot Featured on Stripe Developers (YouTube)**
+- Featured on official Stripe Developers YouTube channel
+- **YouTube Video**: [Watch on YouTube](https://www.youtube.com/watch?v=LEgYHyvGNlg)
 
 ### Acquisition Coverage
 
