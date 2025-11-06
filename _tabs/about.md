@@ -8,7 +8,7 @@ order: 2
 
 ## Overview
 
-I'm Saurav Kumar, **Founder & CEO of xAGI Labs**. A two-time Y Combinator alumni (2019, 2020) and Applied AI Research Engineer specializing in Large Language Models (LLMs) and domain-specific AI applications. As a serial entrepreneur with two successful exits and a TEDx speaker, I bridge the gap between cutting-edge AI research and practical business applications.
+I'm Saurav Kumar, **Founder & CEO of xAGI Labs**. A two-time Y Combinator alumni (2019, 2020) and Applied AI Research Engineer specializing in Large Language Models (LLMs) and domain-specific AI applications. Featured on Google DeepMind podcast and Stripe Developers. As a serial entrepreneur with two successful exits and a TEDx speaker, I bridge the gap between cutting-edge AI research and practical business applications.
 
 ## Current Work
 
@@ -95,6 +95,16 @@ As a **TEDx Conference Speaker** and technology conference speaker, I'm availabl
 **IIT Hyderabad - Guest Lecture on Blockchain (2018)**
 - Invited guest speaker on Blockchain technology at Indian Institute of Technology Hyderabad
 - Coverage: [Wantedly](https://sg.wantedly.com/companies/company_3988596/post_articles/137283) | [Chaintope](https://www.chaintope.com/news/445/)
+
+## Media Coverage & Features
+
+**Google DeepMind Podcast**
+- Featured on Google DeepMind podcast
+- [Watch on YouTube](https://www.youtube.com/watch?v=kx8p7acIyYM)
+
+**Stripe Developers YouTube**
+- bugshoot featured on official Stripe Developers channel
+- [Watch on YouTube](https://www.youtube.com/watch?v=LEgYHyvGNlg)
 
 ## Consulting Services
 

@@ -8,18 +8,18 @@ order: 5
 
 ## About Saurav Kumar
 
-Saurav Kumar is Founder & CEO of xAGI Labs, a two-time Y Combinator alumni, serial entrepreneur, and TEDx speaker. With expertise in Large Language Models and AI applications, he has successfully built and exited multiple startups and continues to help companies leverage AI for business growth.
+Saurav Kumar is Founder & CEO of xAGI Labs, a two-time Y Combinator alumni, serial entrepreneur, and TEDx speaker. Featured on Google DeepMind podcast and Stripe Developers. With expertise in Large Language Models and AI applications, he has successfully built and exited multiple startups and continues to help companies leverage AI for business growth.
 
 ## Bio for Press
 
 ### Short Bio (50 words)
-Saurav Kumar is Founder & CEO of xAGI Labs, a two-time Y Combinator alumni (2019, 2020) and Applied AI consultant specializing in Large Language Models. A serial entrepreneur with 2 successful exits and Presidential Award recipient, he helps startups transform AI initiatives into production-ready systems.
+Saurav Kumar is Founder & CEO of xAGI Labs, a two-time Y Combinator alumni (2019, 2020) and Applied AI consultant specializing in Large Language Models. Featured on Google DeepMind podcast and Stripe Developers. A serial entrepreneur with 2 successful exits and Presidential Award recipient, he helps startups transform AI initiatives into production-ready systems.
 
 ### Medium Bio (100 words)
-Saurav Kumar is Founder & CEO of xAGI Labs and a two-time Y Combinator alumni (2019, 2020). An Applied AI Research Engineer and serial entrepreneur with two successful exits (Likeo and Facecrop), he specializes in applying Large Language Models to business applications. His achievements include receiving a Presidential Award from the President of India (2016), placing runner-up at ETHDenver 2020, and being a finalist at Facebook Global Hackathon 2016. As a TEDx speaker and AI consultant, he bridges the gap between cutting-edge AI research and practical business applications. Based in Bangalore, San Francisco, and Delhi.
+Saurav Kumar is Founder & CEO of xAGI Labs and a two-time Y Combinator alumni (2019, 2020). Featured on Google DeepMind podcast and Stripe Developers. An Applied AI Research Engineer and serial entrepreneur with two successful exits (Likeo and Facecrop), he specializes in applying Large Language Models to business applications. His achievements include receiving a Presidential Award from the President of India (2016), placing runner-up at ETHDenver 2020, and being a finalist at Facebook Global Hackathon 2016. As a TEDx speaker and AI consultant, he bridges the gap between cutting-edge AI research and practical business applications. Based in Bangalore, San Francisco, and Delhi.
 
 ### Long Bio (200 words)
-Saurav Kumar is Founder & CEO of xAGI Labs, an AI product studio focused on building practical AI solutions for businesses. A two-time Y Combinator alumni (2019, 2020), Applied AI Research Engineer, and serial entrepreneur who specializes in applying Large Language Models (LLMs) to domain-specific business applications.
+Saurav Kumar is Founder & CEO of xAGI Labs, an AI product studio focused on building practical AI solutions for businesses. A two-time Y Combinator alumni (2019, 2020), Applied AI Research Engineer, and serial entrepreneur who specializes in applying Large Language Models (LLMs) to domain-specific business applications. Featured on Google DeepMind podcast and Stripe Developers YouTube channel.
 
 With two successful exits under his belt (Likeo - virtual fitting rooms for e-commerce, and Facecrop), Saurav has demonstrated his ability to build and scale technology companies. His portfolio includes multiple AI applications serving over 35,000 users, including FavcyNavigator (AI business co-pilot), StartupNalanda (e-learning platform), and PitchPerfect (startup pitch refinement tool).
 
@@ -112,6 +112,10 @@ AI product studio focused on applying LLMs to business use cases. Building pract
 ## In The News
 
 ### Product Features & Media
+
+**Featured on Google DeepMind Podcast**
+- Featured on Google DeepMind podcast
+- **YouTube Video**: [Watch on YouTube](https://www.youtube.com/watch?v=kx8p7acIyYM)
 
 **bugshoot Featured on Stripe Developers (YouTube)**
 - Featured on official Stripe Developers YouTube channel

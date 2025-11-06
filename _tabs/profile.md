@@ -12,7 +12,7 @@ order: 4
 
 ## Professional Bio
 
-Saurav Kumar is the Founder and CEO of xAGI Labs, an AI product studio focused on applying Large Language Models to business applications. As a two-time Y Combinator alumni (2019, 2020), he brings extensive experience in building and scaling AI-powered companies.
+Saurav Kumar is the Founder and CEO of xAGI Labs, an AI product studio focused on applying Large Language Models to business applications. Featured on Google DeepMind podcast and Stripe Developers. As a two-time Y Combinator alumni (2019, 2020), he brings extensive experience in building and scaling AI-powered companies.
 
 A serial entrepreneur with two successful exits (Likeo, acquired by Kirana Pro, and Facecrop), Saurav has demonstrated his ability to build technology companies that solve real-world problems. His portfolio includes multiple AI applications serving over 35,000 users globally, including FavcyNavigator (AI business co-pilot with 10,000+ users), StartupNalanda (e-learning platform with 5,000+ courses created), and PitchPerfect (startup pitch refinement tool with 10,000+ pitches analyzed).
 
@@ -99,6 +99,8 @@ Saurav Kumar delivers engaging talks on cutting-edge technology and entrepreneur
 ## Press Coverage
 
 ### Product Features & Media
+- **Google DeepMind Podcast** - Featured on Google DeepMind podcast
+  - [Watch Video](https://www.youtube.com/watch?v=kx8p7acIyYM)
 - **Stripe Developers YouTube** - bugshoot featured on official Stripe Developers channel
   - [Watch Video](https://www.youtube.com/watch?v=LEgYHyvGNlg)
 
@@ -182,7 +184,7 @@ For high-resolution photos and additional media assets, please contact via email
 - Y Combinator (2x)
 - Presidential Award from Government of India
 - ETHDenver Runner-Up
-- Featured in Inc42, GeekWire, BTC Wires, Crunchbase, Stripe Developers YouTube
+- Featured in Google DeepMind, Stripe Developers, Inc42, GeekWire, BTC Wires, Crunchbase
 
 ---
 

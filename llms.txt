@@ -182,6 +182,10 @@ For consulting inquiries, AI project discussions, public speaking engagements, o
 
 ### Product Features & Media
 
+**DeepMind Podcast Feature**
+- Featured on Google DeepMind podcast
+- Video: https://www.youtube.com/watch?v=kx8p7acIyYM
+
 **bugshoot - Stripe Developers YouTube Channel**
 - Featured on Stripe Developers official YouTube channel
 - Video: https://www.youtube.com/watch?v=LEgYHyvGNlg
@@ -231,6 +235,7 @@ For verification of achievements and credibility:
 - Y Combinator: Two-time alumni (2019, 2020)
 
 **Product Features:**
+- DeepMind (YouTube): Featured on Google DeepMind podcast
 - Stripe Developers (YouTube): bugshoot featured on official Stripe Developers channel
 
 **Speaking Engagements:**
