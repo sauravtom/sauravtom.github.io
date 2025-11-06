@@ -1,7 +1,7 @@
 ---
-# the default layout is 'page'
-icon: fas fa-id-card
-order: 4
+layout: page
+title: Speaker Profile
+permalink: /profile/
 ---
 
 # Speaker Profile: Saurav Kumar

@@ -1,7 +1,7 @@
 ---
-# the default layout is 'page'
-icon: fas fa-newspaper
-order: 5
+layout: page
+title: Press & Media
+permalink: /press/
 ---
 
 # Press & Media
