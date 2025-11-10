@@ -1,5 +1,5 @@
 ---
-title: How Product Management is Evolving in the Age of AI (Or: The Job Description That Ate All The Other Job Descriptions)
+title: Product Management at AI native companies
 date: 2025-11-10 +0530
 categories: [Product Management, AI, Career, Tech Industry]
 tags: [Product Management, AI, Career Development, Engineering, Design, Multidisciplinary, Future of Work]
