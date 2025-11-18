@@ -6,6 +6,112 @@ tags: [zomato, food delivery, bullish, stock-market]
 author: Saurav Kumar
 ---
 
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="zomato-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E23744; stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#CB1A28; stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="phone-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34495E; stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#2C3E50; stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .title-text {
+      fill: #E23744;
+      font-size: 26px;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+    .subtitle-text {
+      fill: #2C3E50;
+      font-size: 16px;
+      text-anchor: middle;
+    }
+    .phone-body {
+      fill: url(#phone-gradient);
+      stroke: #1ABC9C;
+      stroke-width: 3;
+    }
+    .screen {
+      fill: white;
+    }
+    .app-icon {
+      fill: url(#zomato-red);
+    }
+    .food-icon {
+      fill: #F39C12;
+    }
+    .price-text {
+      fill: #2ECC71;
+      font-size: 20px;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+    .complaint-text {
+      fill: #E74C3C;
+      font-size: 14px;
+      font-style: italic;
+    }
+    .still-ordering {
+      fill: #2ECC71;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .luxury-text {
+      fill: #8E44AD;
+      font-size: 18px;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+  </style>
+
+  <!-- Title -->
+  <text class="title-text" x="400" y="30">Zomato: Habit-Forming Luxury</text>
+  <text class="subtitle-text" x="400" y="55">They Complain. They Still Order. That's Product-Market Fit.</text>
+
+  <!-- Phone mockup -->
+  <rect class="phone-body" x="150" y="80" width="180" height="200" rx="15" />
+  <rect class="screen" x="165" y="100" width="150" height="160" rx="5" />
+
+  <!-- Zomato app icon -->
+  <circle class="app-icon" cx="240" cy="130" r="20" />
+  <text x="240" y="137" fill="white" font-size="18px" font-weight="bold" text-anchor="middle">Z</text>
+
+  <!-- Food delivery illustration -->
+  <g transform="translate(190, 160)">
+    <!-- Pizza slice -->
+    <path class="food-icon" d="M 50 40 L 30 70 L 70 70 Z" />
+    <circle cx="45" cy="55" r="3" fill="#E74C3C" />
+    <circle cx="55" cy="60" r="3" fill="#E74C3C" />
+  </g>
+
+  <!-- Delivery time -->
+  <text x="240" y="220" fill="#2ECC71" font-size="16px" font-weight="bold" text-anchor="middle">🕐 30 mins</text>
+  <text x="240" y="240" fill="#34495E" font-size="12px" text-anchor="middle">Platform Fee: ₹5</text>
+
+  <!-- Arrow -->
+  <path d="M 350 180 L 420 180" stroke="#E74C3C" stroke-width="3" fill="none" marker-end="url(#arrow-zomato)" />
+
+  <marker id="arrow-zomato" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#E74C3C" />
+  </marker>
+
+  <!-- Customer reactions -->
+  <g transform="translate(430, 120)">
+    <text class="complaint-text" x="0" y="0">"Platform fee is too high!"</text>
+    <text class="complaint-text" x="0" y="25">"Delivery charges again?"</text>
+    <text class="complaint-text" x="0" y="50">"This is getting expensive..."</text>
+    <text class="still-ordering" x="0" y="85">✓ Still orders 5x a week</text>
+    <text class="still-ordering" x="0" y="105">✓ Can't live without it</text>
+  </g>
+
+  <!-- Bottom message -->
+  <text class="luxury-text" x="400" y="290">Luxury = Priceless (or close to it)</text>
+</svg>
+
 ## Why I'm Bullish on Zomato
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The bullish case for Zomato and why <a href="https://twitter.com/Deepi?ref_src=twsrc%5Etfw">@deepi</a> is a marketing genius <a href="https://t.co/0Dib1yXTcQ">https://t.co/0Dib1yXTcQ</a> <a href="https://t.co/JJGbLZSKJo">pic.twitter.com/JJGbLZSKJo</a></p>&mdash; Saurav (@aimlbigdata) <a href="https://twitter.com/aimlbigdata/status/1859835955357811011?ref_src=twsrc%5Etfw">November 22, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

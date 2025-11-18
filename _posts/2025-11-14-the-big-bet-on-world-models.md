@@ -6,6 +6,121 @@ tags: [AI, World Models, Fei-Fei Li, Yann LeCun, DeepMind, Spatial Intelligence,
 author: sauravtom
 ---
 
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="world-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498DB; stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#2ECC71; stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="interface-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E74C3C; stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#E67E22; stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="simulator-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9B59B6; stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8E44AD; stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="cognition-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1ABC9C; stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#16A085; stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .center-circle {
+      fill: url(#world-gradient);
+      stroke: #2980B9;
+      stroke-width: 3;
+    }
+    .branch-circle {
+      stroke-width: 2.5;
+    }
+    .interface-circle {
+      fill: url(#interface-gradient);
+      stroke: #C0392B;
+    }
+    .simulator-circle {
+      fill: url(#simulator-gradient);
+      stroke: #8E44AD;
+    }
+    .cognition-circle {
+      fill: url(#cognition-gradient);
+      stroke: #16A085;
+    }
+    .branch-line {
+      stroke-width: 2.5;
+      stroke-dasharray: 5,3;
+    }
+    .center-text {
+      font-size: 18px;
+      fill: white;
+      font-weight: bold;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .label-text {
+      font-size: 14px;
+      fill: #34495E;
+      font-weight: 600;
+      text-anchor: middle;
+    }
+    .subtitle-text {
+      font-size: 11px;
+      fill: #7F8C8D;
+      text-anchor: middle;
+    }
+    .icon-element {
+      stroke-width: 2;
+      fill: none;
+    }
+  </style>
+
+  <!-- Center: World Models -->
+  <circle class="center-circle" cx="400" cy="200" r="60" />
+  <text class="center-text" x="400" y="195">WORLD</text>
+  <text class="center-text" x="400" y="210">MODELS</text>
+
+  <!-- Branch 1: Interface (top-left) -->
+  <line class="branch-line" x1="360" y1="165" x2="150" y2="80" stroke="#E74C3C" />
+  <circle class="branch-circle interface-circle" cx="150" cy="80" r="50" />
+  <g transform="translate(150, 70)">
+    <!-- 3D cube icon -->
+    <path class="icon-element" stroke="white" d="M -15,-10 L 0,-18 L 15,-10 M -15,-10 L -15,10 M 15,-10 L 15,10 M -15,10 L 0,18 L 15,10 M 0,-18 L 0,2" />
+  </g>
+  <text class="center-text" x="150" y="95" style="font-size: 13px;">INTERFACE</text>
+  <text class="label-text" x="150" y="145">Gaussian Splats</text>
+  <text class="subtitle-text" x="150" y="160">3D Asset Generation</text>
+
+  <!-- Branch 2: Simulator (top-right) -->
+  <line class="branch-line" x1="440" y1="165" x2="650" y2="80" stroke="#9B59B6" />
+  <circle class="branch-circle simulator-circle" cx="650" cy="80" r="50" />
+  <g transform="translate(650, 70)">
+    <!-- Game controller icon -->
+    <rect class="icon-element" stroke="white" x="-18" y="-8" width="36" height="16" rx="4" />
+    <circle stroke="white" fill="white" cx="-8" cy="0" r="2" />
+    <circle stroke="white" fill="white" cx="8" cy="0" r="2" />
+  </g>
+  <text class="center-text" x="650" y="95" style="font-size: 13px;">SIMULATOR</text>
+  <text class="label-text" x="650" y="145">Genie 3</text>
+  <text class="subtitle-text" x="650" y="160">Training Environments</text>
+
+  <!-- Branch 3: Cognition (bottom) -->
+  <line class="branch-line" x1="400" y1="260" x2="400" y2="350" stroke="#1ABC9C" />
+  <circle class="branch-circle cognition-circle" cx="400" cy="350" r="50" />
+  <g transform="translate(400, 340)">
+    <!-- Brain/network icon -->
+    <circle class="icon-element" stroke="white" cx="-10" cy="-5" r="4" />
+    <circle class="icon-element" stroke="white" cx="10" cy="-5" r="4" />
+    <circle class="icon-element" stroke="white" cx="0" cy="8" r="4" />
+    <line class="icon-element" stroke="white" x1="-10" y1="-5" x2="10" y2="-5" />
+    <line class="icon-element" stroke="white" x1="-10" y1="-5" x2="0" y2="8" />
+    <line class="icon-element" stroke="white" x1="10" y1="-5" x2="0" y2="8" />
+  </g>
+  <text class="center-text" x="400" y="365" style="font-size: 13px;">COGNITION</text>
+  <text class="label-text" x="400" y="42">JEPA</text>
+  <text class="subtitle-text" x="400" y="27">Internal Predictive State</text>
+</svg>
+
 AI has finally reached the "we need to model the whole world" phase. But here's the twist: the phrase "world model" now means three completely different things, depending on who's talking.
 
 In the same season, Fei-Fei Li's World Labs shipped Marble, a "multimodal world model" that turns prompts into walkable 3D scenes in your browser. Reports emerged that Meta's chief AI scientist Yann LeCun is leaving to build a world-model startup of his own. And DeepMind is calling its new interactive video engine Genie 3 a world model as well.

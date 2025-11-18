@@ -6,6 +6,108 @@ tags: [AI, Artificial Intelligence, Sales, Sales Automation, Demo Automation, Le
 author: sauravtom
 ---
 
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="clock-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498DB; stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#2980B9; stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="ai-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2ECC71; stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#27AE60; stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .clock-face {
+      fill: url(#clock-gradient);
+      stroke: #2980B9;
+      stroke-width: 3;
+    }
+    .clock-number {
+      fill: white;
+      font-size: 20px;
+      font-weight: bold;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .clock-hand {
+      stroke: white;
+      stroke-width: 3;
+      stroke-linecap: round;
+    }
+    .ai-bot {
+      fill: url(#ai-gradient);
+      stroke: #27AE60;
+      stroke-width: 2.5;
+    }
+    .title-text {
+      fill: #2C3E50;
+      font-size: 22px;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+    .subtitle-text {
+      fill: #7F8C8D;
+      font-size: 16px;
+      text-anchor: middle;
+    }
+    .label-text {
+      fill: #E74C3C;
+      font-size: 18px;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+    .feature-text {
+      fill: #34495E;
+      font-size: 14px;
+    }
+  </style>
+
+  <!-- Title -->
+  <text class="title-text" x="400" y="30">Instant Demos, Anytime</text>
+  <text class="subtitle-text" x="400" y="55">No Scheduling. No Waiting. Just Demo.</text>
+
+  <!-- Clock on left -->
+  <circle class="clock-face" cx="180" cy="170" r="80" />
+  <text class="clock-number" x="180" y="110">12</text>
+  <text class="clock-number" x="240" y="170">3</text>
+  <text class="clock-number" x="180" y="230">6</text>
+  <text class="clock-number" x="120" y="170">9</text>
+
+  <!-- Clock hands pointing to 3 AM -->
+  <line class="clock-hand" x1="180" y1="170" x2="180" y2="130" stroke-width="4" />
+  <line class="clock-hand" x1="180" y1="170" x2="220" y2="170" stroke-width="3" />
+  <circle cx="180" cy="170" r="8" fill="white" />
+
+  <text class="label-text" x="180" y="270">3 AM on Christmas</text>
+
+  <!-- AI Bot on right -->
+  <g transform="translate(580, 120)">
+    <!-- Bot head -->
+    <rect class="ai-bot" x="-40" y="-30" width="80" height="80" rx="15" />
+    <!-- Eyes -->
+    <circle cx="-15" cy="-5" r="8" fill="white" />
+    <circle cx="15" cy="-5" r="8" fill="white" />
+    <circle cx="-15" cy="-5" r="4" fill="#2C3E50" />
+    <circle cx="15" cy="-5" r="4" fill="#2C3E50" />
+    <!-- Smile -->
+    <path d="M -20 15 Q 0 25, 20 15" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" />
+    <!-- Antenna -->
+    <line x1="0" y1="-30" x2="0" y2="-45" stroke="#27AE60" stroke-width="3" />
+    <circle cx="0" cy="-50" r="5" fill="#E74C3C" />
+  </g>
+
+  <text class="label-text" x="580" y="210">AI Agent Ready</text>
+
+  <!-- Features list at bottom -->
+  <g transform="translate(250, 265)">
+    <text class="feature-text" x="0" y="0">✓ 24/7 Availability</text>
+    <text class="feature-text" x="150" y="0">✓ Instant Demos</text>
+    <text class="feature-text" x="280" y="0">✓ No Calendar Hell</text>
+  </g>
+</svg>
+
 **The Agony of Demos (and Why They Must Die)**
 So I used to run a… thing. A startup. We made… stuff. And to sell this stuff, we had to do demos.
 

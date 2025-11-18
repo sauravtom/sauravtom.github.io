@@ -6,6 +6,101 @@ tags: [astrology, sports, predictions, Vedic Astrology, game predictions, karma,
 author: Saurav Kumar
 ---
 
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="zodiac-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9B59B6; stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#8E44AD; stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="sports-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E67E22; stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#D35400; stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .title-text {
+      fill: #8E44AD;
+      font-size: 24px;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+    .subtitle-text {
+      fill: #7F8C8D;
+      font-size: 14px;
+      text-anchor: middle;
+    }
+    .zodiac-circle {
+      fill: none;
+      stroke: url(#zodiac-gradient);
+      stroke-width: 4;
+    }
+    .planet {
+      fill: #F39C12;
+    }
+    .sports-ball {
+      fill: url(#sports-gradient);
+      stroke: #D35400;
+      stroke-width: 2;
+    }
+    .technique-text {
+      fill: #34495E;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    .star {
+      fill: #F39C12;
+    }
+  </style>
+
+  <!-- Title -->
+  <text class="title-text" x="400" y="30">Sports Betting Meets Vedic Astrology</text>
+  <text class="subtitle-text" x="400" y="55">Predicting Game Outcomes Through Planetary Positions</text>
+
+  <!-- Zodiac wheel on left -->
+  <g transform="translate(180, 170)">
+    <circle class="zodiac-circle" cx="0" cy="0" r="70" />
+    <circle class="zodiac-circle" cx="0" cy="0" r="50" stroke-dasharray="5,3" />
+
+    <!-- Planets -->
+    <circle class="planet" cx="50" cy="0" r="6" />
+    <circle class="planet" cx="-35" cy="35" r="6" />
+    <circle class="planet" cx="0" cy="-50" r="6" />
+    <circle class="planet" cx="35" cy="35" r="6" />
+
+    <!-- Stars -->
+    <g class="star">
+      <path d="M 0,-70 L 2,-78 L 0,-86 L -2,-78 Z" />
+      <path d="M 0,-70 L 8,-72 L 16,-70 L 8,-68 Z" />
+    </g>
+
+    <text x="0" y="95" fill="#8E44AD" font-size="14px" font-weight="bold" text-anchor="middle">BIRTH CHART</text>
+    <text x="0" y="110" fill="#7F8C8D" font-size="11px" text-anchor="middle">Game Start Time</text>
+  </g>
+
+  <!-- Plus sign -->
+  <text x="350" y="180" fill="#95A5A6" font-size="36px" font-weight="bold">+</text>
+
+  <!-- Sports ball on right -->
+  <g transform="translate(580, 170)">
+    <circle class="sports-ball" cx="0" cy="0" r="50" />
+    <path d="M -30,0 Q -20,-25 0,-30 Q 20,-25 30,0" stroke="#D35400" stroke-width="2" fill="none" />
+    <path d="M -30,0 Q -20,25 0,30 Q 20,25 30,0" stroke="#D35400" stroke-width="2" fill="none" />
+    <circle cx="0" cy="0" r="8" fill="#D35400" />
+
+    <text x="0" y="75" fill="#E67E22" font-size="14px" font-weight="bold" text-anchor="middle">GAME OUTCOME</text>
+    <text x="0" y="90" fill="#7F8C8D" font-size="11px" text-anchor="middle">Winner Prediction</text>
+  </g>
+
+  <!-- Techniques list at bottom -->
+  <g transform="translate(150, 245)">
+    <text class="technique-text" x="0" y="0">📊 Victory Houses</text>
+    <text class="technique-text" x="150" y="0">🌙 Navamsha Analysis</text>
+    <text class="technique-text" x="320" y="0">⭐ Cuspal Strength</text>
+    <text class="technique-text" x="470" y="0">🔮 Sublords</text>
+  </g>
+</svg>
+
 ## Techniques for Predicting Sports Outcomes with Vedic Astrology
 
 I recently picked up a book , [Gambler'S Dharma, Sports betting with vedic astrology by Simon Chokisky](https://archive.org/details/gamblersdharmasp0000chok).
