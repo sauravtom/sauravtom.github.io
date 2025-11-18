@@ -6,6 +6,132 @@ tags: [LLMs, Markov Chains, GPT, Claude, Gemini, Attention Mechanisms, Embedding
 author: sauravtom
 ---
 
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+
+  <defs>
+    <marker
+      id="arrowhead"
+      viewBox="0 0 10 10"
+      refX="8"
+      refY="5"
+      markerWidth="6"
+      markerHeight="6"
+      orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3498DB" />
+    </marker>
+
+    <linearGradient id="llm-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8E44AD; stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#3498DB; stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .markov-node {
+      fill: #3498DB;
+      stroke: #2980B9;
+      stroke-width: 2;
+    }
+    .markov-text {
+      font-size: 18px;
+      fill: white;
+      font-weight: bold;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .arrow-line {
+      stroke: #3498DB;
+      stroke-width: 3;
+      marker-end: url(#arrowhead);
+    }
+    .label-text {
+      font-size: 16px;
+      fill: #34495E;
+      font-weight: 600;
+      text-anchor: middle;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .vs-text {
+      font-size: 24px;
+      fill: #7F8C8D;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+    .llm-cloud {
+      fill: url(#llm-gradient);
+    }
+    .llm-line {
+      stroke: #FFFFFF;
+      stroke-width: 0.5;
+      opacity: 0.6;
+    }
+    .llm-node {
+      fill: #FFFFFF;
+      opacity: 0.9;
+    }
+  </style>
+
+  <g id="markov-chain" transform="translate(0, 40)">
+
+    <circle class="markov-node" cx="100" cy="100" r="25" />
+    <circle class="markov-node" cx="180" cy="100" r="25" />
+    <circle class="markov-node" cx="260" cy="100" r="25" />
+
+    <line class="arrow-line" x1="125" y1="100" x2="155" y2="100" />
+    <line class="arrow-line" x1="205" y1="100" x2="235" y2="100" />
+
+    <text class="markov-text" x="100" y="100">A</text>
+    <text class="markov-text" x="180" y="100">B</text>
+    <text class="markov-text" x="260" y="100">C</text>
+
+    <g id="magnifier" transform="translate(230, 155) rotate(30)">
+      <circle cx="0" cy="0" r="18" fill="none" stroke="#7F8C8D" stroke-width="3" />
+      <line x1="0" y1="20" x2="0" y2="35" stroke="#7F8C8D" stroke-width="4" stroke-linecap="round" />
+    </g>
+
+    <text class="label-text" x="180" y="220">Markov Chains</text>
+  </g>
+
+  <text class="vs-text" x="400" y="220">VS.</text>
+
+  <g id="llm" transform="translate(400, 20)">
+
+    <path class="llm-cloud" d="M 236.4 46.8 C 228.2 20.3 201.8 0 170 0 C 139.6 0 114.3 18.7 104.9 44.2 C 101.4 43.1 97.7 42.5 93.8 42.5 C 72.8 42.5 55.7 58.4 53.1 79 C 23.2 82.3 0 107.4 0 137.5 C 0 169.3 26.2 195.5 58 195.5 L 232 195.5 C 271.8 195.5 304 163.3 304 123.5 C 304 85.5 274 53.6 236.4 46.8 Z" transform="translate(70, 40) scale(0.9)" />
+
+    <g id="llm-network" transform="translate(70, 40) scale(0.9)">
+      <circle class="llm-node" cx="100" cy="100" r="3" />
+      <circle class="llm-node" cx="150" cy="120" r="3" />
+      <circle class="llm-node" cx="200" cy="90" r="3" />
+      <circle class="llm-node" cx="80" cy="150" r="3" />
+      <circle class="llm-node" cx="130" cy="160" r="3" />
+      <circle class="llm-node" cx="180" cy="140" r="3" />
+      <circle class="llm-node" cx="220" cy="165" r="3" />
+      <circle class="llm-node" cx="60" cy="80" r="3" />
+      <circle class="llm-node" cx="240" cy="110" r="3" />
+      <circle class="llm-node" cx="160" cy="60" r="3" />
+      <circle class="llm-node" cx="120" cy="50" r="3" />
+
+      <line class="llm-line" x1="100" y1="100" x2="200" y2="90" />
+      <line class="llm-line" x1="100" y1="100" x2="80" y2="150" />
+      <line class="llm-line" x1="100" y1="100" x2="220" y2="165" />
+      <line class="llm-line" x1="150" y1="120" x2="60" y2="80" />
+      <line class="llm-line" x1="150" y1="120" x2="240" y2="110" />
+      <line class="llm-line" x1="200" y1="90" x2="130" y2="160" />
+      <line class="llm-line" x1="200" y1="90" x2="120" y2="50" />
+      <line class="llm-line" x1="80" y1="150" x2="180" y2="140" />
+      <line class="llm-line" x1="80" y1="150" x2="160" y2="60" />
+      <line class="llm-line" x1="130" y1="160" x2="60" y2="80" />
+      <line class="llm-line" x1="220" y1="165" x2="240" y2="110" />
+      <line class="llm-line" x1="220" y1="165" x2="120" y2="50" />
+      <line class="llm-line" x1="160" y1="60" x2="240" y2="110" />
+    </g>
+
+    <text class="label-text" x="220" y="220">Large Language Models (LLMs)</text>
+  </g>
+
+</svg>
+
 If you've ever dabbled in text generation, you know the thrill: feed a system some text, and watch it spit out eerily coherent new sentences. Both Markov chains and Large Language Models (LLMs) can do this—which has led many people to wonder if modern AI is just an overcomplicated version of a technique we've had since the 1900s.
 
 Spoiler alert: **they're related, but calling an LLM a "fancy Markov chain" is like calling a jet engine a "fancy windmill."** Sure, both involve spinning things, but the engineering? Completely different league.

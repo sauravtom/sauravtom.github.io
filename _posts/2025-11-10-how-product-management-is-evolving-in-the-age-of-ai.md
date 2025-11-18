@@ -6,6 +6,118 @@ tags: [Product Management, AI, Career Development, Engineering, Design, Multidis
 author: sauravtom
 ---
 
+<svg width="800" height="350" viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="pm-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498DB; stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#2980B9; stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="eng-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E74C3C; stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#C0392B; stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="design-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9B59B6; stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8E44AD; stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="builder-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2ECC71; stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#F39C12; stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#E74C3C; stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .role-box {
+      stroke-width: 2.5;
+    }
+    .role-text {
+      fill: white;
+      font-size: 18px;
+      font-weight: bold;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .skill-text {
+      fill: white;
+      font-size: 12px;
+      text-anchor: middle;
+    }
+    .arrow {
+      stroke: #34495E;
+      stroke-width: 3;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+    .title-text {
+      fill: #2C3E50;
+      font-size: 16px;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+    .era-label {
+      fill: #7F8C8D;
+      font-size: 14px;
+      font-weight: 600;
+      text-anchor: middle;
+    }
+  </style>
+
+  <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#34495E" />
+  </marker>
+
+  <!-- Title -->
+  <text class="title-text" x="400" y="25">The Collapse of the Talent Stack</text>
+
+  <!-- Old World (Before AI) -->
+  <text class="era-label" x="150" y="60">BEFORE AI</text>
+
+  <!-- PM Box -->
+  <rect class="role-box" x="50" y="80" width="200" height="80" rx="8" fill="url(#pm-gradient)" stroke="#2980B9" />
+  <text class="role-text" x="150" y="110">PM</text>
+  <text class="skill-text" x="150" y="135">Requirements</text>
+  <text class="skill-text" x="150" y="150">Strategy</text>
+
+  <!-- Engineer Box -->
+  <rect class="role-box" x="50" y="180" width="200" height="80" rx="8" fill="url(#eng-gradient)" stroke="#C0392B" />
+  <text class="role-text" x="150" y="210">Engineer</text>
+  <text class="skill-text" x="150" y="235">Code</text>
+  <text class="skill-text" x="150" y="250">Build</text>
+
+  <!-- Designer Box -->
+  <rect class="role-box" x="50" y="280" width="200" height="60" rx="8" fill="url(#design-gradient)" stroke="#8E44AD" />
+  <text class="role-text" x="150" y="305">Designer</text>
+  <text class="skill-text" x="150" y="325">UI/UX</text>
+
+  <!-- Arrow -->
+  <path class="arrow" d="M 280 180 L 350 180 L 380 180" />
+  <text x="315" y="170" fill="#E74C3C" font-size="24px" font-weight="bold">AI</text>
+
+  <!-- New World (After AI) -->
+  <text class="era-label" x="550" y="60">AI ERA</text>
+
+  <!-- Multidimensional Builder -->
+  <rect class="role-box" x="420" y="120" width="260" height="180" rx="8" fill="url(#builder-gradient)" stroke="#27AE60" />
+  <text class="role-text" x="550" y="150" style="font-size: 20px;">MULTIDIMENSIONAL</text>
+  <text class="role-text" x="550" y="175" style="font-size: 20px;">BUILDER</text>
+
+  <!-- Skills Grid -->
+  <g transform="translate(430, 195)">
+    <text class="skill-text" x="10" y="15">✓ Prototype</text>
+    <text class="skill-text" x="130" y="15">✓ Code</text>
+    <text class="skill-text" x="10" y="35">✓ Design</text>
+    <text class="skill-text" x="130" y="35">✓ Talk to Users</text>
+    <text class="skill-text" x="10" y="55">✓ Ship Fast</text>
+    <text class="skill-text" x="130" y="55">✓ Iterate</text>
+    <text class="skill-text" x="10" y="75">✓ Strategy</text>
+    <text class="skill-text" x="130" y="75">✓ Execute</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="400" y="330" fill="#7F8C8D" font-size="13px" text-anchor="middle" font-style="italic">The boundaries between roles are evaporating</text>
+</svg>
+
 Let me tell you about the most fascinating identity crisis happening in tech right now: Product Management is evolving so fast that by the time you update your LinkedIn title, it's already obsolete. And by "evolving," I mean the role is basically consuming every other role like some kind of corporate Pac-Man while simultaneously questioning its own existence.
 
 Here's what's happening to PMs in the age of AI, and it's both terrifying and exhilarating in the way that watching your career transform in real-time tends to be.

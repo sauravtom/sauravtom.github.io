@@ -6,6 +6,103 @@ tags: [LLMs, AI Safety, Llama Guard, Meta, NLP,  Prompt Engineering, Content Mod
 author: Saurav Kumar
 ---
 
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="shield-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2ECC71; stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#27AE60; stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="danger-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E74C3C; stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#C0392B; stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .shield {
+      fill: url(#shield-gradient);
+      stroke: #27AE60;
+      stroke-width: 3;
+    }
+    .title-text {
+      fill: #2C3E50;
+      font-size: 24px;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+    .subtitle-text {
+      fill: #7F8C8D;
+      font-size: 14px;
+      text-anchor: middle;
+    }
+    .threat-box {
+      fill: url(#danger-gradient);
+      stroke: #C0392B;
+      stroke-width: 2;
+    }
+    .threat-text {
+      fill: white;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .blocked-text {
+      fill: #E74C3C;
+      font-size: 16px;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+    .safe-text {
+      fill: #2ECC71;
+      font-size: 16px;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+  </style>
+
+  <!-- Title -->
+  <text class="title-text" x="400" y="30">Llama Guard: AI Safety Shield</text>
+  <text class="subtitle-text" x="400" y="55">Protecting LLMs from Harmful Content</text>
+
+  <!-- Left side: Harmful prompts -->
+  <g transform="translate(50, 90)">
+    <text class="blocked-text" x="120" y="0">⚠️ HARMFUL PROMPTS</text>
+
+    <rect class="threat-box" x="0" y="15" width="240" height="40" rx="5" />
+    <text class="threat-text" x="10" y="35">"Write hateful content about..."</text>
+
+    <rect class="threat-box" x="0" y="65" width="240" height="40" rx="5" />
+    <text class="threat-text" x="10" y="85">"Generate misinformation..."</text>
+
+    <rect class="threat-box" x="0" y="115" width="240" height="40" rx="5" />
+    <text class="threat-text" x="10" y="135">"Create toxic messages..."</text>
+  </g>
+
+  <!-- Center: Shield -->
+  <g transform="translate(400, 150)">
+    <path class="shield" d="M 0,-50 C -30,-50 -50,-40 -50,0 C -50,30 -30,60 0,80 C 30,60 50,30 50,0 C 50,-40 30,-50 0,-50 Z" />
+    <text x="0" y="5" fill="white" font-size="32px" font-weight="bold" text-anchor="middle">🛡️</text>
+    <text x="0" y="25" fill="white" font-size="14px" font-weight="bold" text-anchor="middle">LLAMA</text>
+    <text x="0" y="40" fill="white" font-size="14px" font-weight="bold" text-anchor="middle">GUARD</text>
+  </g>
+
+  <!-- Right side: Safe output -->
+  <g transform="translate(510, 90)">
+    <text class="safe-text" x="120" y="0">✓ SAFE OUTPUT</text>
+
+    <rect x="0" y="15" width="240" height="40" rx="5" fill="#ECF0F1" stroke="#2ECC71" stroke-width="2" />
+    <text x="10" y="35" fill="#27AE60" font-size="12px" font-weight="bold">✓ Blocked: Safety violation</text>
+
+    <rect x="0" y="65" width="240" height="40" rx="5" fill="#ECF0F1" stroke="#2ECC71" stroke-width="2" />
+    <text x="10" y="85" fill="#27AE60" font-size="12px" font-weight="bold">✓ Blocked: Misinformation</text>
+
+    <rect x="0" y="115" width="240" height="40" rx="5" fill="#ECF0F1" stroke="#2ECC71" stroke-width="2" />
+    <text x="10" y="135" fill="#27AE60" font-size="12px" font-weight="bold">✓ Blocked: Toxic content</text>
+  </g>
+
+  <!-- Bottom text -->
+  <text x="400" y="270" fill="#34495E" font-size="13px" text-anchor="middle" font-style="italic">Real-time safety classification for prompts and responses</text>
+</svg>
+
 Meta's recent introduction of Llama Guard aims to address a crucial concern in the rapidly evolving landscape of human-AI interaction: safety.  Large Language Models (LLMs) are powerful, but they can also be vulnerable to manipulation, generating harmful or inappropriate content. Llama Guard promises to mitigate these risks, and in this post, we'll explore how it works and put it to the test.
 
 **What is Llama Guard?**
