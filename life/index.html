@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Life in Weeks</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .title-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .title-section h1 {
+            font-size: 32px;
+            color: #333;
+        }
+
+        .title-section .life {
+            color: #000;
+        }
+
+        .title-section .weeks {
+            color: #dc143c;
+        }
+
+        .view-mode-selector {
+            position: relative;
+            display: inline-block;
+        }
+
+        .view-mode-btn {
+            background: white;
+            border: 2px solid #333;
+            padding: 8px 30px 8px 15px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 4px;
+            color: #dc143c;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .view-mode-btn::after {
+            content: '▼';
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12px;
+            color: #333;
+        }
+
+        .view-mode-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 2px solid #333;
+            border-top: none;
+            z-index: 100;
+        }
+
+        .view-mode-dropdown.active {
+            display: block;
+        }
+
+        .view-mode-option {
+            padding: 10px 15px;
+            cursor: pointer;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .view-mode-option:hover {
+            background: #f0f0f0;
+            color: #dc143c;
+        }
+
+        .birth-inputs {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .birth-inputs label {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .birth-inputs select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
+        }
+
+        .birth-inputs select:focus {
+            outline: none;
+            border-color: #dc143c;
+        }
+
+        .visualization-container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow-x: auto;
+        }
+
+        .grid-wrapper {
+            position: relative;
+            display: inline-block;
+            min-width: 100%;
+        }
+
+        .axis-label {
+            position: absolute;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .axis-label.week-label {
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .axis-label.week-label::after {
+            content: '→';
+            font-size: 24px;
+        }
+
+        .axis-label.age-label {
+            left: -50px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+            transform-origin: center;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .axis-label.age-label::after {
+            content: '↓';
+            font-size: 24px;
+            transform: rotate(90deg);
+        }
+
+        .week-numbers {
+            display: flex;
+            margin-left: 40px;
+            margin-bottom: 5px;
+        }
+
+        .week-number {
+            flex: 0 0 12px;
+            text-align: center;
+            font-size: 10px;
+            color: #666;
+        }
+
+        .week-number.highlight {
+            font-weight: bold;
+            color: #000;
+        }
+
+        .grid-container {
+            display: flex;
+            gap: 0;
+        }
+
+        .age-labels {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            padding-right: 10px;
+        }
+
+        .age-label-item {
+            height: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 10px;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .age-label-item.highlight {
+            font-weight: bold;
+            color: #000;
+        }
+
+        .life-grid {
+            display: grid;
+            grid-template-columns: repeat(52, 12px);
+            gap: 1px;
+            background: #f0f0f0;
+            padding: 1px;
+        }
+
+        .week-cell {
+            width: 12px;
+            height: 12px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: white;
+        }
+
+        .week-cell.lived {
+            background: #8b0000;
+            border-color: #8b0000;
+        }
+
+        .week-cell.selecting {
+            background: #4CAF50 !important;
+            border-color: #4CAF50 !important;
+        }
+
+        .week-cell.has-note {
+            background: #ffd700;
+            border-color: #ffd700;
+        }
+
+        .week-cell.lived.has-note {
+            background: #ff6b6b;
+            border-color: #ff6b6b;
+        }
+
+        .week-cell:hover {
+            transform: scale(1.3);
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .info-panel {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            max-width: 300px;
+            display: none;
+        }
+
+        .info-panel.active {
+            display: block;
+        }
+
+        .info-panel h3 {
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .info-panel .note-text {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .info-panel .date-info {
+            font-size: 12px;
+            color: #999;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .modal-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .modal-subtitle {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #dc143c;
+            box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.1);
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            margin-top: 25px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary {
+            background: #dc143c;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #b01030;
+        }
+
+        .btn-danger {
+            background: #f44336;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #da190b;
+        }
+
+        .btn-secondary {
+            background: #9e9e9e;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #757575;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #dc143c;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .stats-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .stats-box h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .stat-item {
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 6px;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #dc143c;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .visualization-container {
+                padding: 20px;
+            }
+
+            .info-panel {
+                position: fixed;
+                right: 10px;
+                left: 10px;
+                top: auto;
+                bottom: 10px;
+                transform: none;
+                max-width: none;
+            }
+
+            .title-section h1 {
+                font-size: 24px;
+            }
+
+            .birth-inputs {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title-section">
+                <h1>
+                    <span class="life">Your Life in</span>
+                    <div class="view-mode-selector">
+                        <button class="view-mode-btn" onclick="toggleViewModeDropdown()">
+                            <span id="currentViewMode">Weeks</span>
+                        </button>
+                        <div class="view-mode-dropdown" id="viewModeDropdown">
+                            <div class="view-mode-option" onclick="changeViewMode('weeks')">Weeks</div>
+                            <div class="view-mode-option" onclick="changeViewMode('months')">Months</div>
+                            <div class="view-mode-option" onclick="changeViewMode('years')">Years</div>
+                        </div>
+                    </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="birth-inputs">
+            <label>Enter your Date of Birth</label>
+            <select id="monthSelect">
+                <option value="">Month</option>
+                <option value="0">January</option>
+                <option value="1">February</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
+                <option value="4">May</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">October</option>
+                <option value="10">November</option>
+                <option value="11">December</option>
+            </select>
+            <select id="daySelect">
+                <option value="">Day</option>
+            </select>
+            <select id="yearSelect">
+                <option value="">Year</option>
+            </select>
+        </div>
+
+        <div class="stats-box" id="statsBox" style="display: none;">
+            <h3>Your Life Statistics</h3>
+            <div class="stats-grid" id="statsGrid"></div>
+        </div>
+
+        <div class="visualization-container">
+            <div class="grid-wrapper">
+                <div class="axis-label week-label">Week of the Year</div>
+                <div class="axis-label age-label">Age</div>
+
+                <div class="week-numbers" id="weekNumbers"></div>
+
+                <div class="grid-container">
+                    <div class="age-labels" id="ageLabels"></div>
+                    <div class="life-grid" id="lifeGrid"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Based on the <a href="https://waitbutwhy.com/2014/05/life-weeks.html" target="_blank">Your Life in Weeks</a> post by Tim Urban, from <a href="https://waitbutwhy.com" target="_blank">Wait But Why</a>.</p>
+            <p style="margin-top: 10px;">Click on a cell to add a note. Hold and drag to select multiple cells.</p>
+        </div>
+    </div>
+
+    <div class="info-panel" id="infoPanel">
+        <h3>Week Note</h3>
+        <div class="note-text" id="noteText"></div>
+        <div class="date-info" id="dateInfo"></div>
+    </div>
+
+    <div class="modal" id="noteModal">
+        <div class="modal-content">
+            <div class="modal-title">Add Note</div>
+            <div class="modal-subtitle" id="noteSubtitle"></div>
+
+            <div class="form-group">
+                <label>Your Note:</label>
+                <textarea id="noteTextarea" placeholder="What's significant about this period?"></textarea>
+            </div>
+
+            <div class="modal-buttons">
+                <button class="btn btn-danger" id="deleteBtn" style="display: none;">Delete Note</button>
+                <button class="btn btn-secondary" onclick="closeNoteModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="saveNote()">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const MAX_AGE = 90;
+        const PERIODS_PER_YEAR = {
+            weeks: 52,
+            months: 12,
+            years: 1
+        };
+
+        // State
+        let birthDate = null;
+        let viewMode = 'weeks';
+        let notes = JSON.parse(localStorage.getItem('lifeNotes') || '{}');
+        let isDragging = false;
+        let dragStartCell = null;
+        let selectedCells = new Set();
+        let currentHoverCell = null;
+
+        // Initialize
+        function init() {
+            populateDaySelect();
+            populateYearSelect();
+            loadSavedBirthDate();
+            renderGrid();
+
+            // Add event listeners
+            document.getElementById('monthSelect').addEventListener('change', onBirthDateChange);
+            document.getElementById('daySelect').addEventListener('change', onBirthDateChange);
+            document.getElementById('yearSelect').addEventListener('change', onBirthDateChange);
+
+            document.addEventListener('mouseup', () => {
+                if (isDragging) {
+                    endDrag();
+                }
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.view-mode-selector')) {
+                    document.getElementById('viewModeDropdown').classList.remove('active');
+                }
+            });
+        }
+
+        function populateDaySelect() {
+            const daySelect = document.getElementById('daySelect');
+            for (let i = 1; i <= 31; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = i;
+                daySelect.appendChild(option);
+            }
+        }
+
+        function populateYearSelect() {
+            const yearSelect = document.getElementById('yearSelect');
+            const currentYear = new Date().getFullYear();
+            for (let i = currentYear; i >= currentYear - 100; i--) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = i;
+                yearSelect.appendChild(option);
+            }
+        }
+
+        function loadSavedBirthDate() {
+            const saved = localStorage.getItem('birthDate');
+            if (saved) {
+                const date = new Date(saved);
+                document.getElementById('monthSelect').value = date.getMonth();
+                document.getElementById('daySelect').value = date.getDate();
+                document.getElementById('yearSelect').value = date.getFullYear();
+                birthDate = date;
+            }
+        }
+
+        function onBirthDateChange() {
+            const month = document.getElementById('monthSelect').value;
+            const day = document.getElementById('daySelect').value;
+            const year = document.getElementById('yearSelect').value;
+
+            if (month !== '' && day !== '' && year !== '') {
+                birthDate = new Date(year, month, day);
+                localStorage.setItem('birthDate', birthDate.toISOString());
+                renderGrid();
+                updateStats();
+            }
+        }
+
+        function toggleViewModeDropdown() {
+            const dropdown = document.getElementById('viewModeDropdown');
+            dropdown.classList.toggle('active');
+        }
+
+        function changeViewMode(mode) {
+            viewMode = mode;
+            document.getElementById('currentViewMode').textContent =
+                mode.charAt(0).toUpperCase() + mode.slice(1);
+            document.getElementById('viewModeDropdown').classList.remove('active');
+            renderGrid();
+            updateStats();
+        }
+
+        function renderGrid() {
+            if (!birthDate) {
+                renderEmptyGrid();
+                return;
+            }
+
+            const periodsPerYear = PERIODS_PER_YEAR[viewMode];
+            const grid = document.getElementById('lifeGrid');
+            const weekNumbers = document.getElementById('weekNumbers');
+            const ageLabels = document.getElementById('ageLabels');
+
+            // Update grid template
+            grid.style.gridTemplateColumns = `repeat(${periodsPerYear}, 12px)`;
+
+            // Clear existing
+            grid.innerHTML = '';
+            weekNumbers.innerHTML = '';
+            ageLabels.innerHTML = '';
+
+            // Render week/month/year numbers
+            for (let i = 0; i <= periodsPerYear; i += Math.ceil(periodsPerYear / 10)) {
+                const numberEl = document.createElement('div');
+                numberEl.className = 'week-number highlight';
+                numberEl.textContent = i;
+                numberEl.style.marginLeft = i === 0 ? '0' : `${(i * 12) - 6}px`;
+                weekNumbers.appendChild(numberEl);
+            }
+
+            // Render age labels and grid
+            const now = new Date();
+            const currentAge = Math.floor((now - birthDate) / (365.25 * 24 * 60 * 60 * 1000));
+
+            for (let age = 0; age <= MAX_AGE; age++) {
+                // Age label
+                const labelEl = document.createElement('div');
+                labelEl.className = 'age-label-item' + (age % 5 === 0 ? ' highlight' : '');
+                labelEl.textContent = age % 5 === 0 ? age : '';
+                ageLabels.appendChild(labelEl);
+
+                // Render cells for this age
+                for (let period = 0; period < periodsPerYear; period++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'week-cell';
+                    cell.dataset.age = age;
+                    cell.dataset.period = period;
+
+                    const cellDate = getCellDate(age, period);
+                    const cellKey = `${age}-${period}`;
+
+                    if (cellDate <= now) {
+                        cell.classList.add('lived');
+                    }
+
+                    if (notes[viewMode] && notes[viewMode][cellKey]) {
+                        cell.classList.add('has-note');
+                    }
+
+                    cell.addEventListener('mousedown', (e) => startDrag(e, age, period));
+                    cell.addEventListener('mouseover', (e) => onDragOver(e, age, period));
+                    cell.addEventListener('mouseup', () => endDrag());
+                    cell.addEventListener('mouseenter', (e) => showNote(e, age, period));
+                    cell.addEventListener('mouseleave', hideNote);
+
+                    grid.appendChild(cell);
+                }
+            }
+        }
+
+        function renderEmptyGrid() {
+            const periodsPerYear = PERIODS_PER_YEAR[viewMode];
+            const grid = document.getElementById('lifeGrid');
+            const weekNumbers = document.getElementById('weekNumbers');
+            const ageLabels = document.getElementById('ageLabels');
+
+            grid.style.gridTemplateColumns = `repeat(${periodsPerYear}, 12px)`;
+            grid.innerHTML = '';
+            weekNumbers.innerHTML = '';
+            ageLabels.innerHTML = '';
+
+            // Render week/month/year numbers
+            for (let i = 0; i <= periodsPerYear; i += Math.ceil(periodsPerYear / 10)) {
+                const numberEl = document.createElement('div');
+                numberEl.className = 'week-number highlight';
+                numberEl.textContent = i;
+                numberEl.style.marginLeft = i === 0 ? '0' : `${(i * 12) - 6}px`;
+                weekNumbers.appendChild(numberEl);
+            }
+
+            // Render empty grid
+            for (let age = 0; age <= MAX_AGE; age++) {
+                const labelEl = document.createElement('div');
+                labelEl.className = 'age-label-item' + (age % 5 === 0 ? ' highlight' : '');
+                labelEl.textContent = age % 5 === 0 ? age : '';
+                ageLabels.appendChild(labelEl);
+
+                for (let period = 0; period < periodsPerYear; period++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'week-cell';
+                    grid.appendChild(cell);
+                }
+            }
+        }
+
+        function getCellDate(age, period) {
+            const date = new Date(birthDate);
+
+            if (viewMode === 'weeks') {
+                date.setDate(date.getDate() + (age * 365.25) + (period * 7));
+            } else if (viewMode === 'months') {
+                date.setMonth(date.getMonth() + (age * 12) + period);
+            } else { // years
+                date.setFullYear(date.getFullYear() + age);
+            }
+
+            return date;
+        }
+
+        function startDrag(e, age, period) {
+            e.preventDefault();
+            isDragging = true;
+            dragStartCell = { age, period };
+            selectedCells.clear();
+            selectedCells.add(`${age}-${period}`);
+            updateSelectionDisplay();
+        }
+
+        function onDragOver(e, age, period) {
+            if (isDragging && dragStartCell) {
+                e.preventDefault();
+                selectedCells = getCellsBetween(dragStartCell, { age, period });
+                updateSelectionDisplay();
+            }
+        }
+
+        function endDrag() {
+            if (isDragging && selectedCells.size > 0) {
+                isDragging = false;
+                showNoteModal();
+            }
+        }
+
+        function getCellsBetween(start, end) {
+            const cells = new Set();
+            const minAge = Math.min(start.age, end.age);
+            const maxAge = Math.max(start.age, end.age);
+            const minPeriod = Math.min(start.period, end.period);
+            const maxPeriod = Math.max(start.period, end.period);
+
+            for (let age = minAge; age <= maxAge; age++) {
+                for (let period = minPeriod; period <= maxPeriod; period++) {
+                    cells.add(`${age}-${period}`);
+                }
+            }
+
+            return cells;
+        }
+
+        function updateSelectionDisplay() {
+            document.querySelectorAll('.week-cell.selecting').forEach(el => {
+                el.classList.remove('selecting');
+            });
+
+            selectedCells.forEach(cellKey => {
+                const [age, period] = cellKey.split('-');
+                const cell = document.querySelector(`[data-age="${age}"][data-period="${period}"]`);
+                if (cell) {
+                    cell.classList.add('selecting');
+                }
+            });
+        }
+
+        function showNoteModal() {
+            const modal = document.getElementById('noteModal');
+            const subtitle = document.getElementById('noteSubtitle');
+            const textarea = document.getElementById('noteTextarea');
+            const deleteBtn = document.getElementById('deleteBtn');
+
+            const sortedCells = Array.from(selectedCells).sort();
+
+            if (sortedCells.length === 1) {
+                const [age, period] = sortedCells[0].split('-');
+                const periodName = viewMode === 'weeks' ? 'Week' : viewMode === 'months' ? 'Month' : 'Year';
+                subtitle.textContent = `Age ${age}, ${periodName} ${parseInt(period) + 1}`;
+
+                const existingNote = notes[viewMode] && notes[viewMode][sortedCells[0]];
+                if (existingNote) {
+                    textarea.value = existingNote;
+                    deleteBtn.style.display = 'block';
+                } else {
+                    textarea.value = '';
+                    deleteBtn.style.display = 'none';
+                }
+            } else {
+                subtitle.textContent = `${sortedCells.length} cells selected`;
+                textarea.value = '';
+                deleteBtn.style.display = 'none';
+            }
+
+            modal.classList.add('active');
+        }
+
+        function closeNoteModal() {
+            const modal = document.getElementById('noteModal');
+            modal.classList.remove('active');
+            selectedCells.clear();
+            renderGrid();
+        }
+
+        function saveNote() {
+            const note = document.getElementById('noteTextarea').value.trim();
+
+            if (!note) {
+                alert('Please enter a note');
+                return;
+            }
+
+            if (!notes[viewMode]) {
+                notes[viewMode] = {};
+            }
+
+            selectedCells.forEach(cellKey => {
+                notes[viewMode][cellKey] = note;
+            });
+
+            localStorage.setItem('lifeNotes', JSON.stringify(notes));
+            closeNoteModal();
+        }
+
+        function deleteNote() {
+            if (!notes[viewMode]) return;
+
+            selectedCells.forEach(cellKey => {
+                delete notes[viewMode][cellKey];
+            });
+
+            localStorage.setItem('lifeNotes', JSON.stringify(notes));
+            closeNoteModal();
+        }
+
+        document.getElementById('deleteBtn').onclick = deleteNote;
+
+        function showNote(e, age, period) {
+            const cellKey = `${age}-${period}`;
+            const note = notes[viewMode] && notes[viewMode][cellKey];
+
+            if (note) {
+                const panel = document.getElementById('infoPanel');
+                const noteText = document.getElementById('noteText');
+                const dateInfo = document.getElementById('dateInfo');
+
+                noteText.textContent = note;
+
+                const periodName = viewMode === 'weeks' ? 'Week' : viewMode === 'months' ? 'Month' : 'Year';
+                dateInfo.textContent = `Age ${age}, ${periodName} ${parseInt(period) + 1}`;
+
+                panel.classList.add('active');
+                currentHoverCell = cellKey;
+            }
+        }
+
+        function hideNote() {
+            setTimeout(() => {
+                const panel = document.getElementById('infoPanel');
+                panel.classList.remove('active');
+                currentHoverCell = null;
+            }, 100);
+        }
+
+        function updateStats() {
+            if (!birthDate) {
+                document.getElementById('statsBox').style.display = 'none';
+                return;
+            }
+
+            const now = new Date();
+            const ageMs = now - birthDate;
+            const ageYears = ageMs / (365.25 * 24 * 60 * 60 * 1000);
+
+            let lived, total, remaining;
+
+            if (viewMode === 'weeks') {
+                lived = Math.floor(ageMs / (7 * 24 * 60 * 60 * 1000));
+                total = MAX_AGE * 52;
+                remaining = total - lived;
+            } else if (viewMode === 'months') {
+                lived = Math.floor(ageYears * 12);
+                total = MAX_AGE * 12;
+                remaining = total - lived;
+            } else {
+                lived = Math.floor(ageYears);
+                total = MAX_AGE;
+                remaining = total - lived;
+            }
+
+            const percentLived = ((lived / total) * 100).toFixed(1);
+
+            const statsGrid = document.getElementById('statsGrid');
+            statsGrid.innerHTML = `
+                <div class="stat-item">
+                    <div class="stat-value">${lived.toLocaleString()}</div>
+                    <div class="stat-label">${viewMode} lived</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">${remaining.toLocaleString()}</div>
+                    <div class="stat-label">${viewMode} remaining</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">${percentLived}%</div>
+                    <div class="stat-label">of life lived</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">${Math.floor(ageYears)}</div>
+                    <div class="stat-label">years old</div>
+                </div>
+            `;
+
+            document.getElementById('statsBox').style.display = 'block';
+        }
+
+        // Initialize on load
+        init();
+    </script>
+</body>
+</html>
