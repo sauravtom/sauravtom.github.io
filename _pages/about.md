@@ -1,7 +1,6 @@
 ---
-# the default layout is 'page'
-icon: fas fa-user
-order: 2
+layout: page
+permalink: /about/
 ---
 
 # About Saurav Kumar
