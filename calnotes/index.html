@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Notes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .year-selector {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .year-selector button {
+            padding: 8px 16px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .year-selector button:hover {
+            background: #45a049;
+        }
+
+        .year-selector span {
+            font-size: 24px;
+            font-weight: bold;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .legend {
+            display: flex;
+            gap: 15px;
+            margin-left: auto;
+            align-items: center;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+        }
+
+        .calendar-year {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .year-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .months-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .month {
+            border: 2px solid #333;
+            border-radius: 4px;
+            overflow: hidden;
+            background: white;
+        }
+
+        .month-header {
+            color: black;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            border-bottom: 2px solid #333;
+        }
+
+        .month:nth-child(1) .month-header { background: #89CFF0; }
+        .month:nth-child(2) .month-header { background: #B4E7CE; }
+        .month:nth-child(3) .month-header { background: #5FD3BC; }
+        .month:nth-child(4) .month-header { background: #B4F1B4; }
+        .month:nth-child(5) .month-header { background: #9ACD32; }
+        .month:nth-child(6) .month-header { background: #FFFACD; }
+        .month:nth-child(7) .month-header { background: #FFB347; }
+        .month:nth-child(8) .month-header { background: #FF8C42; }
+        .month:nth-child(9) .month-header { background: #FF7F50; }
+        .month:nth-child(10) .month-header { background: #FFB6C1; }
+        .month:nth-child(11) .month-header { background: #DDA0DD; }
+        .month:nth-child(12) .month-header { background: #B0C4DE; }
+
+        .weekdays {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            border-bottom: 1px solid #333;
+        }
+
+        .weekday {
+            padding: 6px 4px;
+            text-align: center;
+            font-size: 11px;
+            font-weight: bold;
+            color: #333;
+            background: white;
+        }
+
+        .weekday.weekend {
+            color: #333;
+        }
+
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            background: white;
+        }
+
+        .day {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            position: relative;
+            user-select: none;
+            font-size: 12px;
+            transition: background-color 0.2s;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .day:hover {
+            background: #e8f5e9;
+        }
+
+        .day.empty {
+            background: #f9f9f9;
+            cursor: default;
+            color: #ccc;
+        }
+
+        .day.empty:hover {
+            background: #f9f9f9;
+        }
+
+        .day.weekend {
+            color: #333;
+        }
+
+        .day.selected {
+            font-weight: bold;
+        }
+
+        .day.selecting {
+            background: #bbdefb !important;
+        }
+
+        .tooltip {
+            position: fixed;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 13px;
+            max-width: 300px;
+            z-index: 1000;
+            pointer-events: none;
+            display: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            line-height: 1.4;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .modal-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .modal-subtitle {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+        }
+
+        .color-picker {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+        }
+
+        .color-option {
+            aspect-ratio: 1;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+
+        .color-option.selected {
+            border-color: #333;
+            box-shadow: 0 0 0 2px white, 0 0 0 4px #333;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            margin-top: 25px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #45a049;
+        }
+
+        .btn-danger {
+            background: #f44336;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #da190b;
+        }
+
+        .btn-secondary {
+            background: #9e9e9e;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #757575;
+        }
+
+        @media (max-width: 768px) {
+            .months-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .legend {
+                margin-left: 0;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <div class="year-selector">
+                <button onclick="changeYear(-1)">←</button>
+                <span id="currentYear">2025</span>
+                <button onclick="changeYear(1)">→</button>
+            </div>
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #ffcdd2;"></div>
+                    <span>Events</span>
+                </div>
+                <div class="legend-item">
+                    <span>Click or drag to select dates</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="calendar-year" id="calendarContainer"></div>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <div class="modal" id="eventModal">
+        <div class="modal-content">
+            <div class="modal-title">Add Event</div>
+            <div class="modal-subtitle" id="dateRange"></div>
+
+            <div class="form-group">
+                <label>Event Note:</label>
+                <textarea id="eventNote" placeholder="What's happening on this date?"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Choose Color:</label>
+                <div class="color-picker" id="colorPicker"></div>
+            </div>
+
+            <div class="modal-buttons">
+                <button class="btn btn-danger" id="deleteBtn" style="display: none;">Delete Event</button>
+                <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="saveEvent()">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const COLORS = [
+            '#ffcdd2', '#f8bbd0', '#e1bee7', '#d1c4e9',
+            '#c5cae9', '#bbdefb', '#b3e5fc', '#b2ebf2',
+            '#b2dfdb', '#c8e6c9', '#dcedc8', '#f0f4c3',
+            '#fff9c4', '#ffecb3', '#ffe0b2', '#ffccbc',
+            '#d7ccc8', '#cfd8dc'
+        ];
+
+        let currentYear = 2025;
+        let events = JSON.parse(localStorage.getItem('calendarEvents') || '{}');
+        let isDragging = false;
+        let dragStartDate = null;
+        let selectedDates = new Set();
+        let selectedColor = COLORS[0];
+        let editingDates = null;
+
+        const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                          'July', 'August', 'September', 'October', 'November', 'December'];
+        const weekdayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+        function changeYear(delta) {
+            const newYear = currentYear + delta;
+            if (newYear >= 2000 && newYear <= 2026) {
+                currentYear = newYear;
+                document.getElementById('currentYear').textContent = currentYear;
+                renderCalendar();
+            }
+        }
+
+        function getDaysInMonth(year, month) {
+            return new Date(year, month + 1, 0).getDate();
+        }
+
+        function getFirstDayOfMonth(year, month) {
+            return new Date(year, month, 1).getDay();
+        }
+
+        function formatDate(year, month, day) {
+            return `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        }
+
+        function renderCalendar() {
+            const container = document.getElementById('calendarContainer');
+            container.innerHTML = `
+                <div class="year-title">${currentYear}</div>
+                <div class="months-grid" id="monthsGrid"></div>
+            `;
+
+            const monthsGrid = document.getElementById('monthsGrid');
+
+            for (let month = 0; month < 12; month++) {
+                const monthDiv = document.createElement('div');
+                monthDiv.className = 'month';
+
+                const daysInMonth = getDaysInMonth(currentYear, month);
+                const firstDay = getFirstDayOfMonth(currentYear, month);
+
+                let monthHTML = `
+                    <div class="month-header">${monthNames[month]}</div>
+                    <div class="weekdays">
+                        ${weekdayNames.map((day, i) =>
+                            `<div class="weekday ${i === 0 || i === 6 ? 'weekend' : ''}">${day}</div>`
+                        ).join('')}
+                    </div>
+                    <div class="days-grid">
+                `;
+
+                // Empty cells before first day
+                for (let i = 0; i < firstDay; i++) {
+                    monthHTML += '<div class="day empty"></div>';
+                }
+
+                // Days of month
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const date = formatDate(currentYear, month, day);
+                    const dayOfWeek = (firstDay + day - 1) % 7;
+                    const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
+                    const event = events[date];
+
+                    const style = event ? `background-color: ${event.color};` : '';
+                    const classes = ['day'];
+                    if (isWeekend) classes.push('weekend');
+                    if (event) classes.push('selected');
+
+                    monthHTML += `
+                        <div class="${classes.join(' ')}"
+                             data-date="${date}"
+                             style="${style}"
+                             onmousedown="startDrag(event, '${date}')"
+                             onmouseover="onDragOver(event, '${date}')"
+                             onmouseup="endDrag(event, '${date}')"
+                             onmouseenter="showTooltip(event, '${date}')"
+                             onmouseleave="hideTooltip()">
+                            ${day}
+                        </div>
+                    `;
+                }
+
+                monthHTML += '</div></div>';
+                monthDiv.innerHTML = monthHTML;
+                monthsGrid.appendChild(monthDiv);
+            }
+        }
+
+        function startDrag(e, date) {
+            e.preventDefault();
+            isDragging = true;
+            dragStartDate = date;
+            selectedDates.clear();
+            selectedDates.add(date);
+            updateSelectionDisplay();
+        }
+
+        function onDragOver(e, date) {
+            if (isDragging && dragStartDate) {
+                e.preventDefault();
+                selectedDates = getDatesBetween(dragStartDate, date);
+                updateSelectionDisplay();
+            }
+        }
+
+        function endDrag(e, date) {
+            if (isDragging) {
+                e.preventDefault();
+                isDragging = false;
+
+                if (selectedDates.size > 0) {
+                    showEventModal();
+                }
+            }
+        }
+
+        function getDatesBetween(start, end) {
+            const dates = new Set();
+            const startDate = new Date(start);
+            const endDate = new Date(end);
+
+            if (startDate > endDate) {
+                [startDate.setTime(endDate.getTime()), endDate.setTime(startDate.getTime())];
+            }
+
+            const current = new Date(Math.min(new Date(start), new Date(end)));
+            const last = new Date(Math.max(new Date(start), new Date(end)));
+
+            while (current <= last) {
+                dates.add(formatDate(current.getFullYear(), current.getMonth(), current.getDate()));
+                current.setDate(current.getDate() + 1);
+            }
+
+            return dates;
+        }
+
+        function updateSelectionDisplay() {
+            document.querySelectorAll('.day.selecting').forEach(el => {
+                el.classList.remove('selecting');
+            });
+
+            selectedDates.forEach(date => {
+                const dayEl = document.querySelector(`[data-date="${date}"]`);
+                if (dayEl) {
+                    dayEl.classList.add('selecting');
+                }
+            });
+        }
+
+        function showEventModal() {
+            const modal = document.getElementById('eventModal');
+            const dateRangeEl = document.getElementById('dateRange');
+            const noteEl = document.getElementById('eventNote');
+            const deleteBtn = document.getElementById('deleteBtn');
+
+            const sortedDates = Array.from(selectedDates).sort();
+
+            if (sortedDates.length === 1) {
+                const date = new Date(sortedDates[0]);
+                dateRangeEl.textContent = date.toLocaleDateString('en-US', {
+                    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+                });
+
+                const existingEvent = events[sortedDates[0]];
+                if (existingEvent) {
+                    noteEl.value = existingEvent.note;
+                    selectedColor = existingEvent.color;
+                    deleteBtn.style.display = 'block';
+                    editingDates = sortedDates;
+                } else {
+                    noteEl.value = '';
+                    selectedColor = COLORS[0];
+                    deleteBtn.style.display = 'none';
+                    editingDates = null;
+                }
+            } else {
+                const startDate = new Date(sortedDates[0]);
+                const endDate = new Date(sortedDates[sortedDates.length - 1]);
+                dateRangeEl.textContent = `${startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} - ${endDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })} (${sortedDates.length} days)`;
+                noteEl.value = '';
+                selectedColor = COLORS[0];
+                deleteBtn.style.display = 'none';
+                editingDates = null;
+            }
+
+            renderColorPicker();
+            modal.classList.add('active');
+        }
+
+        function renderColorPicker() {
+            const picker = document.getElementById('colorPicker');
+            picker.innerHTML = COLORS.map(color => `
+                <div class="color-option ${color === selectedColor ? 'selected' : ''}"
+                     style="background-color: ${color};"
+                     onclick="selectColor('${color}')">
+                </div>
+            `).join('');
+        }
+
+        function selectColor(color) {
+            selectedColor = color;
+            renderColorPicker();
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('eventModal');
+            modal.classList.remove('active');
+            selectedDates.clear();
+            editingDates = null;
+            renderCalendar();
+        }
+
+        function saveEvent() {
+            const note = document.getElementById('eventNote').value.trim();
+
+            if (!note) {
+                alert('Please enter an event note');
+                return;
+            }
+
+            selectedDates.forEach(date => {
+                events[date] = {
+                    note: note,
+                    color: selectedColor
+                };
+            });
+
+            localStorage.setItem('calendarEvents', JSON.stringify(events));
+            closeModal();
+        }
+
+        function deleteEvent() {
+            if (editingDates) {
+                editingDates.forEach(date => {
+                    delete events[date];
+                });
+                localStorage.setItem('calendarEvents', JSON.stringify(events));
+                closeModal();
+            }
+        }
+
+        document.getElementById('deleteBtn').onclick = deleteEvent;
+
+        function showTooltip(e, date) {
+            const event = events[date];
+            if (event) {
+                const tooltip = document.getElementById('tooltip');
+                tooltip.textContent = event.note;
+                tooltip.style.display = 'block';
+                updateTooltipPosition(e);
+            }
+        }
+
+        function hideTooltip() {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.style.display = 'none';
+        }
+
+        function updateTooltipPosition(e) {
+            const tooltip = document.getElementById('tooltip');
+            const offset = 15;
+
+            let x = e.clientX + offset;
+            let y = e.clientY + offset;
+
+            if (x + tooltip.offsetWidth > window.innerWidth) {
+                x = e.clientX - tooltip.offsetWidth - offset;
+            }
+
+            if (y + tooltip.offsetHeight > window.innerHeight) {
+                y = e.clientY - tooltip.offsetHeight - offset;
+            }
+
+            tooltip.style.left = x + 'px';
+            tooltip.style.top = y + 'px';
+        }
+
+        document.addEventListener('mousemove', (e) => {
+            const tooltip = document.getElementById('tooltip');
+            if (tooltip.style.display === 'block') {
+                updateTooltipPosition(e);
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (isDragging) {
+                isDragging = false;
+            }
+        });
+
+        // Initialize
+        renderCalendar();
+    </script>
+</body>
+</html>
