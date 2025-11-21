@@ -94,6 +94,18 @@ A minimalist notepad application that stores notes directly in the URL using com
 
 ---
 
+### Calendar Notes
+**Interactive year-view calendar with note-taking**
+
+A beautiful calendar application for taking notes on any date. View entire years at a glance, drag to select multiple dates, and color-code your events. All notes are stored locally in your browser.
+
+- **Website:** [sauravtom.github.io/calnotes](https://sauravtom.github.io/calnotes/)
+- **Status:** Active
+- **Tech Stack:** HTML, JavaScript, LocalStorage
+- **Features:** Year-view calendar (1900-2100), Color-coded notes, Drag selection, Persistent storage
+
+---
+
 ### HUE JUMPER Racing Game
 **3D racing game in the browser**
 

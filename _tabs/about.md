@@ -34,6 +34,7 @@ For the past three years, I've been building AI applications and search/recommen
 - **[PitchPerfect](https://pitch.favcynavigator.com)** - AI tool for refining startup pitches (10,000+ pitches analyzed)
 - **[Gamenzo](https://gamenzo.xyz)** - Create games from voice commands
 - **[bugshoot](https://bugshoot.com)** - PR review GitHub bot for automated code reviews (Featured on [Stripe Developers YouTube](https://www.youtube.com/watch?v=LEgYHyvGNlg))
+- **[Calendar Notes](https://sauravtom.github.io/calnotes/)** - Interactive year-view calendar with note-taking
 - **[Notepad2000](https://sauravtom.github.io/notepad2000/)** - Minimalist notepad with URL-based storage
 
 ## Awards & Recognition
