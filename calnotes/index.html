@@ -434,7 +434,7 @@
 
         function changeYear(delta) {
             const newYear = currentYear + delta;
-            if (newYear >= 2000 && newYear <= 2026) {
+            if (newYear >= 1900 && newYear <= 2100) {
                 currentYear = newYear;
                 document.getElementById('currentYear').textContent = currentYear;
                 renderCalendar();
