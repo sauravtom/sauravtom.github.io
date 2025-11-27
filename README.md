@@ -1,60 +1,107 @@
-# Chirpy Starter
+# Saurav Kumar's Personal Website & Blog
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+This repository hosts the source code for [sauravtom.github.io](https://sauravtom.github.io), the personal website and blog of **Saurav Kumar**.
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
-`bundle info --path jekyll-theme-chirpy` to locate these files.
+It is a static site built with [Jekyll](https://jekyllrb.com/) and based on the [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) theme, hosted on GitHub Pages.
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
+## 🚀 Features
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
+- **Professional Portfolio**: Showcases projects, talks, and press coverage.
+- **Technical Blog**: Articles on AI, Blockchain, and Software Engineering with support for categories and tags.
+- **Responsive Design**: Fully responsive layout that works beautifully on mobile and desktop.
+- **Dark Mode**: Built-in dark/light mode toggle.
+- **SEO Optimized**: Integrated SEO tags and sitemap generation.
+- **Analytics**: Privacy-friendly analytics via GoatCounter and Google Analytics.
+- **PWA Support**: Installable as a Progressive Web App.
 
-```shell
+## 📂 Project Structure
+
+Here's an overview of the key directories and files:
+
+```
 .
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+├── _config.yml          # Main configuration (site settings, plugins, theme)
+├── _posts/              # Blog posts (markdown files)
+├── _tabs/               # Tab pages (About, Categories, Tags, etc.)
+├── _pages/              # Standalone pages (Press, Profile, Projects)
+├── _data/               # Data files (locales, etc.)
+├── assets/              # Static assets (images, CSS, JS)
+├── tools/               # Utility scripts
+├── Gemfile              # Ruby dependencies
+└── README.md            # This file
 ```
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+## 🛠️ Local Development
 
-## Prerequisites
+### Prerequisites
 
-Follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of
-the basic environment. [Git](https://git-scm.com/) also needs to be installed.
+- **Ruby**: v2.7 or higher
+- **Bundler**: `gem install bundler`
+- **Jekyll**: `gem install jekyll`
 
-## Installation
+### Installation
 
-Sign in to GitHub and [**use this template**][use-template] to generate a brand new repository and name it
-`USERNAME.github.io`, where `USERNAME` represents your GitHub username.
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/sauravtom/sauravtom.github.io.git
+    cd sauravtom.github.io
+    ```
 
-Then clone it to your local machine and run:
+2.  **Install dependencies**:
+    ```bash
+    bundle install
+    ```
 
-```console
-$ bundle
+### Running Locally
+
+To start the local development server with live reload:
+
+```bash
+bundle exec jekyll serve
 ```
 
-## Usage
+Access the site at `http://127.0.0.1:4000/`.
 
-Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
+## 🔄 Deployment Workflow
 
-## Contributing
+The site is automatically built and deployed to GitHub Pages via GitHub Actions whenever changes are pushed to the `main` branch.
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+```mermaid
+sequenceDiagram
+    participant Dev as Developer
+    participant Repo as GitHub Repo (main)
+    participant Action as GitHub Action (Jekyll Build)
+    participant Pages as GitHub Pages
 
-## License
+    Dev->>Repo: Push changes (git push)
+    Repo->>Action: Trigger Build Workflow
+    Action->>Action: Install Dependencies
+    Action->>Action: Build Jekyll Site
+    Action->>Pages: Deploy Static Files
+    Pages-->>Dev: Site Live (sauravtom.github.io)
+```
 
-This work is published under [MIT][mit] License.
+## 📝 Content Management
 
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[use-template]: https://github.com/cotes2020/chirpy-starter/generate
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+### Adding a New Post
+
+Create a new markdown file in `_posts/` with the format `YYYY-MM-DD-title.md`.
+
+**Front Matter Example:**
+
+```yaml
+---
+title: "My New Post"
+date: 2023-10-27 12:00:00 +0530
+categories: [Tech, AI]
+tags: [llm, tutorial]
+---
+```
+
+### Adding a New Page
+
+Create a markdown file in `_pages/` or `_tabs/` and ensure it has the correct `layout` and `permalink`.
+
+## 📄 License
+
+This project is licensed under the MIT License.
