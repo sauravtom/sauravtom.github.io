@@ -26,7 +26,9 @@ Co-Founder and CTO May 2019 – Sep 2022
   * Architected an AI-enhanced cryptocurrency investment platform, streamlining user onboarding and increasing retention by 25%.
   * Led a team of eight engineers to develop real-time monitoring and alert systems for DeFi traders, protecting $750K+ in assets
 
+
 [**Chaintope**](https://www.chaintope.com/en/2018/10/09/iith_postscript/) Kuala Lumpur, Malaysia
+
 Product Manager May 2017 – May 2019
 
   * Worked on official bitcoin ruby implementation and bitcoin script development. Developed and co-taught the "The Blockchain: Theory and Practice” course at IIT Hyderabad
