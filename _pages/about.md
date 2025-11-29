@@ -139,7 +139,7 @@ Bridging technical teams and business objectives, MVP development and scaling, a
 **Contact:**
 - Email: [stomatrix@gmail.com](mailto:stomatrix@gmail.com)
 - Telegram: [@stomatrix](https://t.me/stomatrix)
-- Schedule a call: [Book a call](https://calendar.app.google/iZcNEWYBSGZLyv5TA)
+- Schedule a call: [Book a call](https://calendar.app.google/DagNFHLpApt7cz4X9)
 
 **Connect:**
 - [LinkedIn](https://www.linkedin.com/in/sauraav007)

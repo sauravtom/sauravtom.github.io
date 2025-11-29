@@ -166,7 +166,7 @@ AI product studio focused on applying LLMs to business use cases. Building pract
 **Email:** [stomatrix@gmail.com](mailto:stomatrix@gmail.com)
 **Telegram:** [@stomatrix](https://t.me/stomatrix)
 **Website:** [sauravtom.github.io](https://sauravtom.github.io)
-**Calendar:** [Book a call](https://calendar.app.google/iZcNEWYBSGZLyv5TA)
+**Calendar:** [Book a call](https://calendar.app.google/DagNFHLpApt7cz4X9)
 
 ### Social Media
 - **X (Twitter):** [@sauraav5](https://twitter.com/sauraav5)

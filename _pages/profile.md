@@ -193,7 +193,7 @@ For high-resolution photos and additional media assets, please contact via email
 **For Speaking Inquiries:**
 - **Email:** [stomatrix@gmail.com](mailto:stomatrix@gmail.com)
 - **Telegram:** [@stomatrix](https://t.me/stomatrix)
-- **Calendar:** [Book a call](https://calendar.app.google/iZcNEWYBSGZLyv5TA)
+- **Calendar:** [Book a call](https://calendar.app.google/DagNFHLpApt7cz4X9)
 - **Website:** [sauravtom.github.io](https://sauravtom.github.io)
 
 **Social Media:**
