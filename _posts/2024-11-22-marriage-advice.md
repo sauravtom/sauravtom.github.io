@@ -2,6 +2,7 @@
 title: The Two-Line Code for Marital Bliss (That Your Programmer Husband Can Understand)
 date: 2024-11-21 +0530
 image: /assets/img/posts/the-two-line-code-for-marital-bliss-that-your-programmer-husband-can-understand.png
+hidden: true
 categories: [Relationships, Marriage, Advice, Humor]
 tags: [Marriage, Relationships, Advice, Humor, Communication, Happiness, Life Hacks, Husband, Wife]
 author: Saurav Kumar

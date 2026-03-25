@@ -1,7 +1,7 @@
 ---
-# the default layout is 'page'
-icon: fas fa-video
-order: 4
+layout: page
+title: Videos
+permalink: /videos/
 ---
 
 # Videos
