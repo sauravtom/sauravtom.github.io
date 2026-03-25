@@ -1,6 +1,7 @@
 ---
 title: The Big Bet on World Models
 date: 2025-11-14 +0530
+image: /assets/img/posts/the-big-bet-on-world-models.png
 categories: [AI, World Models, Computer Vision, Machine Learning]
 tags: [AI, World Models, Fei-Fei Li, Yann LeCun, DeepMind, Spatial Intelligence, 3D Reconstruction, Gaussian Splatting, JEPA, AGI]
 author: sauravtom

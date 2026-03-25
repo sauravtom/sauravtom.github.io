@@ -1,6 +1,7 @@
 ---
 title: Are LLMs Just Souped-Up Markov Chains?
 date: 2025-11-18 +0530
+image: /assets/img/posts/are-llms-just-souped-up-markov-chains.png
 categories: [AI, Machine Learning, LLMs, NLP]
 tags: [LLMs, Markov Chains, GPT, Claude, Gemini, Attention Mechanisms, Embeddings, Text Generation, Natural Language Processing]
 author: sauravtom

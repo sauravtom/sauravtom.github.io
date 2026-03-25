@@ -1,6 +1,7 @@
 ---
 title: Product Management at AI native companies
 date: 2025-11-10 +0530
+image: /assets/img/posts/product-management-at-ai-native-companies.png
 categories: [Product Management, AI, Career, Tech Industry]
 tags: [Product Management, AI, Career Development, Engineering, Design, Multidisciplinary, Future of Work]
 author: sauravtom

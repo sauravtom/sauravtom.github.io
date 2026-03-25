@@ -1,6 +1,7 @@
 ---
 title: Building Intelligent Data Pipelines for Enriching Credit Card Data
 date: 2024-11-22 +0530
+image: /assets/img/posts/building-intelligent-data-pipelines-for-enriching-credit-card-data.png
 categories: [Data Science, Artificial Intelligence, Machine Learning, Fintech, Data Engineering, Credit Card Analytics]
 tags: [AI, Machine Learning, Data Enrichment, Natural Language Processing, NER, Embeddings,  Sentence-BERT, FAISS, Large Language Models,  Credit Card Data, Transaction Analysis,  Fintech, Data Pipelines]
 author: sauravtom

@@ -1,6 +1,7 @@
 ---
 title: How to Ensure Your Blog Outlives You
 date: 2024-09-18 +0530
+image: /assets/img/posts/how-to-ensure-your-blog-outlives-you.png
 categories: [Blogging, Longevity, GitHub Pages]
 tags: [blogging, longevity, GitHub Pages, Microsoft]
 author: Saurav Kumar

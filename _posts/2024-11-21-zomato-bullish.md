@@ -1,6 +1,7 @@
 ---
 title: Zomato - More that just food delivery
 date: 2024-11-21 +0530
+image: /assets/img/posts/zomato-more-that-just-food-delivery.png
 categories: [zomato, food delivery, bullish, stock-market]
 tags: [zomato, food delivery, bullish, stock-market]
 author: Saurav Kumar

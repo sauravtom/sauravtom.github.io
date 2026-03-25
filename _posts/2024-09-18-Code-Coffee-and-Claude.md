@@ -1,6 +1,7 @@
 ---
 title: Code Coffee and Claude Artifacts
 date: 2024-09-18 +05:30
+image: /assets/img/posts/code-coffee-and-claude.png
 categories: [AI Coding, Humor in Tech, Programming Tools, Machine Learning, AI Assistants]
 tags: [GitHub Copilot, OpenAI Codex, V0, Claude Artifacts, AI Tools, Coding Humor, AI in Programming, Machine Learning, AI Assistants, Tech Satire]
 author: sauravtom

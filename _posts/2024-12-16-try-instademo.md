@@ -1,6 +1,7 @@
 ---
 title: Rethinking product demos | Steal this Idea
 date: 2024-12-26 +0530
+image: /assets/img/posts/rethinking-product-demos-steal-this-idea.png
 categories: [SaaS, Sales Enablement, Marketing Automation, Customer Experience, Lead Generation]
 tags: [AI, Artificial Intelligence, Sales, Sales Automation, Demo Automation, Lead Qualification]
 author: sauravtom

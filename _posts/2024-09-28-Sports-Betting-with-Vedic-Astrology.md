@@ -1,6 +1,7 @@
 ---
 title: Steal this idea | Sports Betting with Vedic Astrology
 date: 2024-09-28 +0530
+image: /assets/img/posts/sports-betting-with-vedic-astrology.png
 categories: [Astrology, Sports, Predictions, Vedic Astrology]
 tags: [astrology, sports, predictions, Vedic Astrology, game predictions, karma, birth chart, planets, houses, navamsha, cuspal strength, sublords, fixed stars]
 author: Saurav Kumar

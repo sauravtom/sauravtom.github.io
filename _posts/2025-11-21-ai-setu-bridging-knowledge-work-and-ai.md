@@ -1,6 +1,7 @@
 ---
 title: "AI Setu: Bridging Knowledge Work and AI"
 date: 2025-11-21 +0530
+image: /assets/img/posts/ai-setu-bridging-knowledge-work-and-ai.png
 categories: [AI, Future of Work, Knowledge Work, Tools]
 tags: [AI, IDE, Knowledge Work, Automation, AI Agents, Professional Tools, Productivity, Future of Work]
 author: sauravtom

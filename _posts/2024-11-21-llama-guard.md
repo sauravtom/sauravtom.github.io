@@ -1,6 +1,7 @@
 ---
 title: Safeguarding LLM Conversations Using Llama Guard, A Hands-On Look
 date: 2024-11-21 +0530
+image: /assets/img/posts/safeguarding-llm-conversations-using-llama-guard-a-hands-on-look.png
 categories: [Large Language Models, AI Safety, Llama Guard, Meta AI, Natural Language Processing]
 tags: [LLMs, AI Safety, Llama Guard, Meta, NLP,  Prompt Engineering, Content Moderation, Misinformation, Toxicity, Bias,  AI Ethics]
 author: Saurav Kumar
