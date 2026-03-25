@@ -1,6 +1,6 @@
 ---
 title: "The Age of Token Abundance"
-date: 2026-03-08 12:00:00 +0000
+date: 2026-03-08 12:00:00 +0530
 categories: [AI, Technology]
 tags: [ai, tokens, future, llm, agents]
 ---
