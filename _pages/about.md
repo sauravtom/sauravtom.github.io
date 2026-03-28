@@ -5,6 +5,8 @@ permalink: /about/
 ---
 
 # About Saurav Kumar
+### I help companies bridge the gap between cutting-edge AI research and revenue-generating products.
+**Applied AI Engineer | 2x YC Alumni | Serial Entrepreneur**
 
 ### I help companies bridge the gap between cutting-edge AI research and revenue-generating products.
 
