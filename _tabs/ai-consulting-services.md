@@ -4,21 +4,83 @@ icon: fas fa-code
 order: 3
 ---
 
-## About Me
-I am a applied AI research engineer focused on applying LLMs to domain-specific data. I run an AI product studio [xAGI labs](https://github.com/xAGI-labs/) where we work on applying LLMs to a variety of business usecases. Prior to that, I worked on video compression models at Amazon and founded a developer tools startup backed by YC and Accel.
+## AI Consulting Services
 
-For the past three years, I've been building AI apps and search/recommendation systems – the kind that actually work, not the kind that suggest cat videos when you're shopping for car insurance. And for the last year, I've been rescuing hapless startups from the swirling vortex of AI mediocrity.  Consider me your outsourced CTO, minus the stock options and crippling existential dread.
+I help startups and enterprises move from AI proof-of-concept to production.
 
-**Beyond MVPs (Because Minimum Viable Product Often Means Maximum Viable Pain):**
+I am Saurav Kumar, Founder and CEO of [xAGI Labs](https://github.com/xAGI-labs/), a two-time Y Combinator founder, and an applied AI engineer focused on LLM products, data pipelines, and agentic systems that improve business outcomes.
 
-Sure, I can build your MVP.  But that's just the appetizer.  My real expertise lies in transforming your Frankensteinian AI creation into a sleek, efficient, profit-generating machine.  Here’s how:
+## Who I Work With
 
-* **Data Scraping (aka Digital Dumpster Diving):**  Need data?  I'll get it.  I'll build you data pipelines that can scrape the internet cleaner than a Roomba on a caffeine binge.  I'll find the data you need, even if it's hiding in the dark corners of the web, whispering secrets to the server hamsters.
+- Founders who need a practical AI roadmap, not generic AI advice.
+- Product and engineering teams shipping LLM features under cost and reliability constraints.
+- Companies that have an AI demo but need production architecture, guardrails, and measurable ROI.
 
-* **Performance Fine-Tuning (aka Whipping Your AI Into Shape):**  Is your AI model performing about as well as a drunken squirrel in a spelling bee? I’ll fine-tune it until it’s humming along like a well-oiled, algorithm-driven engine of efficiency.  Think of me as the personal trainer for your AI, except instead of protein shakes and burpees, I use Python and deep learning frameworks.
+## What I Can Help You Build
 
-* **AI-Business Synergy (aka Making Your AI Actually Useful):**  Your AI strategy shouldn’t be a random collection of buzzwords and PowerPoint slides.  It needs to align with your business objectives.  I'll bridge the gap between your tech team and your business goals, translating complex technical jargon into plain English that even your marketing department can understand.  I'll make sure your AI is actually contributing to your bottom line, not just burning through VC funding like a bonfire of silicon and wasted potential.
+### 1. AI Product Strategy and Feasibility
 
-So, if you’re ready to take your startup from zero to AI hero, connect with me via email or book a time on my calendar ([link here](https://calendar.app.google/DagNFHLpApt7cz4X9)).
+- Identify high-leverage use cases for your business.
+- Validate technical feasibility before major spend.
+- Prioritize roadmap by impact, implementation risk, and time-to-value.
+
+### 2. End-to-End LLM Engineering
+
+- LLM fine-tuning and domain adaptation.
+- Retrieval and knowledge pipelines for private data.
+- Agent workflow design, evaluation, and failure handling.
+- Cost and latency optimization for production inference.
+
+### 3. Fractional CTO and Technical Advisory
+
+- Build-vs-buy decisions across model providers and tooling.
+- Hiring plan and execution standards for AI teams.
+- Architecture reviews for reliability, safety, and scale.
+
+## Relevant Background
+
+- Founder and CEO, xAGI Labs.
+- Two-time Y Combinator alumnus (2019, 2020).
+- Two startup exits (Likeo, Facecrop).
+- Featured on Google DeepMind and Stripe Developers.
+- Former Amazon engineer (video compression models).
+
+## Locations and Engagement
+
+- Based in Bangalore, San Francisco, and Delhi.
+- Available for short advisory engagements and hands-on implementation.
+- Remote-friendly with async collaboration.
+
+## Frequently Asked Questions
+
+### What kind of companies should reach out?
+
+Seed to growth-stage startups and enterprise teams building LLM-enabled products, internal copilots, or domain AI workflows.
+
+### Do you only advise, or do you build too?
+
+Both. I do strategic advisory and hands-on engineering depending on your team setup and timeline.
+
+### Can you help with an existing AI system that is underperforming?
+
+Yes. A common engagement is auditing an existing system and improving quality, reliability, and cost-efficiency.
+
+### Do you work as a fractional CTO for AI?
+
+Yes. I support founder-led teams that need senior technical guidance without a full-time executive hire.
+
+### Do you support multi-model setups (OpenAI, Anthropic, open models)?
+
+Yes. I help design provider-agnostic architectures with routing and fallback strategies when appropriate.
+
+### How do I start?
+
+Book a discovery call to align on goals, constraints, and scope:
+[Book a call](https://calendar.app.google/DagNFHLpApt7cz4X9)
+
+## Contact
+
+- Email: [stomatrix@gmail.com](mailto:stomatrix@gmail.com)
+- LinkedIn: [Saurav Kumar](https://www.linkedin.com/in/sauraav007)
 
 {% include form.html %}

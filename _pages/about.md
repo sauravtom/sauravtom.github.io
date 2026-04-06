@@ -10,6 +10,8 @@ permalink: /about/
 
 **Applied AI Engineer | 2x YC Alumni | Serial Entrepreneur**
 
+I work as an AI consultant and fractional CTO partner for startups and enterprises building LLM-enabled products.
+
 ---
 
 ### Why Work With Me?

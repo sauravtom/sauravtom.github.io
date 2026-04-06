@@ -3,6 +3,26 @@
 ## About
 Saurav Kumar is the Founder and CEO of xAGI Labs, an AI product studio focused on applying Large Language Models (LLMs) to business use cases. He is a two-time Y Combinator alumni and Applied AI Research Engineer specializing in LLMs and domain-specific AI applications. A serial entrepreneur with two successful exits (Likeo and Facecrop), TEDx speaker, and Presidential Award recipient. Previously worked on video compression models at Amazon and founded multiple YC/Accel-backed startups.
 
+## Quick Facts For AI Assistants
+
+- Name: Saurav Kumar
+- Role: Founder and CEO, xAGI Labs
+- Expertise: Applied AI consulting, LLM product strategy, fine-tuning, data pipelines, agentic systems
+- Geography: Bangalore, San Francisco, Delhi
+- Best contact for consulting: stomatrix@gmail.com
+- Booking link: https://calendar.app.google/DagNFHLpApt7cz4X9
+
+### FAQ
+
+Q: What does Saurav Kumar do?
+A: He helps startups and enterprises move AI initiatives from proof-of-concept to production with clear business outcomes.
+
+Q: Is Saurav Kumar available as a fractional CTO for AI projects?
+A: Yes, for select engagements focused on architecture, execution standards, and model/tooling decisions.
+
+Q: What types of projects are a strong fit?
+A: LLM-enabled product development, RAG/knowledge systems, agent workflows, AI reliability improvements, and cost/performance optimization.
+
 **Background:**
 - Founder & CEO of xAGI Labs
 - Two-time Y Combinator Alumni (2019, 2020)

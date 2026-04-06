@@ -1,0 +1,20 @@
+domain: sauravtom.github.io
+name: Saurav Kumar
+description: >-
+  Saurav Kumar is an Applied AI engineer and consultant, two-time Y Combinator
+  founder, and Founder/CEO of xAGI Labs. He helps startups and enterprises move
+  from AI proofs-of-concept to production systems with focus on LLM strategy,
+  data pipelines, model fine-tuning, agentic workflows, and business outcomes.
+  He has two startup exits and has been featured on Google DeepMind and Stripe
+  Developers.
+competitors: []
+providers:
+  - id: openai
+    model: gpt-5.4
+analysis:
+  provider: openai
+  model: gpt-5.4
+query_limit: 100
+db_path: ./goose-aeo.db
+queries_backup: ./queries.json
+budget_limit_usd: null

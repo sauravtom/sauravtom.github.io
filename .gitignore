@@ -25,3 +25,11 @@ package-lock.json
 # Misc
 _sass/dist
 assets/js/dist
+
+# Local environment secrets
+.env
+.env.*
+
+# Goose AEO local runtime files
+goose-aeo.db
+pricing.json
