@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn Agent Skills for Codex — English &amp; Hindi</title>
+  <meta name="description" content="A practical bilingual field guide for Indian developers to understand, create, test, and improve Agent Skills for Codex.">
+  <meta name="theme-color" content="#f4eddf">
+  <meta property="og:title" content="Learn Agent Skills for Codex">
+  <meta property="og:description" content="A practical English and Hindi field guide for Indian developers.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sauravtom.github.io/learn/">
+  <link rel="canonical" href="https://sauravtom.github.io/learn/">
+  <link rel="icon" href="/assets/img/favicons/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@400;500;600;700&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/learn.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Learn Agent Skills for Codex",
+    "description": "A practical bilingual guide to understanding, creating, and testing Agent Skills for Codex.",
+    "inLanguage": ["en", "hi"],
+    "provider": {
+      "@type": "Person",
+      "name": "Saurav Kumar",
+      "url": "https://sauravtom.github.io"
+    }
+  }
+  </script>
+</head>
+<body data-language="en">
+  <a class="skip-link" href="#main" data-en="Skip to the guide" data-hi="सीधे गाइड पर जाएँ">Skip to the guide</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="/learn/" aria-label="Agent Skills Bharat home">
+      <span class="wordmark-mark" aria-hidden="true">अ</span>
+      <span>
+        <strong>Agent Skills</strong>
+        <small data-en="Bharat field guide" data-hi="भारत फील्ड गाइड">Bharat field guide</small>
+      </span>
+    </a>
+
+    <nav class="header-nav" aria-label="Primary navigation">
+      <a href="#path" data-en="Learning path" data-hi="सीखने का रास्ता">Learning path</a>
+      <a href="#example" data-en="Example" data-hi="उदाहरण">Example</a>
+      <a href="#sources" data-en="Sources" data-hi="स्रोत">Sources</a>
+    </nav>
+
+    <div class="language-switch" role="group" aria-label="Choose language">
+      <button type="button" data-language-choice="en" aria-pressed="true">EN</button>
+      <button type="button" data-language-choice="hi" aria-pressed="false">हिन्दी</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          <span data-en="Codex · Chapter 01" data-hi="Codex · अध्याय 01">Codex · Chapter 01</span>
+        </div>
+        <h1 id="hero-title" data-en="Teach Codex your workflow. One folder at a time." data-hi="Codex को अपना workflow सिखाएँ। एक folder से शुरुआत करें।">Teach Codex your workflow. One folder at a time.</h1>
+        <p class="hero-lede" data-en="A no-jargon, build-along guide to Agent Skills—written for Indian developers in English and Hindi." data-hi="Agent Skills की आसान build-along guide—भारतीय developers के लिए, हिन्दी और English में।">A no-jargon, build-along guide to Agent Skills—written for Indian developers in English and Hindi.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#path">
+            <span data-en="Start the 20-minute trail" data-hi="20 मिनट की यात्रा शुरू करें">Start the 20-minute trail</span>
+            <span aria-hidden="true">↘</span>
+          </a>
+          <a class="text-link" href="#example" data-en="Jump to the example" data-hi="सीधे उदाहरण देखें">Jump to the example</a>
+        </div>
+        <p class="audience-note" data-en="No API key required · Basic Markdown is enough" data-hi="API key की जरूरत नहीं · Basic Markdown आना काफी है">No API key required · Basic Markdown is enough</p>
+      </div>
+
+      <div class="hero-visual" role="img" aria-label="A skill folder diagram">
+        <div class="stamp" data-en="OPEN FORMAT" data-hi="खुला फ़ॉर्मैट">OPEN FORMAT</div>
+        <div class="folder-tab" aria-hidden="true"></div>
+        <div class="folder-card">
+          <div class="folder-topline">
+            <span>my-skill/</span>
+            <span class="status-pill" data-en="ready" data-hi="तैयार">ready</span>
+          </div>
+          <div class="file-row file-row-main">
+            <span class="file-icon">M↓</span>
+            <span><strong>SKILL.md</strong><small data-en="Required · instructions + metadata" data-hi="ज़रूरी · निर्देश + metadata">Required · instructions + metadata</small></span>
+          </div>
+          <div class="file-row">
+            <span class="file-icon">›_</span>
+            <span><strong>scripts/</strong><small data-en="Optional · repeatable code" data-hi="वैकल्पिक · दोहराया जा सकने वाला code">Optional · repeatable code</small></span>
+          </div>
+          <div class="file-row">
+            <span class="file-icon">¶</span>
+            <span><strong>references/</strong><small data-en="Optional · details on demand" data-hi="वैकल्पिक · जरूरत पर detail">Optional · details on demand</small></span>
+          </div>
+          <div class="file-row">
+            <span class="file-icon">◇</span>
+            <span><strong>assets/</strong><small data-en="Optional · templates and resources" data-hi="वैकल्पिक · templates और resources">Optional · templates and resources</small></span>
+          </div>
+        </div>
+        <p class="visual-caption" data-en="A skill is a folder. SKILL.md is the only required file." data-hi="Skill एक folder है। केवल SKILL.md ज़रूरी file है।">A skill is a folder. SKILL.md is the only required file.</p>
+      </div>
+    </section>
+
+    <aside class="freshness-note" aria-label="Source status">
+      <span class="freshness-label" data-en="SOURCE CHECK" data-hi="स्रोत जाँच">SOURCE CHECK</span>
+      <p data-en="The openai/skills repository is now deprecated. We use it only as a historical example catalog; current setup guidance comes from the official Codex docs and the Agent Skills specification. Checked 10 July 2026." data-hi="openai/skills repository अब deprecated है। हम इसे केवल पुराने examples के catalog की तरह उपयोग करते हैं; मौजूदा setup की जानकारी official Codex docs और Agent Skills specification से आती है। 10 जुलाई 2026 को जाँचा गया।">The openai/skills repository is now deprecated. We use it only as a historical example catalog; current setup guidance comes from the official Codex docs and the Agent Skills specification. Checked 10 July 2026.</p>
+    </aside>
+
+    <section class="definition-band" aria-labelledby="definition-title">
+      <div>
+        <p class="section-kicker" data-en="The 30-second answer" data-hi="30 सेकंड में समझें">The 30-second answer</p>
+        <h2 id="definition-title" data-en="What is an Agent Skill?" data-hi="Agent Skill क्या है?">What is an Agent Skill?</h2>
+      </div>
+      <div class="definition-copy">
+        <p data-en="A lightweight, portable folder that gives an AI agent specialised knowledge or a repeatable workflow. Codex discovers the skill from its name and description, loads its full instructions when relevant, and can then use its scripts or references as needed." data-hi="एक हल्का और portable folder, जो AI agent को किसी खास काम की जानकारी या repeatable workflow देता है। Codex skill का नाम और description देखकर उसे खोजता है, जरूरत पड़ने पर पूरे instructions पढ़ता है, और फिर उसके scripts या references का उपयोग कर सकता है।">A lightweight, portable folder that gives an AI agent specialised knowledge or a repeatable workflow. Codex discovers the skill from its name and description, loads its full instructions when relevant, and can then use its scripts or references as needed.</p>
+        <div class="fact-line">
+          <span data-en="Think:" data-hi="ऐसे समझें:">Think:</span>
+          <strong data-en="README + playbook + toolbox" data-hi="README + playbook + toolbox">README + playbook + toolbox</strong>
+          <span data-en="—loaded only when useful." data-hi="—जो केवल जरूरत पड़ने पर load होता है।">—loaded only when useful.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="path" class="learning-path" aria-labelledby="path-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker" data-en="Follow the trail" data-hi="इस रास्ते पर चलें">Follow the trail</p>
+          <h2 id="path-title" data-en="From idea to a working skill" data-hi="Idea से working skill तक">From idea to a working skill</h2>
+        </div>
+        <p data-en="Four short stops. Each one gives you something you can use immediately." data-hi="चार छोटे पड़ाव। हर पड़ाव पर आपको तुरंत उपयोग करने लायक कुछ मिलेगा।">Four short stops. Each one gives you something you can use immediately.</p>
+      </div>
+
+      <ul class="trail">
+        <li class="trail-stop trail-stop-1">
+          <div class="trail-number">01</div>
+          <div>
+            <p class="trail-time" data-en="3 min · Mental model" data-hi="3 मिनट · Mental model">3 min · Mental model</p>
+            <h3 data-en="How Codex decides" data-hi="Codex कैसे तय करता है">How Codex decides</h3>
+            <p data-en="Skills use progressive disclosure, so the agent only loads the detail it needs." data-hi="Skills progressive disclosure का उपयोग करती हैं, इसलिए agent केवल जरूरी detail load करता है।">Skills use progressive disclosure, so the agent only loads the detail it needs.</p>
+          </div>
+        </li>
+        <li class="trail-stop trail-stop-2">
+          <div class="trail-number">02</div>
+          <div>
+            <p class="trail-time" data-en="5 min · Anatomy" data-hi="5 मिनट · बनावट">5 min · Anatomy</p>
+            <h3 data-en="Write the smallest useful file" data-hi="सबसे छोटी उपयोगी file लिखें">Write the smallest useful file</h3>
+            <p data-en="Good metadata gets the skill selected. Clear instructions make it useful." data-hi="अच्छा metadata skill को select कराता है। साफ instructions उसे उपयोगी बनाते हैं।">Good metadata gets the skill selected. Clear instructions make it useful.</p>
+          </div>
+        </li>
+        <li class="trail-stop trail-stop-3">
+          <div class="trail-number">03</div>
+          <div>
+            <p class="trail-time" data-en="7 min · Build" data-hi="7 मिनट · Build">7 min · Build</p>
+            <h3 data-en="Create it in the right place" data-hi="सही जगह पर बनाएँ">Create it in the right place</h3>
+            <p data-en="Use a repository skill for a team workflow, or a user skill for yourself." data-hi="Team workflow के लिए repository skill और अपने लिए user skill बनाएँ।">Use a repository skill for a team workflow, or a user skill for yourself.</p>
+          </div>
+        </li>
+        <li class="trail-stop trail-stop-4">
+          <div class="trail-number">04</div>
+          <div>
+            <p class="trail-time" data-en="5 min · Test" data-hi="5 मिनट · Test">5 min · Test</p>
+            <h3 data-en="Prove it helps" data-hi="साबित करें कि skill मदद करती है">Prove it helps</h3>
+            <p data-en="Check both triggering and output quality—including near-misses." data-hi="Triggering और output quality दोनों जाँचें—near-miss prompts के साथ भी।">Check both triggering and output quality—including near-misses.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="lesson lesson-disclosure" aria-labelledby="disclosure-title">
+      <div class="lesson-index" aria-hidden="true">01</div>
+      <div class="lesson-content">
+        <p class="section-kicker" data-en="Mental model" data-hi="Mental model">Mental model</p>
+        <h2 id="disclosure-title" data-en="Progressive disclosure: the idea that makes skills scale" data-hi="Progressive disclosure: वह idea जो skills को scale करता है">Progressive disclosure: the idea that makes skills scale</h2>
+        <p class="lesson-intro" data-en="Codex does not paste every skill into every conversation. It reveals the skill in stages." data-hi="Codex हर conversation में हर skill को paste नहीं करता। वह skill को चरणों में खोलता है।">Codex does not paste every skill into every conversation. It reveals the skill in stages.</p>
+
+        <ol class="disclosure-steps">
+          <li>
+            <span class="step-marker">A</span>
+            <div>
+              <h3 data-en="Discover" data-hi="खोज">Discover</h3>
+              <p data-en="At startup, the agent sees the skill's name and description—enough to judge relevance." data-hi="शुरुआत में agent skill का name और description देखता है—relevance तय करने के लिए इतना काफी है।">At startup, the agent sees the skill's name and description—enough to judge relevance.</p>
+            </div>
+            <code>name + description</code>
+          </li>
+          <li>
+            <span class="step-marker">B</span>
+            <div>
+              <h3 data-en="Activate" data-hi="सक्रिय करें">Activate</h3>
+              <p data-en="When the task matches, Codex reads the complete SKILL.md instructions." data-hi="Task match होने पर Codex पूरा SKILL.md instruction पढ़ता है।">When the task matches, Codex reads the complete SKILL.md instructions.</p>
+            </div>
+            <code>SKILL.md</code>
+          </li>
+          <li>
+            <span class="step-marker">C</span>
+            <div>
+              <h3 data-en="Execute" data-hi="काम करें">Execute</h3>
+              <p data-en="Only then does it load a referenced file or run a bundled script if the workflow needs it." data-hi="इसके बाद ही workflow की जरूरत के अनुसार referenced file load होती है या bundled script चलती है।">Only then does it load a referenced file or run a bundled script if the workflow needs it.</p>
+            </div>
+            <code>scripts/ · references/</code>
+          </li>
+        </ol>
+
+        <div class="practical-note">
+          <span class="note-pin" aria-hidden="true">✦</span>
+          <div>
+            <strong data-en="Practical consequence" data-hi="काम की बात">Practical consequence</strong>
+            <p data-en="Your description is not marketing copy. It is routing logic. Say what the skill does, when it should run, and—when useful—where its boundary ends." data-hi="आपका description marketing copy नहीं, routing logic है। साफ लिखें कि skill क्या करती है, कब चलनी चाहिए और—जहाँ जरूरी हो—उसकी सीमा कहाँ खत्म होती है।">Your description is not marketing copy. It is routing logic. Say what the skill does, when it should run, and—when useful—where its boundary ends.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lesson lesson-anatomy" aria-labelledby="anatomy-title">
+      <div class="lesson-index" aria-hidden="true">02</div>
+      <div class="lesson-content">
+        <p class="section-kicker" data-en="Anatomy" data-hi="बनावट">Anatomy</p>
+        <h2 id="anatomy-title" data-en="Start small. Add folders only when they earn their place." data-hi="छोटा शुरू करें। Folder तभी जोड़ें जब उसकी सच में जरूरत हो।">Start small. Add folders only when they earn their place.</h2>
+
+        <div class="anatomy-layout">
+          <div class="tree-panel" role="group" aria-label="Skill directory structure">
+            <div class="tree-heading">
+              <span data-en="DIRECTORY MAP" data-hi="DIRECTORY MAP">DIRECTORY MAP</span>
+              <span>v1</span>
+            </div>
+            <pre><code>my-skill/
+├── SKILL.md          <b># required</b>
+├── scripts/          <i># executable code</i>
+├── references/       <i># detailed docs</i>
+├── assets/           <i># templates/files</i>
+└── agents/
+    └── openai.yaml   <i># Codex metadata</i></code></pre>
+          </div>
+
+          <div class="anatomy-rules">
+            <article>
+              <span class="rule-label" data-en="Must have" data-hi="ज़रूरी">Must have</span>
+              <h3>SKILL.md</h3>
+              <p data-en="YAML frontmatter with name and description, followed by Markdown instructions." data-hi="YAML frontmatter में name और description, उसके बाद Markdown instructions।">YAML frontmatter with name and description, followed by Markdown instructions.</p>
+            </article>
+            <article>
+              <span class="rule-label" data-en="Add when" data-hi="तब जोड़ें जब">Add when</span>
+              <h3>scripts/</h3>
+              <p data-en="A step needs deterministic behaviour or external tooling. Keep scripts non-interactive." data-hi="किसी step में deterministic behaviour या external tooling चाहिए। Scripts को non-interactive रखें।">A step needs deterministic behaviour or external tooling. Keep scripts non-interactive.</p>
+            </article>
+            <article>
+              <span class="rule-label" data-en="Add when" data-hi="तब जोड़ें जब">Add when</span>
+              <h3>references/</h3>
+              <p data-en="Detailed material would make SKILL.md long. Keep references focused and one link deep." data-hi="Detail के कारण SKILL.md बहुत लंबी हो रही हो। References को focused और एक link deep रखें।">Detailed material would make SKILL.md long. Keep references focused and one link deep.</p>
+            </article>
+            <article>
+              <span class="rule-label" data-en="Add when" data-hi="तब जोड़ें जब">Add when</span>
+              <h3>assets/</h3>
+              <p data-en="The workflow reuses templates, schemas, lookup data, images, or other output resources." data-hi="Workflow में templates, schemas, lookup data, images या output resources दोबारा उपयोग होते हों।">The workflow reuses templates, schemas, lookup data, images, or other output resources.</p>
+            </article>
+          </div>
+        </div>
+
+        <ul class="spec-strip">
+          <li><strong>64</strong><span data-en="max name characters" data-hi="name में अधिकतम characters">max name characters</span></li>
+          <li><strong>1024</strong><span data-en="max description characters" data-hi="description में अधिकतम characters">max description characters</span></li>
+          <li><strong>&lt;500</strong><span data-en="recommended SKILL.md lines" data-hi="recommended SKILL.md lines">recommended SKILL.md lines</span></li>
+          <li><strong>1 level</strong><span data-en="recommended reference depth" data-hi="recommended reference depth">recommended reference depth</span></li>
+        </ul>
+        <p class="source-footnote"><span data-en="Specification note:" data-hi="Specification note:">Specification note:</span> <span data-en="The name must use lowercase letters, numbers, and hyphens, match its parent folder, and contain no consecutive hyphens." data-hi="Name में केवल lowercase letters, numbers और hyphens होने चाहिए; वह parent folder से match करे और consecutive hyphens न हों।">The name must use lowercase letters, numbers, and hyphens, match its parent folder, and contain no consecutive hyphens.</span></p>
+      </div>
+    </section>
+
+    <section id="example" class="lesson lesson-build" aria-labelledby="build-title">
+      <div class="lesson-index" aria-hidden="true">03</div>
+      <div class="lesson-content">
+        <p class="section-kicker" data-en="Build along" data-hi="साथ बनाइए">Build along</p>
+        <h2 id="build-title" data-en="Create an incident handoff skill" data-hi="Incident handoff skill बनाएँ">Create an incident handoff skill</h2>
+        <p class="lesson-intro" data-en="This community example is deliberately small: it turns messy on-call notes into a crisp next-shift brief, with IST and UTC times kept explicit." data-hi="यह community example जानबूझकर छोटा है: यह बिखरे हुए on-call notes को साफ next-shift brief में बदलता है और IST व UTC समय स्पष्ट रखता है।">This community example is deliberately small: it turns messy on-call notes into a crisp next-shift brief, with IST and UTC times kept explicit.</p>
+
+        <div class="origin-label"><span data-en="ORIGINAL EXAMPLE · NOT AN OFFICIAL OPENAI SKILL" data-hi="हमारा उदाहरण · OFFICIAL OPENAI SKILL नहीं">ORIGINAL EXAMPLE · NOT AN OFFICIAL OPENAI SKILL</span></div>
+
+        <div class="build-grid">
+          <div class="build-steps">
+            <article>
+              <div class="build-step-number">1</div>
+              <div>
+                <h3 data-en="Choose the scope" data-hi="Scope चुनें">Choose the scope</h3>
+                <p data-en="Put it in the repository when the whole team should use the same handoff. Put it in your home folder when it is personal." data-hi="पूरी team को एक जैसा handoff चाहिए तो repository में रखें। केवल अपने उपयोग के लिए home folder में रखें।">Put it in the repository when the whole team should use the same handoff. Put it in your home folder when it is personal.</p>
+                <div class="path-choice">
+                  <code>.agents/skills/incident-handoff/</code>
+                  <span data-en="team" data-hi="team">team</span>
+                </div>
+                <div class="path-choice">
+                  <code>~/.agents/skills/incident-handoff/</code>
+                  <span data-en="personal" data-hi="अपना">personal</span>
+                </div>
+              </div>
+            </article>
+            <article>
+              <div class="build-step-number">2</div>
+              <div>
+                <h3 data-en="Create SKILL.md" data-hi="SKILL.md बनाएँ">Create SKILL.md</h3>
+                <p data-en="For a first version, instructions alone are enough. Do not add a script just to make the folder look complete." data-hi="पहले version के लिए केवल instructions काफी हैं। Folder को complete दिखाने के लिए बेवजह script न जोड़ें।">For a first version, instructions alone are enough. Do not add a script just to make the folder look complete.</p>
+              </div>
+            </article>
+            <article>
+              <div class="build-step-number">3</div>
+              <div>
+                <h3 data-en="Invoke and observe" data-hi="Invoke करें और देखें">Invoke and observe</h3>
+                <p data-en="Mention the skill explicitly while developing. Then try natural prompts to test whether the description activates it implicitly." data-hi="बनाते समय skill को explicitly mention करें। फिर natural prompts से देखें कि description उसे implicitly activate करता है या नहीं।">Mention the skill explicitly while developing. Then try natural prompts to test whether the description activates it implicitly.</p>
+                <code class="prompt-chip">$incident-handoff turn these notes into the next shift brief</code>
+              </div>
+            </article>
+          </div>
+
+          <div class="code-window">
+            <div class="code-toolbar">
+              <span>incident-handoff/SKILL.md</span>
+              <button class="copy-button" type="button" data-copy-target="skill-code" data-en="Copy" data-hi="Copy करें">Copy</button>
+            </div>
+            <pre id="skill-code"><code>---
+name: incident-handoff
+description: &gt;
+  Create concise engineering incident handoffs from logs,
+  timelines, and notes. Use when the user asks for an
+  on-call handoff, incident summary, status update, or
+  next-shift brief. Do not use for root-cause diagnosis.
+---
+
+# Incident handoff
+
+1. Read every provided note before drafting.
+2. Preserve timestamps. Show IST and UTC for distributed teams.
+3. Separate confirmed facts, hypotheses, and open questions.
+4. List actions with an owner; use “unassigned” when unknown.
+5. Never invent an owner, cause, metric, or resolution.
+
+## Output
+
+- Current status
+- User impact
+- Timeline
+- Actions taken
+- Next actions and owners
+- Open questions
+
+## Final check
+
+Verify that every claim is supported by the input.</code></pre>
+          </div>
+        </div>
+
+        <div class="description-lab">
+          <div>
+            <p class="section-kicker" data-en="Description lab" data-hi="Description lab">Description lab</p>
+            <h3 data-en="A description has three jobs" data-hi="Description के तीन काम हैं">A description has three jobs</h3>
+          </div>
+          <ol>
+            <li><strong data-en="WHAT" data-hi="क्या">WHAT</strong><span data-en="Create incident handoffs" data-hi="Incident handoff बनाना">Create incident handoffs</span></li>
+            <li><strong data-en="WHEN" data-hi="कब">WHEN</strong><span data-en="Handoff, status, summary, next shift" data-hi="Handoff, status, summary, next shift">Handoff, status, summary, next shift</span></li>
+            <li><strong data-en="BOUNDARY" data-hi="सीमा">BOUNDARY</strong><span data-en="Not root-cause diagnosis" data-hi="Root-cause diagnosis नहीं">Not root-cause diagnosis</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="lesson lesson-test" aria-labelledby="test-title">
+      <div class="lesson-index" aria-hidden="true">04</div>
+      <div class="lesson-content">
+        <p class="section-kicker" data-en="Test and improve" data-hi="Test और सुधार">Test and improve</p>
+        <h2 id="test-title" data-en="A skill is not done when it works once" data-hi="Skill केवल एक बार चल जाने से पूरी नहीं होती">A skill is not done when it works once</h2>
+
+        <div class="test-columns">
+          <article class="test-card trigger-card">
+            <div class="test-card-head">
+              <span>TEST A</span>
+              <span class="test-icon" aria-hidden="true">↯</span>
+            </div>
+            <h3 data-en="Does it trigger correctly?" data-hi="क्या यह सही समय पर trigger होती है?">Does it trigger correctly?</h3>
+            <p data-en="Use realistic prompts that should trigger and close near-misses that should not. The boundary is where weak descriptions fail." data-hi="ऐसे realistic prompts उपयोग करें जिन्हें trigger होना चाहिए, और ऐसे near-miss prompts भी जो trigger नहीं होने चाहिए। यहीं कमजोर descriptions fail होती हैं।">Use realistic prompts that should trigger and close near-misses that should not. The boundary is where weak descriptions fail.</p>
+            <div class="query query-positive">
+              <span data-en="SHOULD" data-hi="होना चाहिए">SHOULD</span>
+              <q data-en="Can you turn these PagerDuty notes into a handoff for the 8pm IST shift?" data-hi="इन PagerDuty notes को रात 8 बजे IST shift के handoff में बदल सकते हो?">Can you turn these PagerDuty notes into a handoff for the 8pm IST shift?</q>
+            </div>
+            <div class="query query-negative">
+              <span data-en="SHOULD NOT" data-hi="नहीं होना चाहिए">SHOULD NOT</span>
+              <q data-en="Find the root cause of this memory leak and patch it." data-hi="इस memory leak का root cause खोजकर patch करो।">Find the root cause of this memory leak and patch it.</q>
+            </div>
+          </article>
+
+          <article class="test-card output-card">
+            <div class="test-card-head">
+              <span>TEST B</span>
+              <span class="test-icon" aria-hidden="true">✓</span>
+            </div>
+            <h3 data-en="Does it improve the result?" data-hi="क्या इससे result बेहतर होता है?">Does it improve the result?</h3>
+            <p data-en="Run the same task with and without the skill. Define observable success before you fall in love with the output." data-hi="एक ही task को skill के साथ और बिना skill चलाएँ। Output पसंद आने से पहले observable success तय करें।">Run the same task with and without the skill. Define observable success before you fall in love with the output.</p>
+            <ul class="assertion-list">
+              <li data-en="All timestamps from the input are preserved" data-hi="Input के सभी timestamps सुरक्षित हैं">All timestamps from the input are preserved</li>
+              <li data-en="Facts and hypotheses are separated" data-hi="Facts और hypotheses अलग हैं">Facts and hypotheses are separated</li>
+              <li data-en="No owner or root cause is invented" data-hi="कोई owner या root cause गढ़ा नहीं गया">No owner or root cause is invented</li>
+              <li data-en="Next actions are easy to scan" data-hi="Next actions आसानी से scan होते हैं">Next actions are easy to scan</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="eval-recipe">
+          <div class="eval-title">
+            <span class="recipe-tag" data-en="PRACTICAL RECIPE" data-hi="काम का तरीका">PRACTICAL RECIPE</span>
+            <h3 data-en="A sensible first evaluation" data-hi="पहली evaluation का आसान तरीका">A sensible first evaluation</h3>
+          </div>
+          <ol>
+            <li><strong>2–3</strong><span data-en="output test cases to begin" data-hi="शुरुआती output test cases">output test cases to begin</span></li>
+            <li><strong>~20</strong><span data-en="trigger queries when tuning descriptions" data-hi="description tune करने के लिए trigger queries">trigger queries when tuning descriptions</span></li>
+            <li><strong>3×</strong><span data-en="runs per query as a starting point" data-hi="हर query के runs, शुरुआत के लिए">runs per query as a starting point</span></li>
+            <li><strong>A/B</strong><span data-en="compare with skill vs without" data-hi="skill के साथ और बिना compare करें">compare with skill vs without</span></li>
+          </ol>
+          <p data-en="These are starting points from the Agent Skills creator guides, not hard protocol requirements." data-hi="ये Agent Skills creator guides से मिले starting points हैं, कोई अनिवार्य protocol requirements नहीं।">These are starting points from the Agent Skills creator guides, not hard protocol requirements.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="field-notes" aria-labelledby="notes-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker" data-en="Field notes" data-hi="Field notes">Field notes</p>
+          <h2 id="notes-title" data-en="The advice people usually learn the hard way" data-hi="वे बातें जो अक्सर गलती करने के बाद समझ आती हैं">The advice people usually learn the hard way</h2>
+        </div>
+        <p data-en="Official constraints, plus practical implications made explicit." data-hi="Official constraints और उनके practical implications—दोनों साफ-साफ।">Official constraints, plus practical implications made explicit.</p>
+      </div>
+
+      <div class="notes-grid">
+        <details open>
+          <summary><span>01</span><strong data-en="Treat descriptions like routing rules" data-hi="Description को routing rule समझें">Treat descriptions like routing rules</strong></summary>
+          <div class="details-body">
+            <p data-en="Name the user's intent and likely vocabulary. Test close negatives, not silly unrelated prompts. A broad description can be as harmful as a narrow one." data-hi="User का intent और उसके संभावित शब्द लिखें। बिल्कुल unrelated prompts नहीं, close negatives से test करें। बहुत broad description भी उतना ही नुकसान कर सकता है जितना narrow description।">Name the user's intent and likely vocabulary. Test close negatives, not silly unrelated prompts. A broad description can be as harmful as a narrow one.</p>
+            <span class="evidence-tag" data-en="SPEC + CREATOR GUIDE" data-hi="SPEC + CREATOR GUIDE">SPEC + CREATOR GUIDE</span>
+          </div>
+        </details>
+        <details>
+          <summary><span>02</span><strong data-en="Keep instructions imperative and checkable" data-hi="Instructions को imperative और checkable रखें">Keep instructions imperative and checkable</strong></summary>
+          <div class="details-body">
+            <p data-en="Write explicit inputs, steps, and outputs. End with checks the agent can actually perform. “Make it good” is not a verification step." data-hi="Inputs, steps और outputs को साफ लिखें। अंत में ऐसे checks दें जिन्हें agent सच में कर सके। “इसे अच्छा बनाओ” verification step नहीं है।">Write explicit inputs, steps, and outputs. End with checks the agent can actually perform. “Make it good” is not a verification step.</p>
+            <span class="evidence-tag" data-en="OPENAI BEST PRACTICE" data-hi="OPENAI BEST PRACTICE">OPENAI BEST PRACTICE</span>
+          </div>
+        </details>
+        <details>
+          <summary><span>03</span><strong data-en="Use scripts for certainty, not decoration" data-hi="Scripts certainty के लिए रखें, decoration के लिए नहीं">Use scripts for certainty, not decoration</strong></summary>
+          <div class="details-body">
+            <p data-en="A script should accept flags, environment variables, or stdin—never block on a prompt. Give it concise --help output and errors that explain the next move." data-hi="Script flags, environment variables या stdin से input ले—prompt पर block न हो। छोटा --help output और next step बताने वाले errors दें।">A script should accept flags, environment variables, or stdin—never block on a prompt. Give it concise --help output and errors that explain the next move.</p>
+            <span class="evidence-tag" data-en="CREATOR GUIDE" data-hi="CREATOR GUIDE">CREATOR GUIDE</span>
+          </div>
+        </details>
+        <details>
+          <summary><span>04</span><strong data-en="Separate stable instructions from deep reference" data-hi="Stable instructions और deep reference अलग रखें">Separate stable instructions from deep reference</strong></summary>
+          <div class="details-body">
+            <p data-en="If SKILL.md keeps growing, move domain tables, schemas, and long examples into focused reference files. Link directly; avoid chains of files pointing to more files." data-hi="SKILL.md लगातार बढ़े तो domain tables, schemas और लंबे examples को focused reference files में रखें। सीधे link करें; file से file की लंबी chain न बनाएँ।">If SKILL.md keeps growing, move domain tables, schemas, and long examples into focused reference files. Link directly; avoid chains of files pointing to more files.</p>
+            <span class="evidence-tag" data-en="SPECIFICATION" data-hi="SPECIFICATION">SPECIFICATION</span>
+          </div>
+        </details>
+        <details>
+          <summary><span>05</span><strong data-en="Duplicate names do not merge" data-hi="एक जैसे names merge नहीं होते">Duplicate names do not merge</strong></summary>
+          <div class="details-body">
+            <p data-en="Codex can show both skills when names collide. Give team skills distinctive names, especially when a user-level skill may cover similar work." data-hi="Name collide होने पर Codex दोनों skills दिखा सकता है। Team skills को distinct names दें, खासकर जब user-level skill भी वैसा काम करती हो।">Codex can show both skills when names collide. Give team skills distinctive names, especially when a user-level skill may cover similar work.</p>
+            <span class="evidence-tag" data-en="CODEX DOCS" data-hi="CODEX DOCS">CODEX DOCS</span>
+          </div>
+        </details>
+        <details>
+          <summary><span>06</span><strong data-en="Keep sensitive Indian data local" data-hi="Sensitive Indian data local रखें">Keep sensitive Indian data local</strong></summary>
+          <div class="details-body">
+            <p data-en="Skills for bank statements, Aadhaar-linked records, customer exports, or production logs need a clear data-handling rule. Never bundle real secrets or customer data as examples." data-hi="Bank statements, Aadhaar-linked records, customer exports या production logs वाली skills में साफ data-handling rule होना चाहिए। Real secrets या customer data को example में bundle न करें।">Skills for bank statements, Aadhaar-linked records, customer exports, or production logs need a clear data-handling rule. Never bundle real secrets or customer data as examples.</p>
+            <span class="evidence-tag evidence-editorial" data-en="EDITORIAL SAFETY NOTE" data-hi="EDITORIAL SAFETY NOTE">EDITORIAL SAFETY NOTE</span>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="checklist-section" aria-labelledby="checklist-title">
+      <div class="checklist-intro">
+        <p class="section-kicker" data-en="Before you ship" data-hi="Ship करने से पहले">Before you ship</p>
+        <h2 id="checklist-title" data-en="Your first-skill checklist" data-hi="आपकी first-skill checklist">Your first-skill checklist</h2>
+        <p data-en="Tick each item as you go. Your progress stays in this browser." data-hi="काम के साथ हर item tick करें। आपकी progress इसी browser में सुरक्षित रहेगी।">Tick each item as you go. Your progress stays in this browser.</p>
+        <div class="progress-block">
+          <div class="progress-label"><span data-en="READINESS" data-hi="तैयारी">READINESS</span><strong id="progress-count">0 / 7</strong></div>
+          <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+        </div>
+      </div>
+
+      <div class="checklist" role="group" aria-label="Skill readiness checklist">
+        <label><input type="checkbox" data-check="scope"><span class="custom-check" aria-hidden="true"></span><span data-en="One clear job and a defined boundary" data-hi="एक साफ job और defined boundary">One clear job and a defined boundary</span></label>
+        <label><input type="checkbox" data-check="name"><span class="custom-check" aria-hidden="true"></span><span data-en="Folder name matches the lowercase skill name" data-hi="Folder name lowercase skill name से match करता है">Folder name matches the lowercase skill name</span></label>
+        <label><input type="checkbox" data-check="description"><span class="custom-check" aria-hidden="true"></span><span data-en="Description says what and when" data-hi="Description क्या और कब—दोनों बताता है">Description says what and when</span></label>
+        <label><input type="checkbox" data-check="instructions"><span class="custom-check" aria-hidden="true"></span><span data-en="Steps name inputs, outputs, and checks" data-hi="Steps में inputs, outputs और checks हैं">Steps name inputs, outputs, and checks</span></label>
+        <label><input type="checkbox" data-check="references"><span class="custom-check" aria-hidden="true"></span><span data-en="Long details live in focused reference files" data-hi="लंबी details focused reference files में हैं">Long details live in focused reference files</span></label>
+        <label><input type="checkbox" data-check="triggers"><span class="custom-check" aria-hidden="true"></span><span data-en="Positive and near-miss trigger prompts tested" data-hi="Positive और near-miss trigger prompts tested हैं">Positive and near-miss trigger prompts tested</span></label>
+        <label><input type="checkbox" data-check="baseline"><span class="custom-check" aria-hidden="true"></span><span data-en="Output compared against a no-skill baseline" data-hi="Output को no-skill baseline से compare किया है">Output compared against a no-skill baseline</span></label>
+      </div>
+    </section>
+
+    <section class="next-step" aria-labelledby="next-title">
+      <div class="next-step-mark" aria-hidden="true">→</div>
+      <div>
+        <p class="section-kicker" data-en="What comes next" data-hi="आगे क्या">What comes next</p>
+        <h2 id="next-title" data-en="Codex first. Open format by design." data-hi="शुरुआत Codex से। Format स्वभाव से open है।">Codex first. Open format by design.</h2>
+        <p data-en="This guide starts with Codex locations, invocation, and metadata. Agent Skills are an open format adopted by multiple agent products, so future chapters can add client-specific setup without rewriting the core lessons." data-hi="यह guide Codex locations, invocation और metadata से शुरू होती है। Agent Skills एक open format है जिसे कई agent products अपनाते हैं, इसलिए आगे client-specific setup जोड़ते समय core lessons दोबारा नहीं लिखने पड़ेंगे।">This guide starts with Codex locations, invocation, and metadata. Agent Skills are an open format adopted by multiple agent products, so future chapters can add client-specific setup without rewriting the core lessons.</p>
+      </div>
+      <ul class="roadmap">
+        <li class="roadmap-current"><b>01</b> Codex <small data-en="available now" data-hi="अभी उपलब्ध">available now</small></li>
+        <li><b>02</b> <span data-en="Other agents" data-hi="अन्य agents">Other agents</span> <small data-en="later" data-hi="बाद में">later</small></li>
+      </ul>
+    </section>
+
+    <section id="sources" class="sources" aria-labelledby="sources-title">
+      <div class="sources-heading">
+        <p class="section-kicker" data-en="Grounded in primary sources" data-hi="Primary sources पर आधारित">Grounded in primary sources</p>
+        <h2 id="sources-title" data-en="Read the originals" data-hi="मूल sources पढ़ें">Read the originals</h2>
+        <p data-en="Facts are linked to official documentation. Original examples and editorial advice are labelled on the page." data-hi="Facts official documentation से linked हैं। हमारे examples और editorial advice को page पर label किया गया है।">Facts are linked to official documentation. Original examples and editorial advice are labelled on the page.</p>
+      </div>
+      <div class="source-list">
+        <a href="https://developers.openai.com/codex/skills" target="_blank" rel="noreferrer">
+          <span class="source-number">01</span>
+          <span><strong data-en="OpenAI · Build skills" data-hi="OpenAI · Skills बनाएँ">OpenAI · Build skills</strong><small data-en="Current Codex behaviour, locations, creation, distribution" data-hi="मौजूदा Codex behaviour, locations, creation और distribution">Current Codex behaviour, locations, creation, distribution</small></span>
+          <span aria-hidden="true">↗</span>
+        </a>
+        <a href="https://developers.openai.com/codex/skills#create-a-skill" target="_blank" rel="noreferrer">
+          <span class="source-number">02</span>
+          <span><strong data-en="OpenAI · Create a skill" data-hi="OpenAI · Skill बनाएँ">OpenAI · Create a skill</strong><small data-en="Creator flow and minimal SKILL.md" data-hi="Creator flow और minimal SKILL.md">Creator flow and minimal SKILL.md</small></span>
+          <span aria-hidden="true">↗</span>
+        </a>
+        <a href="https://agentskills.io/home" target="_blank" rel="noreferrer">
+          <span class="source-number">03</span>
+          <span><strong data-en="Agent Skills · Open standard" data-hi="Agent Skills · Open standard">Agent Skills · Open standard</strong><small data-en="Format, progressive disclosure, creator guidance" data-hi="Format, progressive disclosure और creator guidance">Format, progressive disclosure, creator guidance</small></span>
+          <span aria-hidden="true">↗</span>
+        </a>
+        <a href="https://agentskills.io/specification" target="_blank" rel="noreferrer">
+          <span class="source-number">04</span>
+          <span><strong data-en="Agent Skills · Specification" data-hi="Agent Skills · Specification">Agent Skills · Specification</strong><small data-en="Naming, metadata, directory, and validation rules" data-hi="Naming, metadata, directory और validation rules">Naming, metadata, directory, and validation rules</small></span>
+          <span aria-hidden="true">↗</span>
+        </a>
+        <a href="https://github.com/openai/skills" target="_blank" rel="noreferrer">
+          <span class="source-number">05</span>
+          <span><strong data-en="openai/skills · Archived catalog" data-hi="openai/skills · पुराना catalog">openai/skills · Archived catalog</strong><small data-en="Deprecated—use for examples, not current setup guidance" data-hi="Deprecated—examples के लिए देखें, current setup guidance के लिए नहीं">Deprecated—use for examples, not current setup guidance</small></span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="wordmark-mark" aria-hidden="true">अ</span>
+      <p><strong>Agent Skills Bharat</strong><span data-en="Built as a community learning guide by Saurav Kumar." data-hi="Saurav Kumar द्वारा बनाई गई community learning guide।">Built as a community learning guide by Saurav Kumar.</span></p>
+    </div>
+    <div class="footer-links">
+      <a href="/" data-en="Back to sauravtom.github.io" data-hi="sauravtom.github.io पर वापस जाएँ">Back to sauravtom.github.io</a>
+      <a href="https://github.com/sauravtom/sauravtom.github.io" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <script src="/assets/js/learn.js" defer></script>
+</body>
+</html>
