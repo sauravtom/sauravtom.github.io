@@ -2,85 +2,66 @@
 layout: page
 title: Resume
 permalink: /resume/
+description: Saurav Kumar's resume — LiveKit Developer Success.
+toc: false
 ---
 
-**Saurav Kumar**
+{% assign resume_path = '/assets/pdf/Saurav_Kumar_LiveKit_Developer_Success_Resume.pdf' | relative_url %}
 
-Bengaluru, India | sauravalgs@gmail.com
+<div class="resume-actions" role="group" aria-label="Resume actions">
+  <a class="btn btn-primary" href="{{ resume_path }}" target="_blank" rel="noopener">
+    <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
+    Open PDF
+  </a>
+  <a class="btn btn-outline-primary" href="{{ resume_path }}" download>
+    <i class="fas fa-download" aria-hidden="true"></i>
+    Download PDF
+  </a>
+</div>
 
-[LinkedIn](https://www.linkedin.com/in/sauraav007/), [Blog](https://sauravtom.github.io/ai-consulting-services), [GitHub](https://github.com/sauravtom/)
+<iframe
+  class="resume-viewer"
+  src="{{ resume_path }}#view=FitH"
+  title="Saurav Kumar — LiveKit Developer Success resume"
+>
+  <p>
+    Your browser cannot display this PDF.
+    <a href="{{ resume_path }}">Open the resume instead.</a>
+  </p>
+</iframe>
 
-I lead the development of cutting-edge software products used by millions worldwide. With over 12 years of experience in full-stack, back-end, and blockchain development across domains like fintech, education, cybersecurity, healthcare, and supply chain, I excel at adopting new technologies to deliver scalable, user-friendly solutions that solve real-world problems.
+<style>
+  .resume-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
 
-**WORK EXPERIENCE**
+  .resume-actions .btn {
+    align-items: center;
+    display: inline-flex;
+    gap: 0.45rem;
+  }
 
-[**Likeo**](https://inc42.com/buzz/kiranapro-buys-likeo-to-power-virtual-trial-room-experience-for-its-gen-z-fashion-app-users) (Antler AIR-6, Acq.) Bengaluru, IN
-CTO / Co-Founder Nov 2024 – April 2025
+  .resume-viewer {
+    background: #fff;
+    border: 1px solid var(--main-border-color);
+    border-radius: 0.5rem;
+    height: min(1100px, 82vh);
+    min-height: 640px;
+    width: 100%;
+  }
 
-  * Engineered and optimized the Cat-VTON open-source model with a custom Flux in-painting module, achieving a 2x processing speed increase and 10x cost efficiency on AWS GPU infrastructure.
-  * Developed and launched integrations as a Shopify plugin, Chrome extension, and Hugging Face Space, serving 1,000+ merchants globally.
+  @media (max-width: 576px) {
+    .resume-actions .btn {
+      flex: 1 1 auto;
+      justify-content: center;
+    }
 
-**Authlayer** (YC and Accel backed startup) San Francisco, USA
-Co-Founder and CTO May 2019 – Sep 2022
-
-  * Architected an AI-enhanced cryptocurrency investment platform, streamlining user onboarding and increasing retention by 25%.
-  * Led a team of eight engineers to develop real-time monitoring and alert systems for DeFi traders, protecting $750K+ in assets
-
-
-[**Chaintope**](https://www.chaintope.com/en/2018/10/09/iith_postscript/) Kuala Lumpur, Malaysia
-
-Product Manager May 2017 – May 2019
-
-  * Worked on official bitcoin ruby implementation and bitcoin script development. Developed and co-taught the "The Blockchain: Theory and Practice” course at IIT Hyderabad
-  * Started as staff engineer and got Promoted to Product Manager within 6 months; led weekly meetings and supervised four other Engineers.
-
-[**Amazon** (Catalyst Labs)](https://www.geekwire.com/2016/amazon-unveils-amazon-catalyst-programs-backing/) Seattle, WA, USA
-Entrepreneur in Residence May 2015 – Jan 2017
-
-  * Worked on FaceCrop Video Compression Algorithm, creating a scalable, lossy compression solution that optimized streaming efficiency for high-volume educational content, reducing bandwidth usage by 40%.
-  * Collaborated with distinguished professors from the University of Washington to spearhead cutting-edge research initiatives, integrating advanced machine learning techniques to enhance algorithm performance and adaptability.
-
-**PROJECTS**
-
-[**StartupNalanda**](https://startupnalanda.com) **AI powered course creation platform** 2025
-
-  * E-learning platform generating 7,500+ personalized courses, reaching 50,000+ learners.
-
-[**Business Navigator** ](https://favcynavigator.com/) 2024
-
-  * AI enabled business idea copilot with 10k active users
-  * Deployed the platform at leading startup accelerators globally
-
-[**Pitch Perfect Business Navigator** ](https://pitch.favcynavigator.com/) 2023
-
-  * AI tool evaluating 1,000+ startup pitches, improving investor decision-making by 40%.
-
-[**Blockchain URL Shortener** ](https://www.producthunt.com/products/ethereum-url-shortener) 2021
-
-  * Applied compression tech to storing text on the blockchain
-  * Finalist at ETH Denver Global Hackathon 2021
-
-**EDUCATION**
-
-**OPJS UNIVERSITY** Churu, Rajasthan, India
-Bachelor of Technology (B.Tech), Computer Science May 2013 - May 2017
-Relevant Coursework: Data Analysis, Software Engineering; Operating Systems; Algorithms; Artificial Intelligence
-
-**ADDITIONAL**
-
-**Technical Skills**: Python, JavaScript, Solidity, Bitcoin Scripting, PyTorch, NumPy, TensorFlow, Pandas
-
-**Core Competencies**:
-
-  * Product Strategy and Roadmap Development
-  * User Experience Design and Optimization
-  * Cross-Functional Team Leadership
-  * International Market Expansion and Localization
-  * Agile and Lean Methodologies
-
-**Certificates and Achievements**
-
-  * Product Management Nanodegree, Coursera, 2018.
-  * Antler Residency AIR 6 Cohort, 2025.
-  * Runner-Up, Facebook Global Hackathon, 2016.
-  * Amazon Catalyst Program Grant Recipient, 2016.
+    .resume-viewer {
+      height: 72vh;
+      min-height: 480px;
+    }
+  }
+</style>
