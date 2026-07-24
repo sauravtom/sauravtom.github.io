@@ -2,11 +2,11 @@
 layout: page
 title: Resume
 permalink: /resume/
-description: Saurav Kumar's resume — LiveKit Developer Success.
+description: Saurav Kumar's professional resume.
 toc: false
 ---
 
-{% assign resume_path = '/assets/pdf/Saurav_Kumar_LiveKit_Developer_Success_Resume.pdf' | relative_url %}
+{% assign resume_path = '/assets/pdf/Saurav_Kumar_Resume.pdf' | relative_url %}
 
 <div class="resume-actions" role="group" aria-label="Resume actions">
   <a class="btn btn-primary" href="{{ resume_path }}" target="_blank" rel="noopener">
@@ -22,7 +22,7 @@ toc: false
 <iframe
   class="resume-viewer"
   src="{{ resume_path }}#view=FitH"
-  title="Saurav Kumar — LiveKit Developer Success resume"
+  title="Saurav Kumar - AI and Software Engineering resume"
 >
   <p>
     Your browser cannot display this PDF.
